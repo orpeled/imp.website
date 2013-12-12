@@ -1480,3 +1480,10 @@
     @include titleRegular;
     color: $preenPink;
   }
+
+  .article-header {
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }

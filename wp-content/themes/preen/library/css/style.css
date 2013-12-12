@@ -3557,3 +3557,9 @@ article img {
   line-height: 1.2em;
   color: #eb1868;
 }
+
+/* line 1485, ../scss/style.scss */
+.article-header img {
+  max-width: 100%;
+  max-height: 100%;
+}
