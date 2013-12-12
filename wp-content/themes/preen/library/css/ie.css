@@ -485,6 +485,103 @@ select.responsiveMenuSelect {
   display: inline !important;
 }
 
+/* line 119, ../scss/_481up.scss */
+article {
+  padding: 14px !important;
+  background: #fff !important;
+  border: 1px solid #d9d9d9 !important;
+}
+
+/* line 125, ../scss/_481up.scss */
+.home article, .archive article {
+  float: right !important;
+  display: inline-block !important;
+  width: 48%;
+  min-height: 34em !important;
+  margin-bottom: 25px !important;
+}
+/* line 132, ../scss/_481up.scss */
+.home article:first-child, .archive article:first-child {
+  min-height: 0em !important;
+  display: block;
+  width: 100% !important;
+}
+
+/* line 140, ../scss/_481up.scss */
+.home article:nth-child(2n+2), .archive article:nth-child(2n+2) {
+  display: inline-block !important;
+  float: left !important;
+}
+
+/* line 147, ../scss/_481up.scss */
+.home article:first-child {
+  float: none;
+  width: 100%;
+  height: auto;
+}
+/* line 151, ../scss/_481up.scss */
+.home article:first-child img {
+  float: left;
+  margin-right: 0.5em;
+  background-color: white;
+}
+/* line 159, ../scss/_481up.scss */
+.home article .h2 {
+  font-size: 1.45em;
+  margin: 10px 0 14px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* line 169, ../scss/_481up.scss */
+.archive article .h2 {
+  font-size: 1.45em;
+  margin: 10px 0 14px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* line 176, ../scss/_481up.scss */
+.home article:first-child .h2 {
+  margin-top: 0;
+}
+
+/* line 180, ../scss/_481up.scss */
+article img {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  padding: 4px;
+  border: 1px solid #e2e2e2;
+}
+
+/* line 187, ../scss/_481up.scss */
+.entry-content.clearfix p {
+  display: inline !important;
+}
+
+/* line 193, ../scss/_481up.scss */
+.entry-content.clearfix p {
+  display: inline !important;
+}
+
+/* line 198, ../scss/_481up.scss */
+.article-header .byline.vcard {
+  display: inline !important;
+  padding-right: 20%;
+}
+
+/*
+
+.byline {
+  margin-left: 0em;
+  color: #707070;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0;
+
+}*/
 /******************************************************************
 Site Name:
 Author:

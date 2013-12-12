@@ -387,6 +387,77 @@ do they need tweaking?
 select.responsiveMenuSelect {
   display: inline !important; }
 
+article {
+  padding: 14px !important;
+  background: #fff !important;
+  border: 1px solid #d9d9d9 !important; }
+
+.home article, .archive article {
+  float: right !important;
+  display: inline-block !important;
+  width: 48%;
+  min-height: 34em !important;
+  margin-bottom: 25px !important; }
+  .home article:first-child, .archive article:first-child {
+    min-height: 0em !important;
+    display: block;
+    width: 100% !important; }
+
+.home article:nth-child(2n+2), .archive article:nth-child(2n+2) {
+  display: inline-block !important;
+  float: left !important; }
+
+.home article:first-child {
+  float: none;
+  width: 100%;
+  height: auto; }
+  .home article:first-child img {
+    float: left;
+    margin-right: 0.5em;
+    background-color: white; }
+.home article .h2 {
+  font-size: 1.45em;
+  margin: 10px 0 14px;
+  line-height: 1;
+  font-weight: 400; }
+
+.archive article .h2 {
+  font-size: 1.45em;
+  margin: 10px 0 14px;
+  line-height: 1;
+  font-weight: 400; }
+
+.home article:first-child .h2 {
+  margin-top: 0; }
+
+article img {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  padding: 4px;
+  border: 1px solid #e2e2e2; }
+
+.entry-content.clearfix p {
+  display: inline !important; }
+
+.entry-content.clearfix p {
+  display: inline !important; }
+
+.article-header .byline.vcard {
+  display: inline !important;
+  padding-right: 20%; }
+
+/*
+
+.byline {
+  margin-left: 0em;
+  color: #707070;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0;
+
+}*/
 /******************************************************************
 Site Name:
 Author:
