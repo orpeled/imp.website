@@ -520,25 +520,27 @@ article {
 
 /* line 150, ../scss/_481up.scss */
 .home article:first-child {
+  margin-top: 1em;
   float: none;
   width: 100%;
   height: auto;
 }
-/* line 154, ../scss/_481up.scss */
+/* line 155, ../scss/_481up.scss */
 .home article:first-child img {
   float: left;
   margin-right: 0.5em;
   background-color: white;
 }
-/* line 162, ../scss/_481up.scss */
+/* line 163, ../scss/_481up.scss */
 .home article .h2 {
   font-size: 1.45em;
   margin: 10px 0 14px;
   line-height: 1;
   font-weight: 400;
+  padding: 0 0 0 0 !important;
 }
 
-/* line 172, ../scss/_481up.scss */
+/* line 174, ../scss/_481up.scss */
 .archive article .h2 {
   font-size: 1.45em;
   margin: 10px 0 14px;
@@ -546,12 +548,12 @@ article {
   font-weight: 400;
 }
 
-/* line 179, ../scss/_481up.scss */
+/* line 181, ../scss/_481up.scss */
 .home article:first-child .h2 {
   margin-top: 0;
 }
 
-/* line 183, ../scss/_481up.scss */
+/* line 185, ../scss/_481up.scss */
 article img {
   box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -559,41 +561,54 @@ article img {
   border: 1px solid #e2e2e2;
 }
 
-/* line 190, ../scss/_481up.scss */
+/* line 192, ../scss/_481up.scss */
 .entry-content.clearfix p {
   display: inline !important;
 }
 
-/* line 196, ../scss/_481up.scss */
+/* line 198, ../scss/_481up.scss */
 .entry-content.clearfix p {
   display: inline !important;
 }
 
-/* line 200, ../scss/_481up.scss */
+/* line 202, ../scss/_481up.scss */
 .article-header {
   border: none !important;
 }
-/* line 202, ../scss/_481up.scss */
+/* line 204, ../scss/_481up.scss */
 .article-header .byline.vcard {
   display: block !important;
 }
-/* line 206, ../scss/_481up.scss */
+/* line 208, ../scss/_481up.scss */
+.article-header .image-cropper-mobile {
+  overflow: visible !important;
+  margin-top: 1em;
+}
+/* line 212, ../scss/_481up.scss */
 .article-header img {
-  padding: 0.3em !important;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  display: inline !important;
   max-width: 100% !important;
+  max-height: 100% !important;
   width: inherit !important;
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+  padding: 0.3em !important;
 }
-/* line 214, ../scss/_481up.scss */
+/* line 227, ../scss/_481up.scss */
 .article-header .h2 {
   text-align: left !important;
 }
 
-/* line 218, ../scss/_481up.scss */
+/* line 231, ../scss/_481up.scss */
 article {
   padding-bottom: 1em !important;
+}
+
+/* line 235, ../scss/_481up.scss */
+#logo {
+  width: 40% !important;
 }
 
 /******************************************************************
@@ -774,34 +789,35 @@ mobile. Make sure to double check these!
 
 /* line 295, ../scss/_768up.scss */
 #logo {
+  width: 20% !important;
   float: left;
   margin: 0 !important;
   padding: 1.5em 0 0em !important;
 }
-/* line 299, ../scss/_768up.scss */
+/* line 300, ../scss/_768up.scss */
 #logo img {
   display: inline !important;
   width: 100% !important;
 }
 
-/* line 305, ../scss/_768up.scss */
+/* line 306, ../scss/_768up.scss */
 .blog-title-sidebar-mobile {
   display: none !important;
 }
 
-/* line 308, ../scss/_768up.scss */
+/* line 309, ../scss/_768up.scss */
 select.responsiveMenuSelect {
   display: none !important;
 }
 
-/* line 312, ../scss/_768up.scss */
+/* line 313, ../scss/_768up.scss */
 .article-header {
   border: 1px solid #e5e5e5;
 }
-/* line 314, ../scss/_768up.scss */
-.article-header img {
-  max-width: 90%;
-  max-height: 90%;
+
+/* line 325, ../scss/_768up.scss */
+.home article:first-child {
+  margin-top: 0em !important;
 }
 
 /******************************************************************

@@ -411,6 +411,7 @@ article {
   float: left !important; }
 
 .home article:first-child {
+  margin-top: 1em;
   float: none;
   width: 100%;
   height: auto; }
@@ -422,7 +423,8 @@ article {
   font-size: 1.45em;
   margin: 10px 0 14px;
   line-height: 1;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 0 0 0 0 !important; }
 
 .archive article .h2 {
   font-size: 1.45em;
@@ -449,18 +451,27 @@ article img {
   border: none !important; }
   .article-header .byline.vcard {
     display: block !important; }
+  .article-header .image-cropper-mobile {
+    overflow: visible !important;
+    margin-top: 1em; }
   .article-header img {
-    padding: 0.3em !important;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: inline !important;
     max-width: 100% !important;
-    width: inherit !important; }
+    max-height: 100% !important;
+    width: inherit !important;
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+    padding: 0.3em !important; }
   .article-header .h2 {
     text-align: left !important; }
 
 article {
   padding-bottom: 1em !important; }
+
+#logo {
+  width: 40% !important; }
 
 /******************************************************************
 Site Name:
@@ -601,6 +612,7 @@ mobile. Make sure to double check these!
   display: block !important; }
 
 #logo {
+  width: 20% !important;
   float: left;
   margin: 0 !important;
   padding: 1.5em 0 0em !important; }
@@ -616,9 +628,9 @@ select.responsiveMenuSelect {
 
 .article-header {
   border: 1px solid #e5e5e5; }
-  .article-header img {
-    max-width: 90%;
-    max-height: 90%; }
+
+.home article:first-child {
+  margin-top: 0em !important; }
 
 /******************************************************************
 Site Name: 
