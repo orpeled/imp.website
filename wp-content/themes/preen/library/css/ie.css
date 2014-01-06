@@ -589,24 +589,25 @@ article img {
   margin-left: auto;
   margin-right: auto;
   display: inline !important;
-  max-width: 100% !important;
+  height: inherit !important;
   max-height: 100% !important;
   width: inherit !important;
+  max-width: 100% !important;
   margin-top: 0em !important;
   margin-bottom: 0em !important;
   padding: 0.3em !important;
 }
-/* line 227, ../scss/_481up.scss */
+/* line 226, ../scss/_481up.scss */
 .article-header .h2 {
   text-align: left !important;
 }
 
-/* line 231, ../scss/_481up.scss */
+/* line 230, ../scss/_481up.scss */
 article {
   padding-bottom: 1em !important;
 }
 
-/* line 235, ../scss/_481up.scss */
+/* line 234, ../scss/_481up.scss */
 #logo {
   width: 40% !important;
 }
