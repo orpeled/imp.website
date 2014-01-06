@@ -2213,6 +2213,8 @@ select.responsiveMenuSelect {
     display: inline; }
 
 .nav {
+  margin-bottom: 0.1em;
+  padding-top: 0.7em;
   border-bottom: 0; }
   .nav .menu-item {
     margin: 0em 1.5em 0em; }
@@ -2232,7 +2234,7 @@ select.responsiveMenuSelect {
     font-size: 0.8em;
     color: white;
     display: block;
-    padding: 0.7em 0;
+    padding: 0 0;
     text-decoration: none;
     background-color: #252525; }
     .nav .menu-item a:hover, .nav menu-item-has-children a:hover {
@@ -2256,6 +2258,8 @@ select.responsiveMenuSelect {
   .nav .menu-item-has-children .sub-menu .menu-item a {
     padding-left: 2.5em;
     padding-right: 2.5em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
     text-align: center;
     background-color: white;
     color: #eb1868; }
@@ -2266,77 +2270,12 @@ select.responsiveMenuSelect {
     letter-spacing: .05em;
     font-size: 0.8em;
     font-weight: lighter; }
+  .nav .styled-menu {
+    height: 1em;
+    margin-top: 0em; }
   .nav .non-styled-menu a {
     font-family: "Source Sans Pro"; }
 
-/*  article {
-    padding: 14px;
-    background: #fff;
-    border: 1px solid #d9d9d9;
-  }*/
-/*  .home article, .archive article {
-    float: right;
-    //display: inline-block;
-    //width: 48%;
-    display: block;
-    width: 100%;
-    min-height: 34em;
-    margin-bottom: 25px;
-
-    &:first-child {
-      min-height: 0em !important;
-
-    }
-  }
-
-  .home article:nth-child(2n+2), .archive article:nth-child(2n+2) {
-    display: block;
-    float: left;
-  }*/
-/*
-  .home article {
-
-    &:first-child {
-      float: none;
-      width: 100%;
-      height: auto;
-      img {
-        float: left;
-        margin-right: 0.5em;
-        background-color: $white;
-
-
-      }
-    }
-    .h2 {
-
-      font-size: 1.45em;
-      margin: 10px 0 14px;
-      line-height: 1;
-      font-weight: 400;
-
-    }
-  }
-
-  .archive article .h2 {
-    font-size: 1.45em;
-    margin: 10px 0 14px;
-    line-height: 1;
-    font-weight: 400;
-  }
-
-  .home article:first-child .h2 {
-    margin-top: 0;
-  }
-
-  article img {
-    box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    padding: 4px;
-    border: 1px solid #e2e2e2;
-
-
-  }*/
 #content {
   margin-top: 0em; }
 
@@ -2558,7 +2497,7 @@ select.responsiveMenuSelect {
     background: #eb1868;
     font-size: 18px;
     color: #fff;
-    font-weight: 400;
+    font-weight: 500;
     height: 34px;
     line-height: 34px;
     padding: 0 10px;

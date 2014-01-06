@@ -11,7 +11,7 @@
 									
 									<header class="article-header">
                                         <div class="image-cropper-mobile">
-										    <?php the_post_thumbnail( 'bones-thumb-270' ); ?>
+                                            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'bones-thumb-270' ); ?></a>
                                         </div>
 										<h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 										<p class="byline vcard"><?php
