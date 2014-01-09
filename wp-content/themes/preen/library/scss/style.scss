@@ -718,7 +718,7 @@ h5, .h5 {
       background-position: 0 bottom !important;
     }
     &.rss a:hover {
-      background-position: 0 0 !important;
+      background-position: 0 bottom !important;
     }
   }
   display: none;
@@ -1263,6 +1263,9 @@ select.responsiveMenuSelect {
   p{
     display: none;
   }
+}
+.entry-content.clearfix[itemprop="articleBody"] p{
+  display: block !important;
 }
 
 @media only screen and (min-width: 768px) {
