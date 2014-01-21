@@ -622,7 +622,7 @@ span.amp {
 }
 
 body {
-  font-family: 'Source Sans Pro',serif;
+  font-family: 'Source Sans Pro';
   font-size: 100%;
   line-height: 1.5;
   color: $baseBlack;
@@ -777,10 +777,12 @@ select.responsiveMenuSelect {
 .nav {
   margin-bottom: 0.1em;
   padding-top: 0.7em;
+  letter-spacing: 0.58;
   //border: 1px solid #ccc;
   border-bottom: 0;
   .menu-item {
-    margin: 0em 1.5em 0em;
+
+    margin: 0em 1.8em 0em;
 
     &:nth-child(5){
       border-right: 1px solid $lightGray;
@@ -801,9 +803,9 @@ select.responsiveMenuSelect {
   }
 
   .menu-item a, menu-item-has-children a{
-    @include textSub;
+    @include textSubLight;
     font-weight: 300;
-    font-size: 0.8em;
+    font-size: 0.75em;
     color: white;
     display: block;
     padding: 0 0;
@@ -815,7 +817,8 @@ select.responsiveMenuSelect {
     }
   }
   .sub-menu {
-    left: -4.2em;
+    left: -1.5em;
+    letter-spacing: 0.58;
     background-color: white;
     .menu-item-type-custom{
       width: 100%;
@@ -823,7 +826,7 @@ select.responsiveMenuSelect {
       border-bottom: 1px solid $borderGray;
       padding: 0em;
       margin-top: 0em;
-      margin-right: 5em;
+      margin-right: 4.3em;
       margin-left: 0em;
       margin-bottom: 0em;
       background-color: white;
@@ -838,11 +841,11 @@ select.responsiveMenuSelect {
     .sub-menu {
 
       .menu-item a{
-        padding-left: 2.5em;
-        padding-right: 2.5em;
+        padding-left: 2em;
+        padding-right: 1em;
         padding-top: 0.75em;
         padding-bottom: 0.75em;
-        text-align: center;
+        text-align: left;
         background-color: white;
         color: $preenPink;
         &:hover {
@@ -854,7 +857,7 @@ select.responsiveMenuSelect {
   .styled-menu a{
     font-family: $courgette;
     letter-spacing: .05em;
-    font-size: 0.8em;
+    font-size: 0.75em;
     font-weight: lighter;
   }
   .styled-menu {
@@ -881,8 +884,8 @@ select.responsiveMenuSelect {
 .byline {
   margin-left: 0em;
   color: #707070;
+  @include textSub;
   font-size: 0.75em;
-  font-weight: 700;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   padding: 0px 0;
@@ -916,6 +919,7 @@ select.responsiveMenuSelect {
 
   p{
     margin-bottom: 0em;
+    @include textSubLight;
     //text-align: justify;
 
   }
@@ -946,12 +950,14 @@ select.responsiveMenuSelect {
   margin-left: 10px;
   line-height: 1;
   a, span {
+    @include textSubLight;
     padding: 3px 6px;
     display: block;
     text-decoration: none;
     position: relative;
     font-weight: normal;
     border: 1px solid #ddd;
+
   }
   a {
     color: $preenPink;
@@ -1171,7 +1177,7 @@ select.responsiveMenuSelect {
   margin-top: 0em;
   .widgettitle {
     background: $preenPink;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     font-weight: 500;
     height: 34px;
@@ -1179,10 +1185,16 @@ select.responsiveMenuSelect {
     padding: 0 10px;
     margin: 0 -10px 10px;
   }
+  .textwidget {
+    @include textSubLight;
+  }
   .widget {
     padding: 0 10px 10px;
     margin: 0  0 1.2em;
     background: #fff;
+    .cat-item {
+      @include textSubLight;
+    }
   }
   .blog-title-sidebar {
     color: $preenPink;
@@ -1202,7 +1214,7 @@ select.responsiveMenuSelect {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 0.4em;
   padding-bottom: 0.4em;
-  font-weight: 14px;
+  //font-weight: normal;
   &:before {
     content: "";
     display: table;
@@ -1215,7 +1227,7 @@ select.responsiveMenuSelect {
   a {
     color: #575757 !important;
     text-decoration: none;
-    font-weight: 600;
+    //font-weight: normal;
   }
 }
 
@@ -1223,14 +1235,19 @@ select.responsiveMenuSelect {
   img {
     float: left;
     margin-right: 15px;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
   }
   span {
     //float: right;
+    @include textSubLight;
     width: 75%;
-    line-height: 1.3;
-    font-size: 13px;
+    //line-height: 0.5px;
+    //font-size: 12px;
+    //font-weight: 600;
   }
 }
+
 
 .footer {
   clear: both;
@@ -1458,8 +1475,15 @@ select.responsiveMenuSelect {
   }
   .h2 {
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1em;
     padding: 0 3.5% 0 3.5% ;
+  }
+  h1[itemprop="headline"] {
+    margin-top: 0px;
+    @include titleLight;
+    font-weight: lighter;
+    font-size: 2em;
+    color: $preenPink;
   }
 }
 article {

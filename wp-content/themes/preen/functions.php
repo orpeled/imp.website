@@ -174,9 +174,9 @@ function bones_wpsearch($form) {
 	return $form;
 } // don't remove this bracket!
 function custom_excerpt_length( $length ) {
-	return 25;
+	return 22;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'custom_excerpt_length', 22 );
 
 function load_custom_fonts() {
     wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Courgette');

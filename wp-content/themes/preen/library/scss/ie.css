@@ -466,7 +466,9 @@ article img {
     margin-bottom: 0em !important;
     padding: 0.3em !important; }
   .article-header .h2 {
-    text-align: left !important; }
+    text-align: left !important;
+    font-size: 1.3em;
+    padding: 0 3.5% 0 3.5%; }
 
 article {
   padding-bottom: 1em !important; }
