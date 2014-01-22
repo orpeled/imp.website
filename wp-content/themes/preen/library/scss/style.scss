@@ -21,6 +21,9 @@ of the styles inside media queries.
 // import mixins
 @import "mixins";
 
+// import icons
+@import "icons2";
+
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -816,8 +819,9 @@ select.responsiveMenuSelect {
       color: $preenPink;
     }
   }
+
   .sub-menu {
-    left: -1.5em;
+    left: -1em;
     letter-spacing: 0.58;
     background-color: white;
     .menu-item-type-custom{
@@ -839,10 +843,12 @@ select.responsiveMenuSelect {
   .menu-item-has-children {
 
     .sub-menu {
+      margin-top: 0em;
 
-      .menu-item a{
-        padding-left: 2em;
-        padding-right: 1em;
+      .menu-item a {
+
+        padding-left: 1.2em;
+        padding-right: 0.5em;
         padding-top: 0.75em;
         padding-bottom: 0.75em;
         text-align: left;
@@ -871,6 +877,22 @@ select.responsiveMenuSelect {
 
   }
 }
+// Getting the menu down a bit
+.responsiveSelectFullMenu > li > a {
+  padding-bottom: 0.8em !important;
+}
+
+.responsiveSelectFullMenu > .menu-item-has-children > a:after {
+  @include icons-arrow-down4-v2;
+  font-style: normal;
+  font-weight: normal;
+  top: 0.15em;
+  margin-left: 0.3em;
+  line-height: 1;
+  position: relative;
+  //font-size: 0.1em;
+}
+
 
 #content {
   margin-top: 0em;
@@ -1480,11 +1502,13 @@ select.responsiveMenuSelect {
   }
   h1[itemprop="headline"] {
     margin-top: 0px;
-    @include titleLight;
-    font-weight: lighter;
-    font-size: 2em;
+    @include titleRegular;
+    font-size: 1.9em;
     color: $preenPink;
   }
+}
+.inside-article-header {
+  border: none;
 }
 article {
   padding-top: 1em;
