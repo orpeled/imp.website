@@ -55,7 +55,7 @@
 				<?php if ( function_exists( 'ot_get_option' ) ) {
  				 $site_logo = ot_get_option( 'site_logo' );
 				}?>
-				<div id="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo $site_logo;?>"/></a> <span class="blog-title-sidebar-mobile">BLOG</span></div>
+				<div id="logo"><a href="http://www.preen.me"><img src="<?php echo $site_logo;?>"/></a> <span class="blog-title-sidebar-mobile">BLOG</span></div>
 
 					<!-- if you'd like to use the site description you can un-comment it below -->
 					<?php // bloginfo('description'); ?>

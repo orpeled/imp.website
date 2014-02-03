@@ -1,5 +1,7 @@
 				<div id="sidebar1" class="sidebar fourcol first clearfix" role="complementary">
-                    <h2 class="blog-title-sidebar">BLOG</h2>
+                    <h2 class="blog-title-sidebar">
+                        <a href="<?php echo site_url(); ?>">BLOG</a>
+                    </h2>
 
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
