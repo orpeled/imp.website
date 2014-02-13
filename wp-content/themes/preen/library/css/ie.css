@@ -614,6 +614,19 @@ article {
   width: 40% !important;
 }
 
+/* line 242, ../scss/_481up.scss */
+#wp-sharrre .expanded-text {
+  display: inline !important;
+}
+/* line 245, ../scss/_481up.scss */
+#wp-sharrre .alternate-text {
+  display: none !important;
+}
+/* line 249, ../scss/_481up.scss */
+#wp-sharrre .social-share {
+  margin-right: 4px !important;
+}
+
 /******************************************************************
 Site Name:
 Author:

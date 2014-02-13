@@ -476,6 +476,13 @@ article {
 #logo {
   width: 40% !important; }
 
+#wp-sharrre .expanded-text {
+  display: inline !important; }
+#wp-sharrre .alternate-text {
+  display: none !important; }
+#wp-sharrre .social-share {
+  margin-right: 4px !important; }
+
 /******************************************************************
 Site Name:
 Author:

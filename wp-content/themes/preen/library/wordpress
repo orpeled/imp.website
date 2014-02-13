@@ -1,0 +1,23 @@
+server {
+ listen 80;
+ root /var/www/wordpress;
+ index index.php index.html index.htm;
+ server_name preenmeblog;
+ client_max_body_size 45M;
+location / {
+ try_files $uri $uri/ /index.php?q=$uri&$args;
+ }
+error_page 404 /404.html;
+error_page 500 502 503 504 /50x.html;
+ location = /50x.html {
+ root /usr/share/nginx/www;
+ }
+# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9$
+ location ~ \.php$ {
+ #fastcgi_pass 127.0.0.1:9000;
+ # With php5-fpm:
+ fastcgi_pass unix:/etc/php5/fpm/sockets/wordpress.socket;
+ fastcgi_index index.php;
+ include fastcgi_params;
+ }
+}

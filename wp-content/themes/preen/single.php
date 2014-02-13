@@ -19,7 +19,10 @@
 
 								</header> <!-- end article header -->
 
-								<section class="entry-content clearfix" itemprop="articleBody">
+                                <!-- Trying to add Sharrre -->
+                                <?php if ( is_callable( '\WP_Sharrre\View\Frontend::display_wp_sharrre' ) ) { echo \WP_Sharrre\View\Frontend::display_wp_sharrre(); } ?>
+
+                                <section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section> <!-- end article section -->
 

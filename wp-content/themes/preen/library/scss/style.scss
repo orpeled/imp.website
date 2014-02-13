@@ -21,8 +21,12 @@ of the styles inside media queries.
 // import mixins
 @import "mixins";
 
-// import icons
+// import Icons
 @import "icons2";
+
+// import Social Buttons
+@import "socialButtons";
+
 
 /*
 BASE (MOBILE) SIZE
@@ -1513,4 +1517,18 @@ select.responsiveMenuSelect {
 article {
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+#wp-sharrre {
+  .expanded-text {
+    display: none;
+  }
+  .alternate-text {
+    display: inline;
+  }
+
+    .social-share {
+      margin-right: 3px;
+    }
+
 }
