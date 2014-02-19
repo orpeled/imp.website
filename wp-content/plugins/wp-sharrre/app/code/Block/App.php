@@ -89,7 +89,7 @@ if ( ! class_exists( 'App' ) ) :
 		 * Register and enqueue the sharrre main javascript library
 		 */
 		function wp_sharrre_scripts_horizontal() {
-			wp_register_script( 'sharrre-js', WP_SHARRRE_URL . '/assets/js/jquery.sharrre-1.3.4.js', array( 'jquery' ), '1.3.4', true );
+			wp_register_script( 'sharrre-js', WP_SHARRRE_URL . '/assets/js/jquery.sharrre-1.3.4.js?v=12', array( 'jquery' ), '1.3.4', true );
 			wp_enqueue_script( 'sharrre-js' );
 		}
 
@@ -100,7 +100,7 @@ if ( ! class_exists( 'App' ) ) :
 		 * Add CSS and JS scripts
 		 */
 		function wp_sharrre_scripts_vertical() {
-			wp_register_script( 'sharrre-js', WP_SHARRRE_URL . '/assets/js/jquery.sharrre-1.3.4.js', array( 'jquery' ), '1.3.3', true );
+			wp_register_script( 'sharrre-js', WP_SHARRRE_URL . '/assets/js/jquery.sharrre-1.3.4.js?v=12', array( 'jquery' ), '1.3.3', true );
 			wp_enqueue_script( 'sharrre-js' );
 		}
 

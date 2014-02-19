@@ -445,7 +445,7 @@
   Plugin.prototype.getSocialJson = function (name) {
     var self = this,
     count = 0,
-    url = urlJson[name].replace('{url}', encodeURIComponent(this.options.url));
+    url = urlJson[name].replace('{url}', encodeURIComponent(window.location.host + window.location.pathname));
     if(this.options.buttons[name].urlCount === true && this.options.buttons[name].url !== ''){
       url = urlJson[name].replace('{url}', this.options.buttons[name].url);
     }
@@ -495,7 +495,7 @@
     for (e in this.options.count) { shareCount++; }
     if(shareCount === this.options.shareTotal){
       this.options.render(this, this.options);
-      console.log(this.options);
+      //console.log(this.options);
     }
   };
 
