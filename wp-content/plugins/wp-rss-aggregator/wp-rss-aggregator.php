@@ -3,7 +3,7 @@
     Plugin Name: WP RSS Aggregator
     Plugin URI: http://www.wprssaggregator.com
     Description: Imports and aggregates multiple RSS Feeds using SimplePie
-    Version: 3.9.5
+    Version: 4.0.8
     Author: Jean Galea
     Author URI: http://www.wprssaggregator.com
     License: GPLv2
@@ -11,7 +11,7 @@
     */
 
     /*  
-    Copyright 2012-2013 Jean Galea (email : info@jeangalea.com)
+    Copyright 2012-2014 Jean Galea (email : info@jeangalea.com)
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
@@ -29,10 +29,10 @@
 
     /**
      * @package   WPRSSAggregator
-     * @version   3.9.5
+     * @version   4.0.8
      * @since     1.0
      * @author    Jean Galea <info@jeangalea.com>
-     * @copyright Copyright (c) 2012-2013, Jean Galea
+     * @copyright Copyright (c) 2012-2014, Jean Galea
      * @link      http://www.wpmayor.com/
      * @license   http://www.gnu.org/licenses/gpl.html
      */
@@ -43,11 +43,11 @@
 
     // Set the version number of the plugin. 
     if( !defined( 'WPRSS_VERSION' ) )
-        define( 'WPRSS_VERSION', '3.9.5', true );
+        define( 'WPRSS_VERSION', '4.0.8', true );
 
     // Set the database version number of the plugin. 
     if( !defined( 'WPRSS_DB_VERSION' ) )
-        define( 'WPRSS_DB_VERSION', 12 );
+        define( 'WPRSS_DB_VERSION', 13 );
 
     // Set the plugin prefix 
     if( !defined( 'WPRSS_PREFIX' ) )
@@ -80,6 +80,12 @@
     // Set the constant path to the plugin's includes directory. 
     if( !defined( 'WPRSS_INC' ) )
         define( 'WPRSS_INC', WPRSS_DIR . trailingslashit( 'includes' ), true );
+
+    // Set the constant path to the plugin's log file.
+    if( !defined( 'WPRSS_LOG_FILE' ) )
+        define( 'WPRSS_LOG_FILE', WPRSS_DIR . 'log', true );
+    if( !defined( 'WPRSS_LOG_FILE_EXT' ) )
+        define( 'WPRSS_LOG_FILE_EXT', '.txt', true );
     
 
     /**
@@ -99,7 +105,13 @@
     require_once ( WPRSS_INC . 'roles-capabilities.php' ); 
 
     /* Load the feed processing functions file */
-    require_once ( WPRSS_INC . 'feed-processing.php' );   
+    require_once ( WPRSS_INC . 'feed-processing.php' );
+
+    /* Load the feed importing functions file */
+    require_once ( WPRSS_INC . 'feed-importing.php' );
+
+    /* Load the feed states functions file */
+    require_once ( WPRSS_INC . 'feed-states.php' );   
 
     /* Load the feed display functions file */
     require_once ( WPRSS_INC . 'feed-display.php' );            
@@ -154,26 +166,31 @@
 
     /* Load the security reset file */
     require_once ( WPRSS_INC . 'secure-reset.php' );
-
-    /* Load the logging class 
-       Need to make a check to avoid conflicts before loading. Not being used at the moment */
-    // require_once ( WPRSS_INC . 'libraries/WP_Logging.php' );   
-
+   
+    /* Load the admin editor file */
     require_once ( WPRSS_INC . 'admin-editor.php' );
+
+    // Load the logging functions file
+    require_once ( WPRSS_INC . 'admin-log.php' );
 
     
     register_activation_hook( __FILE__ , 'wprss_activate' );
     register_deactivation_hook( __FILE__ , 'wprss_deactivate' );
 
 
-    add_action( 'init', 'wprss_init' );     
+    add_action( 'init', 'wprss_init' );
     /**
      * Initialise the plugin
      *
      * @since  1.0
      * @return void
      */     
-    function wprss_init() {                    
+    function wprss_init() {
+        //If user requested to download system info, generate the download.
+        if ( isset( $_POST['wprss-sysinfo'] ) ) {
+            do_action( 'wprss_download_sysinfo' );
+        }
+
         do_action( 'wprss_init' );
     }
 

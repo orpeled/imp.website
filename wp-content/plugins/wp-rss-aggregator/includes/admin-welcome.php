@@ -61,26 +61,20 @@
 								Check out our add-ons:</p> 
 
 								<ul>
-									<li><strong><a href="http://www.wprssaggregator.com/extension/feed-post/" target="wprss_ftp">Feed to Post</a> <span style="color: green;">*New*</span></strong></li>
+									<li><strong><a href="http://www.wprssaggregator.com/extension/feed-post/" target="wprss_ftp">Feed to Post</a> <!--<span style="color: green;">*New*</span></strong>--></li>
 									<li><strong><a href="http://www.wprssaggregator.com/extension/excerpts-thumbnails/"  target="wprss_et">Excerpts &amp; Thumbnails</a></strong></li>
 									<li><strong><a href="http://www.wprssaggregator.com/extension/categories/" target="wprss_cat">Categories</a></strong></li>
 									<li><strong><a href="http://www.wprssaggregator.com/extension/keyword-filtering/" target="wprss_kf">Keyword Filtering</a></strong></li>
 								</ul>
 							</p>
-							<p>Plus we've got some other add-ons already being developed!</p>
+							<p>Need functionality not already available in core or the add-ons? You <a href="http://www.wprssaggregator.com/feature-requests/">suggest new features</a>!</p>
 							<p>More information about add-ons can be found on our website <a href="http://www.wprssaggregator.com">www.wprssaggregator.com</a></p>
 
 
 
 							<h3>Changelog for v<?php echo WPRSS_VERSION; ?></h3>
 							<ul>
-								<li>Enhanced: Added a feed validator link in the New/Edit Feed Sources page.</li>
-								<li>Enhanced: The Next Update column also shows the time remaining for next update, for feed source on the global update interval.</li>
-								<li>Enhanced: The custom feed has been improved, and is now identical to the feeds displayed with the shortcode.</li>
-								<li>Enhanced: License notifications only appear on the main site when using WordPress multisite.</li>
-								<li>Enhanced: Updated Colorbox script to 1.4.33</li>
-								<li>Fixed bug: The Imported Items column was always showing zero.</li>
-								<li>Fixed bug: Feed items not being imported with limit set to zero. Should be unlimited.</li>
+								<li><strong>Fixed bug:</strong> Using the shortcode makes the comments section always open.</li>
 							</ul>
 
 

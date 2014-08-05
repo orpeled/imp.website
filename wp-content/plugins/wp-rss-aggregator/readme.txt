@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Plugin URI: http://www.wprssaggregator.com
 Tags: rss, feeds, aggregation, autoblog aggregator, rss import, feed aggregator, rss aggregator, multiple rss feeds, multi rss feeds, rss multi importer, feed import, feed import, multiple feed import, feed aggregation, rss feader, feed reader, feed to post, multiple feeds, multi feed importer, multi feed import, multi import, autoblogging, autoblogger
 Requires at least: 3.3
-Tested up to: 3.8
-Stable tag: 3.9.5
+Tested up to: 3.8.1
+Stable tag: 4.0.8
 License: GPLv2 or later
 Imports and aggregates multiple RSS Feeds using SimplePie. Outputs feeds sorted by date (latest first).
 
@@ -70,6 +70,11 @@ WP RSS Aggregator uses the SimplePie class to import and handle feeds, and store
 = Translations =
 Italian - Davide De Maestri
 
+= Reviewed On =
+* [Kikolani](http://kikolani.com/create-latest-posts-portfolio-page-wp-rss-aggregator.html) 
+* [IndexWP](www.indexwp.com/wp-rss-aggregator-plugin-review/)
+* [WPulsar](http://www.wpulsar.com/wp-rss-aggregator-plugin-feed-to-posts-keyword-filtering-review/)
+* [Kevin Muldoon](http://www.kevinmuldoon.com/wp-rss-aggregator-wordpress-plugin/)
 
 == Installation ==
 
@@ -144,6 +149,54 @@ Yes, within the [Feed to Post](http://www.wprssaggregator.com/extensions/feed-to
 
 
 == Changelog ==
+
+= 4.0.8 (2014-03-20) =
+* Fixed bug: Using the shortcode makes the comments section always open.
+
+= 4.0.7 (2014-03-08) =
+* Fixed bug: The plugin prevented uploading of header images.
+
+= 4.0.6 (2014-03-05) =
+* Fixed bug: Hook change in last version suspected reason for some installations having non-updated feed items.
+
+= 4.0.5 (2014-03-03) =
+* New Feature: Time ago added as an option.
+* Enhanced: The plugin now allows the use of RSS and Atom feeds that do not specify the correct MIME type.
+* Enhanced: Better performance due to better hook usage.
+* Fixed bug: Facebook page feed URL conversion was not being triggered for new feed sources.
+* Fixed bug: Styles fix for pagination.
+* Fixed bug: Removed empty spaces in logging.
+
+= 4.0.4 (2014-02-17) =
+* Enhanced: Added Activate/Pause bulk actions in the Feed Sources page.
+* Enhanced: Feed Sources page table has been re-designed.
+* Enhanced: Logging is now site dependant on multisite.
+* Fixed bug: Undefined display settings where appearing on the front end.
+
+= 4.0.3 (2014-02-12) =
+* Fixed bug: The general setting for deleting feed items by age was not working.
+
+= 4.0.2 (2014-02-10) =
+* Enhanced: Added a filter to change the html tags allowed in feed item content.
+
+= 4.0.1 (2014-02-08) =
+* Fixed bug: Empty array of feed items bug caused importing problems.
+
+= 4.0 (2014-02-04) =
+* Enhanced: Improved some internal queries, for better performance.
+* Fixed bug: Feed limits were not working properly.
+
+= 3.9.9 (2014-02-03) =
+* Enhanced: The custom feed can now be extended by add-ons.
+
+= 3.9.8 (2014-01-20) =
+* Fixed bug: Removed excessive logging from Debugging Error Log.
+
+= 3.9.7 (2014-01-17) =
+* Fixed bug: Bug in admin-debugging.php causing trouble with admin login
+
+= 3.9.6 (2014-01-17) =
+* Enhanced: Added error logging.
 
 = 3.9.5 (2014-01-02) =
 * Enhanced: Added a feed validator link in the New/Edit Feed Sources page.

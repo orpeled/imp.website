@@ -185,5 +185,5 @@ function load_custom_fonts() {
 
 add_action('wp_print_styles', 'load_custom_fonts');
 
-
+add_theme_support( 'post-thumbnails' );
 ?>

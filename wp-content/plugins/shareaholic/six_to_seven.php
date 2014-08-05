@@ -29,7 +29,6 @@ class ShareaholicSixToSeven {
     $new_classicbookmarks_locations = self::transform_classicbookmarks_locations($classicbookmarks_configuration, $sexybookmarks_configuration);
     $new_top_bar_configuration = self::transform_top_bar_configuration($top_bar_configuration);
 
-
     $location_names = array_map(array('self', 'grab_location_iterator'), $new_share_buttons_configuration['locations_attributes']);
     // if sexybookmarks are off or not on the bottom
     if ($sexybookmarks_configuration['sexybookmark'] != '1' ||
@@ -65,8 +64,10 @@ class ShareaholicSixToSeven {
       null;
 
     $verification_key = md5(mt_rand());
-    list($turned_on_share_buttons_locations, $turned_off_share_buttons_locations) = self::pad_locations($new_share_buttons_configuration);
-    list($turned_on_recommendations_locations, $turned_off_recommendations_locations) = self::pad_locations($new_recommendations_configuration);
+
+    list($turned_on_share_buttons_location_names, $turned_off_share_buttons_location_names) = self::pad_locations($new_share_buttons_configuration);
+    list($turned_on_recommendations_location_names, $turned_off_recommendations_location_names) = self::pad_locations($new_recommendations_configuration);
+
     $new_configuration = array(
       'configuration_publisher' => array(
         'share_buttons_attributes' => $new_share_buttons_configuration,
@@ -78,9 +79,6 @@ class ShareaholicSixToSeven {
         'language_id' => ShareaholicUtilities::site_language()
       ),
     );
-
-    ShareaholicUtilities::log($turned_off_share_buttons_locations);
-    ShareaholicUtilities::log($turned_off_recommendations_locations);
 
     $shortener_configuration = (isset($sexybookmarks_configuration['shorty']) ?
       self::transform_shortener_configuration($sexybookmarks_configuration) : array());
@@ -105,8 +103,8 @@ class ShareaholicSixToSeven {
       ));
 
       ShareaholicUtilities::turn_on_locations(
-        array('share_buttons' => $turned_on_share_buttons_locations, 'recommendations' => $turned_on_recommendations_locations),
-        array('share_buttons' => $turned_off_share_buttons_locations, 'recommendations' => $turned_off_recommendations_locations)
+        array('share_buttons' => array_flip($turned_on_share_buttons_location_names), 'recommendations' => array_flip($turned_on_recommendations_location_names)),
+        array('share_buttons' => array_flip($turned_off_share_buttons_location_names), 'recommendations' => array_flip($turned_off_recommendations_location_names))
       );
 
       self::transform_wordpress_specific_settings();
@@ -137,14 +135,11 @@ class ShareaholicSixToSeven {
     foreach($names_to_pad as $name) {
       $configuration['locations_attributes'][] = array('name' => $name);
     }
-    if (isset($configuration['location_name_ids'])) {
-      return array(
-        ShareaholicUtilities::associative_array_slice($configuration['location_name_ids'], $already_set_names),
-        ShareaholicUtilities::associative_array_slice($configuration['location_name_ids'], $names_to_pad)
-      );
-    } else {
-      return array();
-    }
+
+    return array(
+      $already_set_names,
+      $names_to_pad
+    );
   }
 
   private static function grab_location_iterator($location) {

@@ -1,9 +1,9 @@
 === Shareaholic | share buttons & related posts ===
 Contributors: shareaholic
 Tags: sexybookmarks, shareaholic, shareholic, facebook, twitter, linkedin, URL Shortener, bitly, tinyurl, Goo.gl, Google+1, Google Analytics, Google Plus, Google, Instapaper, Wish List, Digg, Gmail, Google Bookmarks, Translate, Tumblr, AIM, Yahoo Messenger, Delicious, StumbleUpon, mister wong, evernote, add this, addtoany, share this, sharethis, share and follow, share and enjoy, sharing is sexy, sharing is caring, yahoo, reddit, hackernews, tweet button, twitter button, fark, buffer, myspace, orkut, netlog, hubspot, weheartit, printfriendly, yammer, wanelo, pinterest, google translate, bookmarks, social, email button, social share, socialize, sociable, sharebar, bookmark button, share button, social bookmarking, bookmarks menu, bookmarking, share, seo, analytics, stats, sharing, facebook like, facebook recommend, WPMU, mutisite, shortcode, yaarp, yarpp, nrelate, outbrain, linkwithin, related content, related posts, related, popular posts, popular, thumbnails, recommendations
-Requires at least: 2.7
-Tested up to: 3.8
-Stable tag: 7.2.0.0
+Requires at least: 3.0
+Tested up to: 3.8.1
+Stable tag: 7.4.0.2
 
 Adds an attractive social bookmarking menu and related content widget to your posts, pages, index, or any combination of the three.
 
@@ -12,6 +12,7 @@ Adds an attractive social bookmarking menu and related content widget to your po
 Three powerful apps to amplify your content and create conversations, across the web. Shareaholic has proven time and time again to be an extremely useful and successful tool in getting your readers to actually **discover** and **submit your articles** to numerous social bookmarking sites.
 
 = Recent Updates =
+* [Floating Share Buttons](https://blog.shareaholic.com/floating-share-buttons/)!
 * [Shareable Images](https://blog.shareaholic.com/image-share-buttons/) (share buttons for images)
 * Recommendations & Related Content - Increases engagement and time on site by highlighting relevant content that may not otherwise be discovered from across your site.
 * Social Analytics - Provides you with important actionable metrics including insights into how your content is performing, who's sharing it, and through which channels.
@@ -19,6 +20,7 @@ Three powerful apps to amplify your content and create conversations, across the
 * Share Counters for Twitter, Facebook, LinkedIn, etc
 * Official support for Google's URL shortener (goo.gl) and Google Analytics
 * Localized in 15+ languages
+* Related Content support for post keywords specified in "All in One SEO Pack", "WordPress SEO by Yoast", etc plugins
 
 = Share Buttons =
 
@@ -128,11 +130,13 @@ In your PHP / theme template code, you would add:
 
 `<?php echo do_shortcode ('[shareaholic app="share_buttons" id="<insert shareaholic app ID here>"]'); ?>`
 `<?php echo do_shortcode ('[shareaholic app="recommendations" id="<insert shareaholic app ID here>"]'); ?>`
+`<?php echo do_shortcode ('[shareaholic app="ad_spaces" id="<insert shareaholic app ID here>"]'); ?>`
 
 Grab the corresponding App ID from your Shareaholic Dashboard for the App you want to manually insert into your theme. If use double quotes ("'s) in your title or summary, make sure to encode them properly as `&quot;`
 
 Shareaholic Shortcode's are full featured and support all available configuration options available. Enjoy!
 
+[General information about shortcodes and WordPress](https://codex.wordpress.org/Shortcode)
 
 Old legacy methods (not officially supported as of version 7.0.0.0):
 
@@ -144,12 +148,57 @@ Old legacy methods (not officially supported as of version 7.0.0.0):
 == Frequently Asked Questions ==
 
 = Where can I find a detailed FAQ? =
-Please see here: [Frequently Asked Questions](https://shareaholic.com/tools/wordpress/faq)
+Please see here: [Shareaholic Helpdesk](http://support.shareaholic.com/hc/en-us)
 
 = Where can I get detailed Usage & Installation instructions? =
-Please see here: [Usage & Installation Instructions](https://shareaholic.com/tools/wordpress/usage-installation)
+Please see here: [Usage & Installation Instructions](http://support.shareaholic.com/hc/en-us/categories/200101476-WordPress-Plugin)
 
 == Changelog ==
+
+= 7.4.0.2 =
+* Miscellaneous performance enhancements for Share Counts
+
+= 7.4.0.1 =
+* Miscellaneous performance enhancements for Share Counts
+
+= 7.4.0.0 =
+* Share Buttons App
+  * Share Counts for Google+, Reddit, StumbleUpon, VK, Buffer, etc! This release features an optional and all new server side Share Counts API. Toggle this option under the "Advanced Settings" section.
+  * Major performance upgrade and speed boost! Your pages will load faster for your visitors as share count lookups are now consolidated to one single HTTP request per page load (vs a call for each sharing service). The share counts are also heavily cached on both the client and server for super fast lookups and page performance.
+
+= 7.3.0.1 =
+* Miscellaneous bug fixes and performance enhancements
+
+= 7.3.0.0 =
+* Share Buttons App
+  * New alignment options - you can now pick whether you want your text to wrap around your buttons
+  * Multishare toggle for Twitter
+  * New services: VK (the 2nd largest social network service in Europe after Facebook), Fancy (recommended for e-commerce sites), Wanelo (recommended for e-commerce sites)
+  * New Share Counts library  
+* Floating Share Buttons App (NEW!) [learn more](https://blog.shareaholic.com/floating-share-buttons/)
+  * To enable, click on "Edit General Settings" -> Sign In -> Click on "Site Tools" -> Turn on the "Floated Share Buttons" App
+* Shareable Images App (NEW!) [learn more](https://blog.shareaholic.com/image-share-buttons/)
+  * To enable, click on "Edit General Settings" -> Sign In -> Turn on "Shareable Images"
+
+= 7.2.2.0 =
+* Miscellaneous performance enhancements and bug fixes
+* New / updated translations:
+  * French (by Rozenn Dagorn)
+  * German (by Oliver Heinrich)
+  * Dutch (by Patrick Ruers)
+  * Greek (by Takis Bouyouris)
+
+= 7.2.1.0 =
+* Admin Bar is now configurable
+* Shareaholic.js is now included earlier on the page to load apps faster
+* Bugfix: fixed "non-static method" and "array to string conversion" warnings -- affected servers running newer versions of PHP
+* Related Content
+  * Bugfix: Related Content data processing status is now correct
+  * Bugfix: Initiate Related Content crawl *after* site ID is set and not prior to
+  * Support for "WordPress SEO by Yoast" plugin meta keywords
+  * Support for "Add Meta Tags" plugin meta keywords
+* Analytics
+  * Several high impact enhancements to greatly improve data accuracy
 
 = 7.2.0.0 =
 * Miscellaneous bug fixes and performance enhancements to Related Content
@@ -997,6 +1046,30 @@ Please see here: [Usage & Installation Instructions](https://shareaholic.com/too
 * Initial release!
 
 == Upgrade Notice ==
+
+= 7.4.0.2 =
+
+Miscellaneous performance enhancements for Share Counts
+
+= 7.4.0.1 =
+
+Miscellaneous performance enhancements for Share Counts
+
+= 7.4.0.0 =
+
+Optional and all new server side Share Counts API for share counts for Google+, StumbleUpon, etc! You can toggle this option under the "Advanced Settings" section.
+  
+= 7.3.0.1 =
+Miscellaneous bug fixes and performance enhancements
+ 
+= 7.3.0.0 =
+Lots of new features - including Floating Share Buttons and Shareable Images!
+
+= 7.2.2.0 =
+New / updated translations for French (by Rozenn Dagorn), German (by Oliver Heinrich), Dutch (by Patrick Ruers) and Greek (by Takis Bouyouris)
+
+= 7.2.1.0 =
+The Admin Bar is now configurable and we also fixed the Related Content data processing status indicator. Also includes miscellaneous plugin  performance enhancements.
 
 = 7.2.0.0 =
 New Admin Bar options + miscellaneous bug fixes and performance enhancements to Related Content

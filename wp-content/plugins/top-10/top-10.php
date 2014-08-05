@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Top 10
-Version:     1.9.8.5
+Version:     1.9.9.2
 Plugin URI:  http://ajaydsouza.com/wordpress/plugins/top-10/
 Description: Count daily and total visits per post and display the most popular posts based on the number of views. Based on the plugin by <a href="http://weblogtoolscollection.com">Mark Ghosh</a>
 Author:      Ajay D'Souza
@@ -50,7 +50,7 @@ $tptn_settings = tptn_read_options();
  * @return string Filtered content
  */
 function tptn_add_viewed_count($content) {
-	global $post, $wpdb, $single,$tptn_url,$tptn_path;
+	global $post, $wpdb, $single, $tptn_url, $tptn_path;
 	$table_name = $wpdb->prefix . "top_ten";
 
 	if(is_singular()) {
@@ -74,7 +74,7 @@ function tptn_add_viewed_count($content) {
 				if ($tptn_settings['cache_fix']) {
 					$output = '<script type="text/javascript">jQuery.ajax({url: "' .$tptn_url. '/top-10-addcount.js.php", data: {top_ten_id: ' .$id. ', activate_counter: ' . $activate_counter . ', top10_rnd: (new Date()).getTime() + "-" + Math.floor(Math.random()*100000)}});</script>';				
 				} else {
-					$output = '<script type="text/javascript" src="'.$tptn_url.'/top-10-addcount.js.php?top_ten_id='.$id.'"></script>';
+					$output = '<script type="text/javascript" src="'.$tptn_url.'/top-10-addcount.js.php?top_ten_id='.$id.'&amp;activate_counter='.$activate_counter.'"></script>';
 				}
 			}
 			$output = apply_filters('tptn_viewed_count',$output);
@@ -115,7 +115,7 @@ function tptn_pc_content($content) {
 	global $tptn_settings;
 
 	$exclude_on_post_ids = explode(',',$tptn_settings['exclude_on_post_ids']);
-	//$p_in_c = (in_array($post->ID, $exclude_on_post_ids)) ? true : false;
+
 	if (in_array($post->ID, $exclude_on_post_ids)) return $content;	// Exit without adding related posts
 	
 	if((is_single())&&($tptn_settings['add_to_content'])) {
@@ -195,44 +195,52 @@ function echo_tptn_post_count($echo=1) {
  * @param int|string $id Post ID
  * @return int Post count
  */
-function get_tptn_post_count($id) {
+function get_tptn_post_count($id = FALSE) {
 	global $wpdb;
 	
 	$table_name = $wpdb->prefix . "top_ten";
 	$table_name_daily = $wpdb->prefix . "top_ten_daily";
 	global $tptn_settings;
 	$count_disp_form = stripslashes($tptn_settings['count_disp_form']);
+	$count_disp_form_zero = stripslashes($tptn_settings['count_disp_form_zero']);
+	$totalcntaccess = get_tptn_post_count_only($id,'total');
 	
 	if($id > 0) {
 
 		// Total count per post
-		if (strpos($count_disp_form, "%totalcount%") !== false) {
-			$resultscount = $wpdb->get_row("SELECT postnumber, cntaccess FROM ".$table_name." WHERE postnumber = ".$id);
-			$cntaccess = number_format_i18n((($resultscount) ? $resultscount->cntaccess : 1));
-			$count_disp_form = str_replace("%totalcount%", $cntaccess, $count_disp_form);
+		if ( (strpos($count_disp_form, "%totalcount%") !== false) || (strpos($count_disp_form_zero, "%totalcount%") !== false) ) {
+			if ( (0 == $totalcntaccess) && (!is_singular()) ) {
+				$count_disp_form_zero = str_replace("%totalcount%", $totalcntaccess, $count_disp_form_zero);
+			} else {
+				$count_disp_form = str_replace("%totalcount%", (0 == $totalcntaccess ? $totalcntaccess+1 : $totalcntaccess), $count_disp_form);
+			}
 		}
 		
 		// Now process daily count
-		if (strpos($count_disp_form, "%dailycount%") !== false) {
-			$daily_range = $tptn_settings['daily_range']-1;
-			$current_time = gmdate( 'Y-m-d', ( time() + ( get_option( 'gmt_offset' ) * 3600 ) ) );
-			$current_date = strtotime ( '-'.$daily_range. ' DAY' , strtotime ( $current_time ) );
-			$current_date = date ( 'Y-m-j' , $current_date );
-	
-			$resultscount = $wpdb->get_row("SELECT postnumber, SUM(cntaccess) as sumCount FROM ".$table_name_daily." WHERE postnumber = ".$id." AND dp_date >= '".$current_date."' GROUP BY postnumber ");
-			$cntaccess = number_format_i18n((($resultscount) ? $resultscount->sumCount : 1));
-			$count_disp_form = str_replace("%dailycount%", $cntaccess, $count_disp_form);
+		if ( (strpos($count_disp_form, "%dailycount%") !== false) || (strpos($count_disp_form_zero, "%dailycount%") !== false) ) {
+			$cntaccess = get_tptn_post_count_only($id,'daily');
+			if ( (0 == $totalcntaccess) && (!is_singular()) ) {
+				$count_disp_form_zero = str_replace("%dailycount%", $cntaccess, $count_disp_form_zero);
+			} else {
+				$count_disp_form = str_replace("%dailycount%", (0 == $cntaccess ? $cntaccess+1 : $cntaccess), $count_disp_form);
+			}
 		}
 		
 		// Now process overall count
-		if (strpos($count_disp_form, "%overallcount%") !== false) {
-			$resultscount = $wpdb->get_row("SELECT SUM(cntaccess) as sumCount FROM ".$table_name);
-			$cntaccess = number_format_i18n((($resultscount) ? $resultscount->sumCount : 1));
-			$count_disp_form = str_replace("%overallcount%", $cntaccess, $count_disp_form);
+		if ( (strpos($count_disp_form, "%overallcount%") !== false) || (strpos($count_disp_form_zero, "%overallcount%") !== false) ) {
+			$cntaccess = get_tptn_post_count_only($id,'overall');
+			if ( (0 == $cntaccess) && (!is_singular()) ) {
+				$count_disp_form_zero = str_replace("%overallcount%", $cntaccess, $count_disp_form_zero);
+			} else {
+				$count_disp_form = str_replace("%overallcount%", (0 == $cntaccess ? $cntaccess+1 : $cntaccess), $count_disp_form);
+			}
 		}
-				
 		
-		return apply_filters('tptn_post_count',$count_disp_form);
+		if ( (0 == $totalcntaccess) && (!is_singular()) ) {
+			return apply_filters('tptn_post_count',$count_disp_form_zero);
+		} else {
+			return apply_filters('tptn_post_count',$count_disp_form);
+		}
 	} else {
 		return 0;
 	}
@@ -256,8 +264,8 @@ function get_tptn_post_count_only($id = FALSE, $count = 'total') {
 	if($id > 0) {
 		switch ($count) {
 			case 'total':
-				$resultscount = $wpdb->get_row("SELECT postnumber, cntaccess FROM ".$table_name." WHERE postnumber = ".$id);
-				$cntaccess = number_format_i18n((($resultscount) ? $resultscount->cntaccess : 1));
+				$resultscount = $wpdb->get_row( $wpdb->prepare( "SELECT postnumber, cntaccess FROM {$table_name} WHERE postnumber = %d" , $id ) );
+				$cntaccess = number_format_i18n((($resultscount) ? $resultscount->cntaccess : 0));
 				break;
 			case 'daily':
 				$daily_range = $tptn_settings['daily_range']-1;
@@ -265,12 +273,12 @@ function get_tptn_post_count_only($id = FALSE, $count = 'total') {
 				$current_date = strtotime ( '-'.$daily_range. ' DAY' , strtotime ( $current_time ) );
 				$current_date = date ( 'Y-m-j' , $current_date );
 		
-				$resultscount = $wpdb->get_row("SELECT postnumber, SUM(cntaccess) as sumCount FROM ".$table_name_daily." WHERE postnumber = ".$id." AND dp_date >= '".$current_date."' GROUP BY postnumber ");
-				$cntaccess = number_format_i18n((($resultscount) ? $resultscount->sumCount : 1));
+				$resultscount = $wpdb->get_row( $wpdb->prepare( "SELECT postnumber, SUM(cntaccess) as sumCount FROM {$table_name_daily} WHERE postnumber = %d AND dp_date >= '%s' GROUP BY postnumber ", array($id, $current_date) ) );
+				$cntaccess = number_format_i18n((($resultscount) ? $resultscount->sumCount : 0));
 				break;
 			case 'overall':
 				$resultscount = $wpdb->get_row("SELECT SUM(cntaccess) as sumCount FROM ".$table_name);
-				$cntaccess = number_format_i18n((($resultscount) ? $resultscount->sumCount : 1));
+				$cntaccess = number_format_i18n((($resultscount) ? $resultscount->sumCount : 0));
 				break;
 		}
 		return apply_filters('tptn_post_count_only',$cntaccess);
@@ -297,7 +305,7 @@ function tptn_pop_posts( $args ) {
 		'strict_limit' => FALSE,
 		'posts_only' => FALSE,
 	);
-	$defaults = array_merge($defaults, tptn_read_options());
+	$defaults = array_merge($defaults, $tptn_settings);
 	
 	// Parse incomming $args into an array and merge it with $defaults
 	$args = wp_parse_args( $args, $defaults );
@@ -305,8 +313,11 @@ function tptn_pop_posts( $args ) {
 	// OPTIONAL: Declare each item in $args as its own variable i.e. $type, $before.
 	extract( $args, EXTR_SKIP );
 
-	if ($daily) $table_name = $wpdb->prefix . "top_ten_daily"; 
-		else $table_name = $wpdb->prefix . "top_ten";
+	if ($daily) {
+		$table_name = $wpdb->prefix . "top_ten_daily"; 
+	} else {
+		$table_name = $wpdb->prefix . "top_ten";
+	}
 	
 	$limit = ($strict_limit) ? $limit : ($limit*5);	
 
@@ -318,41 +329,53 @@ function tptn_pop_posts( $args ) {
 	parse_str($post_types,$post_types);	// Save post types in $post_types variable
 
 	if (!$daily) {
+		$args = array();
 		$sql = "SELECT postnumber, cntaccess as sumCount, ID, post_type, post_status ";
-		$sql .= "FROM $table_name INNER JOIN ". $wpdb->posts ." ON postnumber=ID " ;
+		$sql .= "FROM {$table_name} INNER JOIN ". $wpdb->posts ." ON postnumber=ID " ;
 		$sql .= "AND post_status = 'publish' ";
-		if ($exclude_post_ids!='') $sql .= "AND ID NOT IN (".$exclude_post_ids.") ";
+		if ($exclude_post_ids!='') { 
+			$sql .= "AND ID NOT IN ({$exclude_post_ids}) ";
+		}
 		$sql .= "AND ( ";
 		$multiple = false;
 		foreach ($post_types as $post_type) {
 			if ( $multiple ) $sql .= ' OR ';
-			$sql .= " post_type = '".$post_type."' ";
+			$sql .= " post_type = '%s' ";
 			$multiple = true;
+			$args[] = $post_type;	// Add the post types to the $args array
 		}
 		$sql .=" ) ";
-		$sql .= "ORDER BY sumCount DESC LIMIT $limit";
+		$sql .= "ORDER BY sumCount DESC LIMIT %d";
+		$args[] = $limit;
 	} else {
 		$current_time = current_time( 'timestamp', 0 );
 		$current_time = $current_time - ($daily_range-1) * 3600 * 24;
 		$current_date = date( 'Y-m-j', $current_time );
 		
+		$args = array(
+			$current_date,
+		);
 		$sql = "SELECT postnumber, SUM(cntaccess) as sumCount, dp_date, ID, post_type, post_status ";
-		$sql .= "FROM $table_name INNER JOIN ". $wpdb->posts ." ON postnumber=ID " ;
-		$sql .= "AND post_status = 'publish' AND dp_date >= '$current_date' ";
-		if ($exclude_post_ids!='') $sql .= "AND ID NOT IN (".$exclude_post_ids.") ";
+		$sql .= "FROM {$table_name} INNER JOIN ". $wpdb->posts ." ON postnumber=ID " ;
+		$sql .= "AND post_status = 'publish' AND dp_date >= '%s' ";
+		if ($exclude_post_ids!='') { 
+			$sql .= "AND ID NOT IN ({$exclude_post_ids}) ";
+		}
 		$sql .= "AND ( ";
 		$multiple = false;
 		foreach ($post_types as $post_type) {
 			if ( $multiple ) $sql .= ' OR ';
-			$sql .= " post_type = '".$post_type."' ";
+			$sql .= " post_type = '%s' ";
 			$multiple = true;
+			$args[] = $post_type;	// Add the post types to the $args array
 		}
 		$sql .=" ) ";
 		$sql .= "GROUP BY postnumber ";
-		$sql .= "ORDER BY sumCount DESC LIMIT $limit";
+		$sql .= "ORDER BY sumCount DESC LIMIT %d";
+		$args[] = $limit;
 	}
-	$results = $wpdb->get_results($sql);
-	if($posts_only) return apply_filters('tptn_pop_posts_array',$results);		// Return the array of posts only if the variable is set	
+	if($posts_only) return apply_filters('tptn_pop_posts_array', $wpdb->get_results( $wpdb->prepare( $sql , $args ) , ARRAY_A) );		// Return the array of posts only if the variable is set	
+	$results = $wpdb->get_results( $wpdb->prepare( $sql , $args ) );
 	
 	$counter = 0;
 
@@ -366,9 +389,9 @@ function tptn_pop_posts( $args ) {
 		}
 	} else {
 		if (!$daily) {
-			$output .= '<div class="tptn_posts">';
+			$output .= '<div class="tptn_posts tptn_posts_widget">';
 		} else {
-			$output .= '<div class="tptn_posts_daily">';
+			$output .= '<div class="tptn_posts_daily tptn_posts_widget">';
 		}
 	}
 	
@@ -505,6 +528,7 @@ class WidgetTopTen extends WP_Widget
 	function form($instance) {
 		$title = isset($instance['title']) ? esc_attr($instance['title']) : '';
 		$limit = isset($instance['limit']) ? esc_attr($instance['limit']) : '';
+		$disp_list_count = isset($instance['disp_list_count']) ? esc_attr($instance['disp_list_count']) : '';
 		$show_excerpt = isset($instance['show_excerpt']) ? esc_attr($instance['show_excerpt']) : '';
 		$show_author = isset($instance['show_author']) ? esc_attr($instance['show_author']) : '';
 		$show_date = isset($instance['show_date']) ? esc_attr($instance['show_date']) : '';
@@ -533,6 +557,11 @@ class WidgetTopTen extends WP_Widget
 		<p>
 			<label for="<?php echo $this->get_field_id('daily_range'); ?>">
 			<?php _e('Range in number of days (applies only to custom option above)', TPTN_LOCAL_NAME); ?>: <input class="widefat" id="<?php echo $this->get_field_id('daily_range'); ?>" name="<?php echo $this->get_field_name('daily_range'); ?>" type="text" value="<?php echo esc_attr($daily_range); ?>" /> 
+			</label>
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id('disp_list_count'); ?>">
+			<input id="<?php echo $this->get_field_id('disp_list_count'); ?>" name="<?php echo $this->get_field_name('disp_list_count'); ?>" type="checkbox" <?php if ($disp_list_count) echo 'checked="checked"' ?> /> <?php _e(' Show count?', TPTN_LOCAL_NAME); ?>
 			</label>
 		</p>
 		<p>
@@ -577,6 +606,7 @@ class WidgetTopTen extends WP_Widget
 		$instance['limit'] = ($new_instance['limit']);
 		$instance['daily'] = ($new_instance['daily']);
 		$instance['daily_range'] = strip_tags($new_instance['daily_range']);
+		$instance['disp_list_count'] = ($new_instance['disp_list_count']);
 		$instance['show_excerpt'] = ($new_instance['show_excerpt']);
 		$instance['show_author'] = ($new_instance['show_author']);
 		$instance['show_date'] = ($new_instance['show_date']);
@@ -603,6 +633,11 @@ class WidgetTopTen extends WP_Widget
 		$output = $before_widget;
 		$output .= $before_title . $title . $after_title;
 
+        $instance['disp_list_count'] = isset($new_instance['disp_list_count']) ? true : false;
+        $instance['show_excerpt'] = isset($new_instance['show_excerpt']) ? true : false;
+        $instance['show_author'] = isset($new_instance['show_author']) ? true : false;
+        $instance['show_date'] = isset($new_instance['show_date']) ? true : false;
+
 		if ($daily) {
 			if ($tptn_settings['d_use_js']) {
 				$output .= '<script type="text/javascript" src="'.$tptn_url.'/top-10-daily.js.php?widget=1"></script>';
@@ -618,6 +653,7 @@ class WidgetTopTen extends WP_Widget
 					'post_thumb_op' => $instance['post_thumb_op'],
 					'thumb_height' => $instance['thumb_height'],
 					'thumb_width' => $instance['thumb_width'],
+					'disp_list_count' => $instance['disp_list_count'],
 				) );
 				
 			}
@@ -633,6 +669,7 @@ class WidgetTopTen extends WP_Widget
 				'post_thumb_op' => $instance['post_thumb_op'],
 				'thumb_height' => $instance['thumb_height'],
 				'thumb_width' => $instance['thumb_width'],
+				'disp_list_count' => $instance['disp_list_count'],
 			) );
 			
 		}
@@ -645,18 +682,35 @@ class WidgetTopTen extends WP_Widget
 }
 
 /**
- * Initialise the plugin.
+ * Initialise the widget.
  * 
  * @access public
  * @return void
  */
-function init_tptn(){
+function tptn_register_widget() {
 
 	if (function_exists('register_widget')) { 
 		register_widget('WidgetTopTen');
 	}
 }
-add_action('init', 'init_tptn', 1); 
+add_action('widgets_init', 'tptn_register_widget', 1); 
+
+
+/**
+ * Enqueue styles.
+ * 
+ * @access public
+ * @return void
+ */
+function tptn_heading_styles() {
+	global $tptn_settings;
+	
+	if ($tptn_settings['include_default_style']) {
+		wp_register_style('tptn_list_style', plugins_url('css/default-style.css', __FILE__));
+		wp_enqueue_style('tptn_list_style');
+	}
+}
+add_action( 'wp_enqueue_scripts', 'tptn_heading_styles' );  
 
 
 /**
@@ -688,23 +742,30 @@ function tptn_default_options() {
 						'add_to_category_archives' => false,		// Add post count to category archives
 						'add_to_tag_archives' => false,		// Add post count to tag archives
 						'add_to_archives' => false,		// Add post count to other archives
+
 						'track_authors' => false,			// Track Authors visits
 						'track_admins' => true,			// Track Admin visits
 						'pv_in_admin' => true,			// Add an extra column on edit posts/pages to display page views?
+						'show_count_non_admins' => true,	// Show counts to non-admins
+						
 						'blank_output' => false,		// Blank output? Default is "blank Output test"
 						'blank_output_text' => $blank_output_text,		// Blank output text
 						'disp_list_count' => true,		// Display count in popular lists?
 						'd_use_js' => false,				// Use JavaScript for displaying daily posts
 						'dynamic_post_count' => true,		// Use JavaScript for displaying the post count
-						'count_disp_form' => '(Visited %totalcount% times, %dailycount% visits today)',	// Format to display the count
+						'count_disp_form' => '(Visited %totalcount% time, %dailycount% visit today)',	// Format to display the count
+						'count_disp_form_zero' => 'No visits yet',	// What to display where there are no hits?
+
 						'title' => $title,				// Title of Popular Posts
 						'title_daily' => $title_daily,	// Title of Daily Popular
 						'limit' => '10',					// How many posts to display?
 						'daily_range' => '1',				// Daily Popular will contain posts of how many days?
+
 						'before_list' => '<ul>',			// Before the entire list
 						'after_list' => '</ul>',			// After the entire list
 						'before_list_item' => '<li>',		// Before each list item
 						'after_list_item' => '</li>',		// After each list item
+
 						'post_thumb_op' => 'text_only',	// Display only text in posts
 						'thumb_height' => '50',			// Max height of thumbnails
 						'thumb_width' => '50',			// Max width of thumbnails
@@ -714,26 +775,32 @@ function tptn_default_options() {
 						'thumb_default_show' => true,	// Show default thumb if none found (if false, don't show thumb at all)
 						'thumb_timthumb' => true,	// Use timthumb
 						'scan_images' => true,			// Scan post for images
+
 						'show_excerpt' => false,			// Show description in list item
+						'excerpt_length' => '10',			// Length of characters
 						'show_date' => false,			// Show date in list item
 						'show_author' => false,			// Show author in list item
-						'excerpt_length' => '10',			// Length of characters
 						'title_length' => '60',		// Limit length of post title
+
 						'exclude_categories' => '',		// Exclude these categories
 						'exclude_cat_slugs' => '',		// Exclude these categories (slugs)
 						'exclude_post_ids' => '',	// Comma separated list of page / post IDs that are to be excluded in the results
 						'exclude_on_post_ids' => '', 	// Comma separate list of page/post IDs to not display related posts on
+
 						'custom_CSS' => '',			// Custom CSS to style the output
-						'cron_on' => false,		// Run cron daily?
-						'cron_hour' => '0',		// Cron Hour
-						'cron_min' => '0',		// Cron Minute
-						'cron_recurrence' => 'weekly',	// Frequency of cron
+						'include_default_style' => false,	// Include default Top 10 style
+
 						'activate_daily' => true,	// Activate the daily count
 						'activate_overall' => true,	// activate overall count
 						'cache_fix' => false,		// Temporary fix for W3 Total Cache
 						'post_types' => $post_types,		// WordPress custom post types
 						'link_new_window' => false,			// Open link in new window - Includes target="_blank" to links
 						'link_nofollow' => false,			// Includes rel="nofollow" to links
+
+						'cron_on' => false,		// Run cron daily?
+						'cron_hour' => '0',		// Cron Hour
+						'cron_min' => '0',		// Cron Minute
+						'cron_recurrence' => 'weekly',	// Frequency of cron
 						);
 	return $tptn_settings;
 }
@@ -940,16 +1007,14 @@ function tptn_get_the_post_thumbnail($args = array()) {
 
 	} else {
 		$postimage = get_post_meta($result->ID, $thumb_meta, true);	// Check
+		if (!$postimage) $postimage = tptn_get_first_image($result->ID);	// Get the first image
 		if (!$postimage && $scan_images) {
 			preg_match_all( '|<img.*?src=[\'"](.*?)[\'"].*?>|i', $result->post_content, $matches );
 			// any image there?
 			if (isset($matches[1][0]) && $matches[1][0]) {
-				if (((strpos($matches[1][0], parse_url(get_option('home'),PHP_URL_HOST)) !== false) && (strpos($matches[1][0], 'http://') !== false))|| ((strpos($matches[1][0], 'http://') === false))) {
 					$postimage = preg_replace('/\?.*/', '', $matches[1][0]); // we need the first one only!
-				}
 			}
 		}
-		if (!$postimage) $postimage = tptn_get_first_image($result->ID);	// Get the first image
 		if (!$postimage) $postimage = get_post_meta($result->ID, '_video_thumbnail', true); // If no other thumbnail set, try to get the custom video thumbnail set by the Video Thumbnails plugin
 		if ($thumb_default_show && !$postimage) $postimage = $thumb_default; // If no thumb found and settings permit, use default thumb
 		if ($postimage) {
@@ -1059,10 +1124,19 @@ function tptn_max_formatted_content($content, $MaxLength = -1) {
  * @access public
  * @return void
  */
-function ald_tptn() {
-	tptn_trunc_count(true);
+function ald_tptn_cron() {
+	global $tptn_settings, $wpdb;
+	
+	$table_name_daily = $wpdb->prefix . "top_ten_daily";
+
+	$current_time = gmdate( 'Y-m-d', ( time() + ( get_option( 'gmt_offset' ) * 3600 ) ) );
+	$current_date = strtotime ( '-90 DAY' , strtotime ( $current_time ) );
+	$current_date = date ( 'Y-m-j' , $current_date );
+
+	$resultscount = $wpdb->query( $wpdb->prepare( "DELETE FROM {$table_name_daily} WHERE dp_date <= '%s' ", $current_date ) );
+	
 }
-add_action('ald_tptn_hook', 'ald_tptn');
+add_action('ald_tptn_hook', 'ald_tptn_cron');
 
 
 /**
@@ -1109,15 +1183,66 @@ if (!function_exists('ald_more_reccurences')) {
  * @return void
  */
 function ald_more_reccurences() {
-	return array(
-		'weekly' => array('interval' => 604800, 'display' => __( 'Once Weekly', TPTN_LOCAL_NAME )),
-		'fortnightly' => array('interval' => 1209600, 'display' => __( 'Once Fortnightly', TPTN_LOCAL_NAME )),
-		'monthly' => array('interval' => 2419200, 'display' => __( 'Once Monthly', TPTN_LOCAL_NAME )),
+	// add a 'weekly' interval
+	$schedules['weekly'] = array(
+		'interval' => 604800,
+		'display' => __('Once Weekly', TPTN_LOCAL_NAME)
 	);
+	$schedules['fortnightly'] = array(
+		'interval' => 1209600,
+		'display' => __('Once Fortnightly', TPTN_LOCAL_NAME)
+	);
+	$schedules['monthly'] = array(
+		'interval' => 2635200,
+		'display' => __('Once Monthly', TPTN_LOCAL_NAME)
+	);
+	return $schedules;
 }
 add_filter('cron_schedules', 'ald_more_reccurences');
 }
 
+
+/*********************************************************************
+*				Shortcode functions									*
+********************************************************************/
+/**
+ * Creates a shortcode [tptn_list limit="5" heading="1" daily="0"].
+ * 
+ * @access public
+ * @param array $atts
+ * @param string $content (default: null)
+ * @return void
+ */
+function tptn_shortcode( $atts, $content = null ) {
+	global $tptn_settings;
+	
+	extract( shortcode_atts( array(
+	  'limit' => $tptn_settings['limit'],
+	  'heading' => '1',
+	  'daily' => '0',
+	  ), $atts ) );
+	
+	$heading = 1 - $heading;	  
+	return tptn_pop_posts('is_widget='.$heading.'&limit='.$limit.'&daily='.$daily);
+}
+add_shortcode( 'tptn_list', 'tptn_shortcode' );
+
+/**
+ * Creates a shortcode [tptn_views daily="0"].
+ * 
+ * @access public
+ * @param array $atts
+ * @param string $content (default: null)
+ * @return void
+ */
+function tptn_shortcode_views($atts , $content=null) {
+	extract( shortcode_atts( array(
+	  'daily' => '0',
+	  ), $atts ) );
+	
+	return get_tptn_post_count_only( get_the_ID(), ( $daily ? 'daily' : 'total' ) );
+}
+add_shortcode( 'tptn_views', 'tptn_shortcode_views' );
 
 /*********************************************************************
 *				Admin interface										*

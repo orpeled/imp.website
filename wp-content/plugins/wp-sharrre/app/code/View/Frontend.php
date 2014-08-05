@@ -142,6 +142,7 @@ if ( ! class_exists( 'Frontend' ) ) :
 				}
 			}
 
+
 			// the html div holder
 			$html = '';
 			$html .= '<div id="wp-sharrre" data-url="' . get_bloginfo( 'wpurl' ) . '"';

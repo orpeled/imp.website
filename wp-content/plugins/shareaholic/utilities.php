@@ -7,6 +7,7 @@
 
 require_once(SHAREAHOLIC_DIR . '/curl.php');
 require_once(SHAREAHOLIC_DIR . '/six_to_seven.php');
+require_once(SHAREAHOLIC_DIR . '/lib/social-share-counts/seq_share_count.php');
 
 /**
  * This class is just a holder for general functions that have
@@ -69,7 +70,7 @@ class ShareaholicUtilities {
   }
 
   /**
-   * Returns the defaults we want becuase PHP does not allow
+   * Returns the defaults we want because PHP does not allow
    * arrays in class constants.
    *
    * @return array
@@ -77,6 +78,8 @@ class ShareaholicUtilities {
   private static function defaults() {
     return array(
       'disable_tracking' => 'off',
+      'disable_admin_bar_menu' => 'off',
+      'disable_internal_share_counts_api' => 'off',
       'api_key' => '',
       'verification_key' => '',
     );
@@ -92,24 +95,24 @@ class ShareaholicUtilities {
   	$links[] = '<a href="admin.php?page=shareaholic-settings">'.__('Settings', 'shareaholic').'</a>';
   	return $links;
   }
-  
+
   /**
    * Extend the admin bar
    *
    */
-   
-   function admin_bar_extended() {
+
+   public static function admin_bar_extended() {
    	global $wp_admin_bar;
-   	
-   	if(!current_user_can('update_plugins') || !is_admin_bar_showing())
+
+   	if(!current_user_can('update_plugins') || !is_admin_bar_showing() || self::get_option('disable_admin_bar_menu') == "on")
    		return;
-    
+
    	$wp_admin_bar->add_menu(array(
    		'id' => 'wp_shareaholic_adminbar_menu',
    		'title' => __('Shareaholic', 'shareaholic'),
    		'href' => admin_url('admin.php?page=shareaholic-settings'),
    	));
-   	
+
    	/*
    	$wp_admin_bar->add_menu(array(
    		'parent' => 'wp_shareaholic_adminbar_menu',
@@ -119,14 +122,14 @@ class ShareaholicUtilities {
    		'meta' => Array( 'target' => '_blank' )
    	));
    	*/
-   	
+
    	$wp_admin_bar->add_menu(array(
    		'parent' => 'wp_shareaholic_adminbar_menu',
    		'id' => 'wp_shareaholic_adminbar_submenu-settings',
    		'title' => __('App Manager', 'shareaholic'),
    		'href' => admin_url('admin.php?page=shareaholic-settings'),
    	));
-   	
+
    	$wp_admin_bar->add_menu(array(
    		'parent' => 'wp_shareaholic_adminbar_menu',
    		'id' => 'wp_shareaholic_adminbar_submenu-general',
@@ -342,8 +345,7 @@ class ShareaholicUtilities {
   }
 
   /**
-   * Returns the appropriate asset path for something from our
-   * rails app.
+   * Returns the appropriate asset path for environment
    *
    * @param string $asset
    * @return string
@@ -447,19 +449,28 @@ class ShareaholicUtilities {
    * @param array $array
    */
   public static function turn_on_locations($array, $turn_off_array = array()) {
-    foreach($array as $app => $ids) {
-      foreach($ids as $name => $id) {
-        self::update_options(array(
-          $app => array($name => 'on')
-        ));
+
+   if (is_array($array)) {
+      foreach($array as $app => $ids) {
+        if (is_array($ids)) {
+          foreach($ids as $name => $id) {
+            self::update_options(array(
+              $app => array($name => 'on')
+            ));
+          }
+        }
       }
     }
 
-    foreach($turn_off_array as $app => $ids) {
-      foreach($ids as $name => $id) {
-        self::update_options(array(
-          $app => array($name => 'off')
-        ));
+    if (is_array($turn_off_array)) {
+      foreach($turn_off_array as $app => $ids) {
+        if (is_array($ids)) {
+          foreach($ids as $name => $id) {
+            self::update_options(array(
+              $app => array($name => 'off')
+            ));
+          }
+        }
       }
     }
   }
@@ -552,9 +563,19 @@ class ShareaholicUtilities {
     if (!self::is_locked('get_or_create_api_key')) {
       self::set_lock('get_or_create_api_key');
 
+      $old_settings = self::get_settings();
+
       delete_option('shareaholic_settings');
 
+      // restore any old settings that should be preserved between resets
+      if (isset($old_settings['share_counts_connect_check'])) {
+        self::update_options(array(
+          'share_counts_connect_check' => $old_settings['share_counts_connect_check'],
+        ));
+      }
+
       $verification_key = md5(mt_rand());
+
       $turned_on_share_buttons_locations = array(
         array('name' => 'post_below_content', 'counter' => 'badge-counter'),
         array('name' => 'page_below_content', 'counter' => 'badge-counter'),
@@ -642,6 +663,7 @@ class ShareaholicUtilities {
           );
 
           ShareaholicUtilities::turn_on_locations($turn_on, $turn_off);
+
         } else {
           ShareaholicUtilities::log_bad_response('FailedToCreateApiKey', $response);
         }
@@ -833,7 +855,7 @@ class ShareaholicUtilities {
    */
    public static function notify_content_manager_singlepage($post_id = NULL) {
      $post_permalink = get_permalink($post_id);
-     
+
      if ($post_permalink != NULL) {
        $cm_single_page_job_url = Shareaholic::CM_API_URL . '/jobs/uber_single_page';
        $payload = array (
@@ -855,7 +877,7 @@ class ShareaholicUtilities {
       if ($domain == NULL) {
         $domain = get_bloginfo('url');
       }
-      
+
       if ($domain != NULL) {
         $cm_single_domain_job_url = Shareaholic::CM_API_URL . '/jobs/single_domain';
         $payload = array (
@@ -867,7 +889,7 @@ class ShareaholicUtilities {
        $response = ShareaholicCurl::post($cm_single_domain_job_url, $payload, 'json');
       }
     }
-    
+
   /**
    * This is a wrapper for the Event API
    *
@@ -925,7 +947,7 @@ class ShareaholicUtilities {
    *
    * @return array Where header => header value
    */
-  public function add_header_xua($headers)
+  public static function add_header_xua($headers)
   {
       if(!isset($headers['X-UA-Compatible'])) {
         $headers['X-UA-Compatible'] = 'IE=edge,chrome=1';
@@ -937,7 +959,7 @@ class ShareaholicUtilities {
    * Draws xua meta tag
    *
    */
-  public function draw_meta_xua()
+  public static function draw_meta_xua()
   {
     echo '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">';
   }
@@ -962,25 +984,95 @@ class ShareaholicUtilities {
    }
 
   /**
-   * This is a wrapper for the Recommendations Status API
+   * Share Counts API Connectivity check
+   *
+   */
+   public static function share_counts_api_connectivity_check() {
+      
+    // if we already checked and it is successful, then do not call the API again
+    $share_counts_connect_check = self::get_option('share_counts_connect_check');
+    if (isset($share_counts_connect_check) && $share_counts_connect_check == 'SUCCESS') {
+      return $share_counts_connect_check;
+    }
+    
+    $services_config = ShareaholicSeqShareCount::get_services_config();
+    $services = array_keys($services_config);
+    $param_string = implode('&services[]=', $services);
+    $share_counts_api_url = admin_url('admin-ajax.php') . '?action=shareaholic_share_counts_api&url=https%3A%2F%2Fwww.google.com%2F&services[]=' . $param_string;
+    $cache_key = 'share_counts_api_connectivity_check';
+    
+    $response = get_transient($cache_key);
+    if (!$response) {
+      $response = ShareaholicCurl::get($share_counts_api_url, array(), '', true);
+    }
+
+    $response_status = self::get_share_counts_api_status($response);
+    // if this was the first time we are doing this and it failed, disable
+    // the share counts API
+    if (empty($share_counts_connect_check) && $response_status == 'FAIL') {
+      self::update_options(array('disable_internal_share_counts_api' => 'on'));
+    }
+
+    if ($response_status == 'SUCCESS') {
+      set_transient( $cache_key, $response, SHARE_COUNTS_CHECK_CACHE_LENGTH );
+    }
+
+    self::update_options(array('share_counts_connect_check' => $response_status));
+    return $response_status;
+   }
+
+  /**
+   * Check the share counts API for empty response or missing services
+   */
+  public static function get_share_counts_api_status($response) {
+    if (!$response || !isset($response['body']) || !is_array($response['body']) || !isset($response['body']['data'])) {
+      return 'FAIL';
+    }
+
+    // Did it return at least 8 services?
+    $has_majority_services = count(array_keys($response['body']['data'])) >= 8 ? true : false;
+    $has_important_services = true;
+    // Does it have counts for twtr, fb, linkedin, pinterest, and delicious?
+    foreach (array('twitter', 'facebook', 'linkedin', 'pinterest', 'delicious') as $service) {
+      if (!isset($response['body']['data'][$service]) || !is_numeric($response['body']['data'][$service])) {
+        $has_important_services = false;
+      }
+    }
+
+    if (!$has_majority_services || !$has_important_services) {
+      return 'FAIL';
+    }
+
+    return 'SUCCESS';
+  }
+
+  /**
+   * This is a wrapper for the Recommendations API
    *
    */
    public static function recommendations_status_check() {
-  	$recommendations_status_api_url = Shareaholic::API_URL . "/v2/recommendations/status?url=" . get_bloginfo('url');
-    $response = ShareaholicCurl::get($recommendations_status_api_url);
-    if(is_array($response) && array_key_exists('body', $response)) {
-      $body = $response['body'];
-      if (is_array($body) && $body['code'] == 200) {
-        if ($body['data'][0]['status_code'] < 3) {
-          return "processing";
-        } else {
+    if (self::get_option('api_key') != NULL){
+    	$recommendations_url = Shareaholic::REC_API_URL . "/v3/recommend?url=" . urlencode(get_bloginfo('url')) . "&internal=6&sponsored=3&apiKey=" . self::get_option('api_key');
+      $cache_key = 'recommendations_status_check-' . md5( $recommendations_url );
+      
+      $response = get_transient($cache_key);
+      if (!$response){
+        $response = ShareaholicCurl::get($recommendations_url);
+        if( !is_wp_error( $response ) ) {
+            set_transient( $cache_key, $response, RECOMMENDATIONS_STATUS_CHECK_CACHE_LENGTH );
+        }
+      }
+      
+      if(is_array($response) && array_key_exists('response', $response)) {
+        $body = $response['response'];
+        if (is_array($body) && $body['code'] == 200) {
           return "ready";
+        } else {
+          return "processing";
         }
       } else {
         return "unknown";
       }
     }
    }
-
 }
-?>

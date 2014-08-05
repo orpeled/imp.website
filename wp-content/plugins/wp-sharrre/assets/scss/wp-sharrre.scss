@@ -1,0 +1,243 @@
+@import "icons2";
+
+.container_socialNetworks.sharrre {
+  //@include container;
+  max-width: 100%;
+
+  div {
+    display: inline-block;
+  }
+
+  .box {
+    //@include span-columns(5, 12);
+
+    text-align: center;
+    margin-top: 10px;
+
+    a {
+      color: rgb(37, 37, 37);
+      cursor: text;
+    }
+
+    .count {
+      font-size: 4em;
+      display: block;
+      margin-bottom: 10px;
+      line-height: 0.5em;
+    }
+
+    .share {
+      font-size: 0.9em;
+      text-transform: uppercase;
+    }
+  }
+
+  .buttons {
+    //@include span-columns(7 omega, 12);
+    float: right;
+
+    .button {
+      margin-left: 16px;
+    }
+
+    .button:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.social-buttons {
+  margin-bottom: 1.5em;
+
+  .primary-shares {
+    display: inline-block;
+
+    .social-share {
+      margin-bottom: 4px;
+    }
+  }
+
+  .loading {
+    .social-share {
+      cursor: wait;
+    }
+  }
+
+  .total-shares {
+    display: inline-block;
+    text-align: center;
+    margin-right: 1em;
+    line-height: 1.7;
+    font-size: 0.8em;
+
+    em {
+      font-size: 4.5em;
+      line-height: 0.6;
+    }
+
+    .caption {
+      margin-top: -5px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  .share-buttons {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .social-share {
+    background: #2D609B;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 10px 10px 2.8em;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 39px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 4px;
+
+    .alternate-text {
+      display: none;
+    }
+
+    .expanded-text {
+      margin-left: 0.2em;
+    }
+  }
+
+  .pinterest {
+    background: #ca212a;
+  }
+
+  .pinterest:before {
+    @include icons-pinterest-v2;
+  }
+
+  .twitter {
+    background: #00c3f3;
+  }
+
+  .twitter:before {
+    @include icons-twitter2-v2;
+  }
+
+  .facebook {
+    background: #2D609B;
+  }
+
+  .facebook:before {
+    @include icons-facebook-v2;
+  }
+
+  .linked-in {
+    background: #0074a1;
+  }
+
+  .linked-in:before {
+    @include icons-linkedin2-v2;
+  }
+
+  .stumble-upon {
+    background: #ff4e2e;
+  }
+
+  .stumble-upon:before {
+    @include icons-stumbleupon-v2;
+  }
+
+  .google-plus {
+    background: #eb4026;
+  }
+
+  .google-plus:before {
+    @include icons-googleplus-v2;
+  }
+
+  .share-toggle {
+    background: #c5c5c5;
+    padding-right: 0;
+  }
+
+  .share-toggle:before {
+    @include icons-plus-v2;
+  }
+
+  .social-share:before {
+    position: absolute;
+    left: 9px;
+    font-size: 1.4em;
+  }
+
+  .secondary-shares {
+    display: none;
+    vertical-align: top;
+
+    .social-share {
+      padding-right: 0;
+    }
+
+    .secondary-share-toggle {
+      background: #c5c5c5;
+    }
+
+    .secondary-share-toggle:before {
+      @include icons-minus-v2;
+    }
+  }
+}
+
+.social-buttons.secondary-open {
+  .share-toggle {
+    display: none;
+  }
+
+  .secondary-shares {
+    display: inline-block;
+  }
+}
+
+.social-buttons.bottom {
+  text-align: center;
+  margin: 2em 0;
+}
+
+@mixin hide-bubbles {
+  .container_socialNetworks.sharrre {
+    .box {
+      //@include span-columns(0, 12);
+      display: none;
+
+      .twitter {
+        .btn-o {
+          margin-top: 0;
+        }
+
+        .count-o {
+          display: none;
+        }
+      }
+    }
+
+    .buttons {
+      //@include span-columns(12 omega, 12);
+      text-align: center;
+      display: block;
+      float: none;
+    }
+  }
+}
+
+//@include columns4 {
+//  @include hide-bubbles;
+//}
+
+//@include columns8 {
+//  @include hide-bubbles;
+//}

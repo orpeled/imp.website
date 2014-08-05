@@ -229,6 +229,7 @@ class WP_SHARRRE_Updater {
 
 			if ( empty( $matches[1] ) )
 				$version = false;
+
 			else
 				$version = $matches[1];
 

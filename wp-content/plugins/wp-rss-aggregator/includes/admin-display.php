@@ -1,6 +1,12 @@
 <?php 
+    /**
+     * Functions for the admin section, columns and row actions 
+     * 
+     * @package WP RSS Aggregator
+     */ 
 
-    add_filter( 'manage_edit-wprss_feed_columns', 'wprss_set_feed_custom_columns'); 
+
+    add_filter( 'manage_wprss_feed_posts_columns', 'wprss_set_feed_custom_columns'); 
     /**     
      * Set up the custom columns for the wprss_feed list
      * 
@@ -9,19 +15,22 @@
     function wprss_set_feed_custom_columns( $columns ) {
 
         $columns = array(
-            'cb'          => '<input type="checkbox" />',
-            'title'       => __( 'Name', 'wprss' ),
-            'url'         => __( 'URL', 'wprss' ),
-        //  'description' => __( 'Description', 'wprss' )
+            'cb'          =>  '<input type="checkbox" />',
+            'title'       =>  __( 'Name', 'wprss' ),
+            'id'          =>  __( 'ID', 'wprss' ),
+            // 'url'         => __( 'URL', 'wprss' ),
+            // 'description' => __( 'Description', 'wprss' )
         );
+
         $columns = apply_filters( 'wprss_set_feed_custom_columns', $columns );
-        $columns['id'] = __( 'ID', 'wprss' );
+
         // Columns to add when feed is not trashed
         if ( !isset( $_GET['post_status'] ) || $_GET['post_status'] !== 'trash' ) {
-            $columns['next-update'] = __( 'Next Update', 'wprss' );
             $columns['state'] = __( 'State', 'wprss' );
+            $columns['next-update'] = __( 'Next Update', 'wprss' );
             $columns['feed-count'] = __( apply_filters( 'wprss_feed_items_count_column', 'Imported items' ), 'wprss' );
         }
+
         return $columns;
     }    
 
@@ -141,7 +150,7 @@
     }
 
 
-    add_filter( 'manage_edit-wprss_feed_item_columns', 'wprss_set_feed_item_custom_columns'); 
+    add_filter( 'manage_wprss_feed_item_posts_columns', 'wprss_set_feed_item_custom_columns'); 
     /**
      * Set up the custom columns for the wprss_feed source list
      * 
@@ -287,7 +296,7 @@
     }
 
 
-    add_action( 'init', 'check_delete_for_feed_source' );
+    add_action( 'admin_init', 'check_delete_for_feed_source' );
     /**
      * Checks the GET data for the delete per feed source action request
      * 
@@ -353,7 +362,6 @@
     }
 
 
-
     /**
      * Shows a notification that tells the user that feed items for a particular source are being deleted
      * 
@@ -363,7 +371,6 @@
         $message = __( apply_filters( 'wprss_notify_about_deleting_source_feed_items_message', 'The feeds for this feed source are being deleted in the background.' ), 'wprss' );
         echo '<div class="updated"><p>' . $message . '</p></div>';
     }
-
 
 
     add_action( 'wp_ajax_wprss_fetch_feeds_row_action', 'wprss_fetch_feeds_action_hook' );
@@ -377,7 +384,9 @@
         if ( isset( $_POST['id'] ) && !empty( $_POST['id'] ) ) {
             $id = $_POST['id'];
             update_post_meta( $id, 'wprss_force_next_fetch', '1' );
-            wprss_fetch_insert_single_feed_items( $id );
+            // Prepare the schedule
+            $schedule_args = array( strval( $id ) );
+            wp_schedule_single_event( time(), 'wprss_fetch_single_feed_hook', $schedule_args );
             die();
         }
     }

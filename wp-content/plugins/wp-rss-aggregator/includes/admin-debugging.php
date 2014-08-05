@@ -25,7 +25,7 @@
      * @since 3.4.6
      */
     function wprss_get_debug_operations() {
-        return apply_filters(
+        $operations = apply_filters(
             'wprss_debug_operations',
             array(
                 'update-feeds' => array(
@@ -40,13 +40,25 @@
                     'run'       =>  'wprss_feed_reset',
                     'redirect'  =>  'edit.php?post_type=wprss_feed&page=wprss-debugging&debug_message=2',
                     'render'    =>  'wprss_debug_reimport_feeds',
-                )
+                ),
             )
         );
+
+        $operations['error-log'] = apply_filters(
+            'wprss_debug_error_log_operation',
+            array(
+                'nonce'     =>  'wprss-clear-error-log',
+                'run'       =>  'wprss_clear_log',
+                'redirect'  =>  'edit.php?post_type=wprss_feed&page=wprss-debugging&debug_message=3',
+                'render'    =>  'wprss_debug_clear_log_button'
+            )
+        );
+
+        return $operations;
     }
 
 
-    add_action( 'init', 'wprss_debug_operations' );
+    add_action( 'admin_init', 'wprss_debug_operations' );
     /**
      * Performs debug operations, depending on the POST request.
      *
@@ -114,16 +126,37 @@
 
 
     /**
+     * Renders the Clear Log button
+     * 
+     * @since 3.9.6
+     */
+    function wprss_debug_clear_log_button() {
+        ?>
+        <h3><?php _e( 'Error Log', 'wprss' ); ?></h3>
+
+        <textarea readonly="readonly" id="wprss-error-log-textarea"><?php echo wprss_get_log(); ?></textarea>
+
+        <form action="edit.php?post_type=wprss_feed&page=wprss-debugging" method="POST"> 
+            <?php wp_nonce_field( 'wprss-clear-error-log' );
+            submit_button( __( 'Clear log', 'wprss' ), 'button-primary', 'error-log', true  ); ?>
+        </form>
+
+        <?php
+    }
+
+
+    /**
      * Build the debugging page
      * 
      * @since 3.0
      */ 
-    function wprss_debugging_page_display() {             
+    function wprss_debugging_page_display() {
         $debug_messages = apply_filters(
             'wprss_debug_messages',
             array(
                 '1'     =>  'wprss_debugging_admin_notice_update_feeds',
-                '2'     =>  'wprss_debugging_admin_notice_reimport_feeds'
+                '2'     =>  'wprss_debugging_admin_notice_reimport_feeds',
+                '3'     =>  'wprss_debugging_admin_notice_clear_log',
             )
         );
         
@@ -176,4 +209,14 @@
      */ 
     function wprss_debugging_admin_notice_reimport_feeds() {        
         echo '<div class="updated"><p>Feeds deleted and are being re-imported in the background.</p></div>';
+    }
+
+
+    /**
+     * Output admin notice that log has been cleard
+     * 
+     * @since 3.9.6
+     */ 
+    function wprss_debugging_admin_notice_clear_log() {        
+        echo '<div class="updated"><p>The error log has been cleared.</p></div>';
     }

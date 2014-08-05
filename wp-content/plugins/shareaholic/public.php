@@ -5,6 +5,12 @@
  * @package shareaholic
  */
 
+// Get the required libraries for the Share Counts API
+require_once(SHAREAHOLIC_DIR . '/lib/social-share-counts/wordpress_http.php');
+require_once(SHAREAHOLIC_DIR . '/lib/social-share-counts/seq_share_count.php');
+require_once(SHAREAHOLIC_DIR . '/lib/social-share-counts/curl_multi_share_count.php');
+require_once(SHAREAHOLIC_DIR . '/public_js.php');
+
 /**
  * This class is all about drawing the stuff in publishers'
  * templates that visitors can see.
@@ -44,7 +50,8 @@ class ShareaholicPublic {
         ShareaholicUtilities::get_or_create_api_key()) {
       ShareaholicUtilities::load_template('script_tag', array(
         'shareaholic_url' => Shareaholic::URL,
-        'api_key' => ShareaholicUtilities::get_option('api_key')
+        'api_key' => ShareaholicUtilities::get_option('api_key'),
+        'page_config' => ShareaholicPublicJS::get_page_config(),
       ));
     }
   }
@@ -114,15 +121,16 @@ class ShareaholicPublic {
       }
       
       // Get post tags
-      $keywords = implode(', ', wp_get_post_tags( $id, array('fields' => 'names') ) );
-       
+      $keywords = implode(', ', wp_get_post_tags( $id, array('fields' => 'names') ) );      
+             
       // Get post categories
-      $categories = get_the_category($id);
+      $categories_array = get_the_category($id);
+      $categories = '';
       $separator = ', ';
       $output = '';
       
-      if($categories) {
-      	foreach($categories as $category) {
+      if($categories_array) {
+      	foreach($categories_array as $category) {
       	  if ($category->cat_name != "Uncategorized") {
       		  $output .= $separator.$category->cat_name;
     		  }
@@ -137,10 +145,30 @@ class ShareaholicPublic {
         $keywords .= $categories;
       }
       
-      // Support for All in One SEO Pack keywords
-      $keywords .= ', '.stripslashes(get_post_meta($post->ID, '_aioseop_keywords', true));
+      // Support for "All in One SEO Pack" plugin keywords
+      if (get_post_meta($post->ID, '_aioseop_keywords') != NULL){
+        $keywords .= ', '.stripslashes(get_post_meta($post->ID, '_aioseop_keywords', true));
+      }
       
-      // Encode & trim appropriately
+      // Support for "WordPress SEO by Yoast" plugin keywords
+      if (get_post_meta($post->ID, '_yoast_wpseo_focuskw') != NULL){
+        $keywords .= ', '.stripslashes(get_post_meta($post->ID, '_yoast_wpseo_focuskw', true));
+      }
+      
+      if (get_post_meta($post->ID, '_yoast_wpseo_metakeywords') != NULL){
+        $keywords .= ', '.stripslashes(get_post_meta($post->ID, '_yoast_wpseo_metakeywords', true));
+      }
+      
+      // Support for "Add Meta Tags" plugin keywords
+      if (get_post_meta($post->ID, '_amt_keywords') != NULL){
+        $keywords .= ', '.stripslashes(get_post_meta($post->ID, '_amt_keywords', true));
+      }
+ 
+      if (get_post_meta($post->ID, '_amt_news_keywords') != NULL){
+        $keywords .= ', '.stripslashes(get_post_meta($post->ID, '_amt_news_keywords', true));
+      }     
+      
+      // Encode, lowercase & trim appropriately
       $keywords = trim(trim(strtolower(trim(htmlspecialchars(htmlspecialchars_decode($keywords), ENT_QUOTES))), ","));
 
       // Unique keywords
@@ -253,75 +281,72 @@ class ShareaholicPublic {
   }
   
   /**
-   * Draws Shareaholic image tag. Will only run on pages or posts.
+   * Draws Shareaholic image meta tag. Will only run on pages or posts.
    */
   private static function draw_image_meta_tag() {
-    global $post;
-    if (in_array(ShareaholicUtilities::page_type(), array('page', 'post'))) {
-      if (has_post_thumbnail($post->ID)) {
-        $thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
-        echo "<meta name='shareaholic:image' content='" . esc_attr($thumbnail_src[0]) . "' />";
-      } else {
-        if ($first_image = self::post_first_image()) {
-          echo "<meta name='shareaholic:image' content='" . $first_image . "' />";
-        }
-      }
-    }
-  }
-
-  /**
-   * Draws og image tags if they are enabled and exist. Will only run on pages or posts.
-   */
-  private static function draw_og_tags() {
-    $settings = ShareaholicUtilities::get_settings();
-
     if (in_array(ShareaholicUtilities::page_type(), array('page', 'post'))) {
       global $post;
+      $thumbnail_src = '';
+      
+      if (function_exists('has_post_thumbnail') && has_post_thumbnail($post->ID)) {
+        $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+        $thumbnail_src = esc_attr($thumbnail[0]);
+      } 
+      if ($thumbnail_src == NULL) {
+        $thumbnail_src = self::post_first_image();
+      }
+      if ($thumbnail_src != NULL) {
+        echo "<meta name='shareaholic:image' content='" . $thumbnail_src . "' />";
+      }
+    }
+  }
 
-      if (!get_post_meta($post->ID, 'shareaholic_disable_open_graph_tags', true) && (isset($settings['disable_og_tags']) && $settings['disable_og_tags'] == "off")) {
-        if (has_post_thumbnail($post->ID)) {
-          $thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+  /**
+   * Draws an open graph image meta tag if they are enabled and exist. Will only run on pages or posts.
+   */
+  private static function draw_og_tags() {
+    if (in_array(ShareaholicUtilities::page_type(), array('page', 'post'))) {
+      global $post;
+      $thumbnail_src = '';
+      $settings = ShareaholicUtilities::get_settings();
+      if (!get_post_meta($post->ID, 'shareaholic_disable_open_graph_tags', true) && (isset($settings['disable_og_tags']) && $settings['disable_og_tags'] == "off")) {        
+        if (function_exists('has_post_thumbnail') && has_post_thumbnail($post->ID)) {
+          $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+          $thumbnail_src = esc_attr($thumbnail[0]);
+        } 
+        if ($thumbnail_src == NULL) {
+          $thumbnail_src = self::post_first_image();
+        }
+        if ($thumbnail_src != NULL) {
           echo "\n<!-- Shareaholic Open Graph Tags -->\n";
-          echo "<meta property='og:image' content='" . esc_attr($thumbnail_src[0]) . "' />";
+          echo "<meta property='og:image' content='" . $thumbnail_src . "' />";
           echo "\n<!-- Shareaholic Open Graph Tags End -->\n";
-        } else {
-          $first_image = self::post_first_image();
-          if ($first_image) {
-            echo "\n<!-- Shareaholic Open Graph Tags -->\n";
-            echo "<meta property='og:image' content='" . $first_image . "' />";
-            echo "\n<!-- Shareaholic Open Graph Tags End -->\n";
-          }
         }
       }
     }
   }
 
   /**
-   * Copied straight out of the old wordpress version, this will grab the
-   * first image in a post. Not sure why the output buffering is needed,
-   * should probably be removed.
+   * This will grab the URL of the first image in a given post
    *
-   * @return mixed either returns `false` or a string of the image src
+   * @return returns `false` or a string of the image src
    */
   public static function post_first_image() {
-    global $post, $posts;
-    $og_first_img = '';
-    ob_start();
-    ob_end_clean();
-    if ($post == null)
+    global $post;
+    $first_img = '';
+    if ($post == NULL)
       return false;
-    else {
-      $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-      if(isset($matches) && isset($matches[1]) && isset($matches[1][0]) ){
-          $og_first_img = $matches[1][0];
-      }
-      if(empty($og_first_img)){ // return false if nothing there, makes life easier
+    else {      
+      $output = preg_match_all('/<img[^>]+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+      if(isset($matches[1][0]) ){
+          $first_img = $matches[1][0];
+      } else {
         return false;
       }
-      return $og_first_img;
+      return $first_img;
     }
   }
-
+	
   /**
    * This static function inserts the shareaholic canvas at the end of the post
    *
@@ -382,6 +407,48 @@ class ShareaholicPublic {
       data-summary='$data_summary'></div>";
 
     return trim(preg_replace('/\s+/', ' ', $canvas));
+  }
+
+
+  /**
+   * Function to handle the share count API requests
+   *
+   */
+  public static function share_counts_api() {
+    $cache_key = 'shr_api_res-' . md5( $_SERVER['QUERY_STRING'] );
+    $result = get_transient($cache_key);
+
+    if (!$result) {
+      $url = isset($_GET['url']) ? $_GET['url'] : NULL;
+      $services = isset($_GET['services']) ? $_GET['services'] : NULL;
+      $result = array();
+
+      if(is_array($services) && count($services) > 0 && !empty($url)) {
+        if(self::has_curl()) {
+          $shares = new ShareaholicCurlMultiShareCount($url, $services);
+        } else {
+          $shares = new ShareaholicSeqShareCount($url, $services);
+        }
+        $result = $shares->get_counts();
+
+        if (isset($result['data'])) {
+          set_transient( $cache_key, $result, SHARE_COUNTS_CHECK_CACHE_LENGTH );
+        }
+      }
+    }
+
+    header('Content-Type: application/json');
+    echo json_encode($result);
+    exit;
+  }
+
+  /**
+   * Checks to see if curl is installed
+   *
+   * @return bool true or false that curl is installed
+   */
+  public static function has_curl() {
+    return function_exists('curl_version') && function_exists('curl_multi_init') && function_exists('curl_multi_add_handle') && function_exists('curl_multi_exec');
   }
 }
 

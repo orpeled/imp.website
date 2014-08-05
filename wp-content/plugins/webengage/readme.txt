@@ -2,8 +2,8 @@
 Contributors: Official WebEngage Plugin
 Tags: feedback, survey, webengage, web engage, targeting, dashboard, contact, contact form, feedback form, survey form, form builder, feedback inbox, customer support, widget, feedback widget, survey widget, notification, notification widget, call-to-action message, pop-up message, push messaging, real-time messages, user messaging, exit surveys
 Requires at least: 2.7
-Tested up to: 3.3.1
-Stable tag: 2.0.1
+Tested up to: 3.8.1
+Stable tag: 2.0.2
 
 Get feedback and resolve support queries. Conduct short surveys. Display push notification messages. Love your customers? Get WebEngage now!
 
@@ -19,8 +19,8 @@ With WebEngage you can do the following:
 
 This is an offical WebEngage plugin which lets you embed the Javascript integration code in to your pages without editing templates. Install the plugin once. No need to change or write a single line of code to make it work. Ever!
 
-Here's a quick 2 minute explainer video: http://www.youtube.com/watch?v=5poyDyvHApw
-[youtube http://www.youtube.com/watch?v=5poyDyvHApw]
+Here's a quick 2 minute explainer video: https://www.youtube.com/watch?v=5poyDyvHApw
+[youtube https://www.youtube.com/watch?v=5poyDyvHApw]
 
 More on WebEngage here - [webengage.com](http://webengage.com/)
 
@@ -44,7 +44,7 @@ Survey - [webengage.com/survey](http://webengage.com/survey)
 Notification - [webengage.com/notification](http://webengage.com/notification)
 
 = Localization =
-WebEngage is currently available in 28 languages - English, Arabic, Bulgarian, Chinese (Traditional), Czech, Danish, Dutch, Estonian, Finnish, French, Georgian, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish and Turkish. If your language is missing, you can help us translate. There are just 30 odd phrases that need to be translated. [Let us know](http://webengage.com/contact) if you are interested.
+WebEngage is currently available in 30 languages - English, Arabic, Bulgarian, Chinese (Traditional), Czech, Danish, Dutch, Estonian, Finnish, French, Georgian, German, Greek, Hebrew, Hindi, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Thai and Turkish. If your language is missing, you can help us translate. There are just 30 odd phrases that need to be translated. [Let us know](http://webengage.com/contact) if you are interested.
 
 = Demo =
 Take an online demo to get an idea of how the feedback tab, survey windows and notification messages will look on your website - [demo.webengage.com](http://demo.webengage.com/)
@@ -108,6 +108,10 @@ Email us on support {at} webengage dot com or [contact us](http://webengage.com/
 For any other question(s), please email us on support {at} webengage dot com or [contact us](http://webengage.com/contact). We assure you of a quick revert.
 
 == Changelog ==
+= 2.0.2 =
+* Reduced dependency on iframes
+* New logo and notification text in the options page
+
 = 2.0.1 =
 * xss vulnerability fix in plugin managament files
 
@@ -124,4 +128,3 @@ For any other question(s), please email us on support {at} webengage dot com or 
 
 = 1.0.0 = 
 * Hello World! This is our initial release.
- 

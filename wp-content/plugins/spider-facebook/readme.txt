@@ -1,10 +1,10 @@
-=== Spider Facebook===
+=== Wordpress Facebook===
 Contributors: webdorado
 Donate link: http://web-dorado.com/products/wordpress-facebook.html
-Tags: player, facebook, omments, Facebook registration, facebook platform, friends, Like, like button, open graph, page, plugin, posts, sidebar, social, Social Plugins
+Tags: Facebook, facebook platform, friends, Like, like button, comments, facebook like, open graph, page, plugin, posts, sidebar, social, Social Plugins, Facebook Widget,wordpress like,facebook share, Facebook Page,facebook connect,Facebook Login, facebook plugin, facebook badge, facebook comments, facebook like box, Facebook Open Graph, facebook recommend, facebook button, facebook send, facebook like button, facebook share button, facebook meta, Facebook send button, facebook wall, facebook group,facebook meta tag, social sidebar, post to facebook,  facebook sidebar, Facebook fan page, like box, login with facebook, facebook promotion, facebook integration, Facebook like widget, facebook style, fb, fb like, facebook comments import, social share, social bookmark, social bookmarking, sharebar, share buttons, twitter, twitter share,twitter share button, google bookmarks, google plus one, google +1, google plus, google widget, google plus one button,Google share, google plus share,  linkedin, linkedin share, Linked In,social media auto publish,social network auto publish, social profiles, social media publishing
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 1.0.5
+Tested up to: 3.8.1
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,9 @@ Spider Facebook is a WordPress integration tool for Facebook.It includes all the
 
 ###[Spider Facebook](http://web-dorado.com/products/wordpress-facebook.html)
 
+Spider Facebook is a well-equipped tool to integrate your website with Facebook. The product package contains a large number of widgets and plugins to make your website more social. Using it you will be able to add not only Like/Share and Registration buttons, but also Facepile, Facebook commenting box and etc.
+This WordPress plugin comes with Open Graph Integration, so that the shared pages/posts can be fully customized, including title, image and other content. Spider Facebook is user-friendly and comes with a detailed documentation for an easier installation and use.   
+The options for the Facebook buttons are enhanced allowing the user to define some of its design and location. There is also a possibility of displaying count boxes next to some of the buttons wherever needed.   
 
 Features of Spider [Facebook](http://web-dorado.com/products/wordpress-facebook.html):  
 
@@ -28,6 +31,12 @@ Features of Spider [Facebook](http://web-dorado.com/products/wordpress-facebook.
 * Facebook Facepile that shows the Facebook profile pictures of the Facebook users who have liked your Facebook page or have signed up for your site.	
 * Facebook Request Dialog for sending a Facebook Request from one Facebook user to one or more Facebook users.	
 * Facebook Register 	
+* The plugin can be used to add social sharing buttons for specific and/or all posts and pages.
+
+In addition to the social integration widgets, Facebook plugin allows having registration possibility with Facebook, which is one of the most common features for the high-end websites. (commercial version)
+Multiple registration possibilities (auto registration, username and password, as well as username/password and Captcha). (commercial version)
+
+ ###IMPORTANT: If you think you found a bug in Spider Facebook or have any problem/question concerning the plugin, please check out [Support Forum](http://web-dorado.com/forum/spider-facebook-wordpress.html) in our website. If you do not find a solution here, do not hesitate to contact us at [info@web-dorado.com](mailto:info@web-dorado.com).
 
  
 ### Supported languages
@@ -96,11 +105,11 @@ After downloading the ZIP file
 1.  Login to your WordPress site administrator panel and head over the 'Plugins' menu  
 2.  Click 'Add New'  
 3.  Choose the 'Upload' option
-4.  Click **Choose file** (**Browse**) and select the Spider Facebook zip file.  
+4.  Click **Choose file** (**Browse**) and select the zip file.  
 5.  Click **Install Now** button.  
 6.  Once it is complete, activate the plugin.  
 
-Once the plugin is activated, you'll notice a menu on the left called "Facebook".  
+Once the plugin is activated, you'll notice a menu on the left called Spider Facebook.  
 If any problem occurs with [Spider Facebook](http://web-dorado.com/products/wordpress-facebook.html), please contact us info@web-dorado.com.  
 
 == Screenshots ==
@@ -124,10 +133,14 @@ If any problem occurs with [Spider Facebook](http://web-dorado.com/products/word
 1.2 Perform a new installation.		
 1.	Log in to the administrator panel.		
 2.	Go to Plugins Add New > Upload.		
-3.	Click "Choose file" and select the Spider Facebook zip file.	
+3.	Click "Choose file" and select the zip file.	
 4.	Click the "Install Now" button.		
 5.	Click the "Activate Plugin" to activate the plugin.		 
-If the installation is successful, you will see a notification message. If any problem occurs, please contact us at info@web-dorado.com.		
+If the installation is successful, you will see a notification message. If any problem occurs, please contact us at info@web-dorado.com.
+		
+1.3 Updating the Spider Facebook.  
+
+If you want to update the facebook plugin while preserving your existing data, you need to deactivate and delete the Spider Facebook from the list of installed plugins (Do not uninstall it using the Uninstall Spider Facebook option of the plugin, otherwise you will lose your initial data) and install the new plugin. 
 
 == Spider Facebook Step by step guide Step 2 ==    
 = Adding Facebook social plugins to the website =   	
@@ -199,7 +212,7 @@ Example:
 2.2.14 Add pages. Choose pages to which you want to add the plugin. The following META tags allow you to customize the appearance of the chosen pages on the user's wall.		
 2.2.15 Vertical Position. Choose whether to place the plugin at the top or at the bottom.		
 2.2.16 Style. Here you can customize certain style options. Simply change the values of the parameters that are listed in the box.		
-2.2.17 Add to <html> Tag. Add the code (ONLY ONCE) to the <html> tag of your template's index.php file (templates/your_template/index.php).		
+2.2.17 Add to <html> Tag. Add the code (ONLY ONCE) to the <html> tag of your template's index.php file ("templates/your_template/index.php").		
 Example: 
 <html xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">			
 

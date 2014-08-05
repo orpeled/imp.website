@@ -28,16 +28,23 @@ h3{
 }
 
 .webengage-logo-container{
-	padding-top:5px;
-	padding-left:10px;
-	border:1px solid #482E1A;
-	background-color:#482E1A;
+	padding: 10px;
+	padding-left: 20px;
+	border:1px solid #333;
+	background: #454a52 url('bg-header-holder.gif');
 	-moz-border-radius-topright:5px;
 	-moz-border-radius-topleft:5px;
 	-webkit-border-top-right-radius:5px;
 	-webkit-border-top-left-radius:5px;
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
+}
+
+.webengage-logo-container span { 
+    display: inline-block; 
+    width: 200px;
+    height: 48px;
+    background: url('logo.png');
 }
 
 .webengage-container a {

@@ -1,10 +1,10 @@
-=== Top 10  - Popular posts plugin for WordPress ===
+﻿=== Top 10  - Popular posts plugin for WordPress ===
 Tags: top 10, counter, popular posts, top posts, daily popular, page views, statistics
 Contributors: Ajay
 Donate link: http://ajaydsouza.com/donate/
 Stable tag: trunk
-Requires at least: 3.0
-Tested up to: 3.7
+Requires at least: 3.3
+Tested up to: 3.9
 License: GPLv2 or later
 
 
@@ -22,6 +22,7 @@ Includes a sidebar widget to display the popular posts. And, all settings can be
 * **Show off popular posts**: Display a list of daily and/or overall popular posts by page count. You can choose how many posts are to be displayed plus loads of other customisation options
 * **Widget ready**: Sidebar widgets available for daily popular and overall popular posts. Highly customizable widgets to control what you want to display in the list of posts
 * **Customisable output**: 
+	* Top 10 includes a default CSS style to make your popular posts list look pretty. Choose **Thumbnails inline, before title** under 'Thumbnail options' when using this option
 	* Output wrapped in CSS classes that allows you to style the list. You can enter your custom CSS styles from within WordPress Admin area under "Custom Styles"
 	* Pick your own HTML tags to use for displaying the output in case you don't prefer the default `list` format
 * **Thumbnail support**
@@ -29,10 +30,14 @@ Includes a sidebar widget to display the popular posts. And, all settings can be
 	* Auto-extract the first image in your post to be displayed as a thumbnail
 	* Manually enter the URL of the thumbnail via <a href="http://codex.wordpress.org/Custom_Fields">WordPress meta fields</a>
 	* Use timthumb to crop and resize images
+* **Shortcodes**: The plugin includes two shortcodes `[tptn_list]` and `[tptn_views]` to display the posts list and the number of views respectively
 * **Exclusions**: Exclude posts from select categories from appearing in the top posts list. Also exclude posts by ID from appearing in the list
 * **Admin interface**: View list of daily and/or overall popular posts from within the dashboard. Top 10 will also add two sortable columns to your All Posts and All Pages pages in your WordPress Admin area
-* **Clean uninstall**: If you choose to delete the plugin from within WP-Admin, the plugin will remove all its data. But why would you?
 * **Works with caching plugins** like WP-Super-Cache, W3 Total Cache or Quick Cache
+* **Clean uninstall**: If you choose to delete the plugin from within WP-Admin, the plugin will remove all its data. But why would you?
+
+
+If you're looking for a plugin to display related, look no further than my other plugin <a href="http://ajaydsouza.com/wordpress/plugins/contextual-related-posts">Contextual Related Posts</a>.
 
 
 == Screenshots ==
@@ -46,11 +51,32 @@ Includes a sidebar widget to display the popular posts. And, all settings can be
 
 == Upgrade Notice ==
 
-= 1.9.8.5 =
-Author display name is used now, cleaner pagination, new function to get the post count only. 
-Refer to the changelog for more details
+= 1.9.9.2 =
+Bug fixes for widget, exclude posts and thumbnail detection. 
+Refer to the Changelog for more details
 
 == Changelog ==
+
+= 1.9.9.2 =
+* Fixed: Show count in widget was always checked
+* Fixed: "List of post or page IDs to exclude from the results" did not work for more than one post
+* Fixed: First image in the post was not detected in some cases. First image attached is now prioritised over image detection to speed things up
+
+= 1.9.9.1 =
+* Fixed: Maintenance cron wasn't running properly
+
+= 1.9.9 =
+* New: Default style to make those popular posts a little pretty. Choose **Thumbnails inline, before title** under 'Thumbnail options'
+* New: Option to disable display of counts to non-admins. Check out the option 'Show number of views to non-admins'
+* New: Option to display different text when there are no hits on the post on non single posts e.g. home page, archives, etc.
+* New: Class `tptn_posts_widget` for the widgets
+* Modified: Brought back the old columns "Views" in the Admin Posts and Pages which contains both the Overall and Daily counts 
+* Modified: New admin interface keeping mobile first in mind
+* Modified: Optimised widgets loading
+* Modified: Cron job will now delete entries from the daily table older than 90 days
+* Fixed: mySQL error messages due to improper escaping
+* Fixed: Plugin no longer overwrites cron schedules
+* Modified: Lot's of code optimisation and cleanup
 
 = 1.9.8.5 =
 * Modified: Including the author in the list will now use the Display Name which is set under “Display name publicly as” in the User Profile page
@@ -228,6 +254,14 @@ Refer to the changelog for more details
 
 == Installation ==
 
+= WordPress install =
+1. Navigate to Plugins within your WordPress Admin Area
+
+2. Click "Add new" and in the search box enter "Top 10" and select "Keyword" from the dropdown
+
+3. Find the plugin in the list (usually the first result) and click "Install Now"
+
+= Manual install =
 1. Download the plugin
 
 2. Extract the contents of top-10.zip to wp-content/plugins/ folder. You should get a folder called top-10.
@@ -240,12 +274,10 @@ Refer to the changelog for more details
 
 6. Go to **Top 10 &raquo; Overall Popular Posts** and **Top 10 &raquo; Daily Popular Posts** to view the list of popular posts
 
-Alternatively, search for **Top 10** from Plugins &raquo; Add New within your WordPress admin.
-
 
 == Frequently Asked Questions ==
 
-If your question isn't listed here, please post a comment at the <a href="http://wordpress.org/support/plugin/top-10">WordPress.org support forum</a>. I monitor the forums on an ongoing basis. If you're looking for more advanced support, please see <a href="http://ajaydsouza.com/support/">details here</a>.
+If your question isn't listed here, please create a new post in the <a href="http://wordpress.org/support/plugin/top-10">WordPress.org support forum</a>. I monitor the forums on an ongoing basis. If you're looking for more advanced *paid* support, please see <a href="http://ajaydsouza.com/support/">details here</a>.
 
 = How can I customise the output? =
 
@@ -270,6 +302,40 @@ The following CSS classes / IDs are available:
 * **tptn_counter**: Class of the `div` tag that wraps the post count that is driven by the field "Format to display the count in: " under 'Output Options'
 
 For more information, please visit http://ajaydsouza.com/wordpress/plugins/top-10/
+
+= Shortcodes =
+
+You can insert the popular posts anywhere in your post using the `[tptn_list]` shortcode. The plugin takes three optional attributes `limit`, `heading` and `daily` as follows:
+
+`[tptn_list limit="5" heading="1" daily="0"]`
+
+*limit* : Maximum number of posts to return. The actual number displayed may be lower depending on the category / post exclusion settings.
+
+*heading* : By default, the heading you specify in **Title of popular posts:** under **Output options** will be displayed. You can override this by specifying your own heading e.g.
+
+`
+<h3>Top posts</h3>
+[tptn_list limit="2" heading="0"] 
+`
+*daily* : If set to 1, then the shortcode will return the daily popular posts list
+
+
+You can also display the number of visits using the `[tptn_views]` shortcode. The plugin takes one optional attribute `daily` as follows:
+
+`[tptn_views daily="0"]`
+
+*daily* : If set to 1, then the shortcode will return the number of _daily_ views
+
+
+= Filters =
+
+The plugin includes the following filters that allows you to customise the output for several section using <a href="http://codex.wordpress.org/Function_Reference/add_filter">add_filter</a>.
+
+*tptn_heading_title* : Filter for heading title of the posts. This is the text that you enter under *Output options > Title of related posts*
+
+*tptn_title* : Filter for the post title for each of the related posts
+
+I'll be adding more filters eventually. If you are looking for any particular filter do raise a post in the <a href="http://wordpress.org/support/plugin/contextual-related-posts">support forum</a> requesting the same.
 
 = How does the plugin select thumbnails? =
 
@@ -317,3 +383,4 @@ Replace `{$cpt}` by the slug of your custom post type. E.g. to make the columns 
 `
 add_filter( 'manage_edit-projects_sortable_columns', 'tptn_column_register_sortable' );
 `
+

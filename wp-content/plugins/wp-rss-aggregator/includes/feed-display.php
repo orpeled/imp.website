@@ -13,12 +13,20 @@
      */
     function wprss_get_display_settings( $settings ) {
 
+        $args = wp_parse_args(
+            $settings,
+            array(
+                'open_dd'   =>  'New Window',
+                'follow_dd' =>  '',
+            )
+        );
+
         $display_settings = array(
             'open'      =>  '',
             'follow'    =>  ''
         );
 
-        switch ( $settings['open_dd'] ) {
+        switch ( $args['open_dd'] ) {
 
             case 'Lightbox' :
                 $display_settings['open'] = 'class="colorbox"';
@@ -29,7 +37,7 @@
                 break;
         }
 
-        switch ( $settings['follow_dd'] ) {
+        switch ( $args['follow_dd'] ) {
 
             case 'no_follow' :
                 $display_settings['follow'] = 'rel="nofollow"';
@@ -147,6 +155,7 @@
         global $paged;
         $old_wp_query = $wp_query;
         $wp_query = $feed_items;
+
         $general_settings = get_option( 'wprss_settings_general' );
         $excerpts_settings = get_option( 'wprss_settings_excerpts' );
         $thumbnails_settings = get_option( 'wprss_settings_thumbnails' );
@@ -174,8 +183,10 @@
 
                 do_action( 'wprss_get_post_data' );
 
+                $timestamp = intval( get_post_meta( get_the_ID(), 'wprss_item_date', true ) );
+
                 // convert from Unix timestamp
-                $date = date_i18n( $general_settings['date_format'], intval( get_post_meta( get_the_ID(), 'wprss_item_date', true ) ) );
+                $date = date_i18n( $general_settings['date_format'], $timestamp );
 
                 if ( $general_settings['title_link'] == 1 ) {
                     $output .= "$link_before" . '<a ' . $display_settings['open'] . ' ' . $display_settings['follow'] . ' href="'. $permalink . '">'. get_the_title(). '</a>';
@@ -218,6 +229,10 @@
 
                 // No source, no date
                 else { $output .= "$link_after"; }
+
+                if ( $general_settings['time_ago_format_enable'] == 1 ) {
+                    $output .= '<div class="time-ago">' . human_time_diff( $timestamp, time() ) . ' ago</div>';
+                }
                 
 
             }
@@ -227,20 +242,20 @@
 
             $output = apply_filters( 'feed_output', $output );
 
-            echo $output;
-
-            wp_reset_postdata();
+            echo $output;           
 
         } else {
             $output = apply_filters( 'no_feed_items_found', __( 'No feed items found.', 'wprss' ) );
             echo $output;
         }
-        $wp_query = $old_wp_query;
+
+        $wp_query = $old_wp_query;  
+
+        wp_reset_postdata();
     }
     
 
     add_filter( 'wprss_pagination', 'wprss_pagination_links' );
-
     /**
      * Display pagination links
      *
@@ -253,7 +268,6 @@
         $output .= '</div>';  
         return $output;              
     }
-
 
 
     add_filter( 'the_title', 'wprss_shorten_title', 10, 2 );
@@ -275,7 +289,6 @@
         // Otherwise, return the same title
         return $title;
     }
-
 
 
     /**
