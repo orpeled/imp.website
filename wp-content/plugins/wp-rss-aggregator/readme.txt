@@ -2,10 +2,10 @@
 Contributors: jeangalea
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X9GP6BL4BLXBJ
 Plugin URI: http://www.wprssaggregator.com
-Tags: rss, feeds, aggregation, autoblog aggregator, rss import, feed aggregator, rss aggregator, multiple rss feeds, multi rss feeds, rss multi importer, feed import, feed import, multiple feed import, feed aggregation, rss feader, feed reader, feed to post, multiple feeds, multi feed importer, multi feed import, multi import, autoblogging, autoblogger
+Tags: rss, feeds, aggregation, rss to post, autoblog aggregator, rss import, feed aggregator, rss aggregator, multiple rss feeds, multi rss feeds, rss multi importer, feed import, feed import, multiple feed import, feed aggregation, rss feader, feed reader, feed to post, multiple feeds, multi feed importer, multi feed import, multi import, autoblogging, autoblogger
 Requires at least: 3.3
-Tested up to: 3.8.1
-Stable tag: 4.0.8
+Tested up to: 3.9.1
+Stable tag: 4.3
 License: GPLv2 or later
 Imports and aggregates multiple RSS Feeds using SimplePie. Outputs feeds sorted by date (latest first).
 
@@ -23,9 +23,9 @@ With WP RSS Aggregator, you can:
 
 You can add any number of feeds through an administration panel, the plugin will then pull feed items from these sites, merge them and display them in date order.
 
-To display your imported feed items, you can use a shortcode or call the display function directly from within your theme.
+To [display your imported feed items](http://wordpress.org/plugins/wp-rss-aggregator/screenshots/), you can use a shortcode or call the display function directly from within your theme.
 
-__More Features__: 
+= Highlighted Features = 
 
 * Export a custom RSS feed based on your feed sources
 * Pagination
@@ -68,10 +68,19 @@ Created by Jean Galea from [WP Mayor](http://www.wpmayor.com)
 WP RSS Aggregator uses the SimplePie class to import and handle feeds, and stores all feed sources and feed items as custom post types in the WordPress default table structure, thus no custom tables are added. 
 
 = Translations =
-Italian - Davide De Maestri
+* Italian - Davide De Maestri
+* Spanish - Andrew Kurtis
 
-= Reviewed On =
+= As featured on =
+* [WP Beginner](http://www.wpbeginner.com/plugins/how-to-fetch-feeds-in-wordpress-using-wp-rss-aggregator/)
+* [WPEXplorer](http://www.wpexplorer.com/custom-rss-aggregator-plugin/)
+* [WP Kube](http://www.wpkube.com/wp-rss-aggregator-wordpress-review/)
+* [Torquemag](http://torquemag.io/wp-rss-aggregator-review-do-more-with-rss-feeds/)
+* [MyWPExpert](http://www.mywpexpert.com/wordpress-rss-aggregator-plugin)
 * [Kikolani](http://kikolani.com/create-latest-posts-portfolio-page-wp-rss-aggregator.html) 
+* [ManageWP Plugins of the Month](http://managewp.com/free-wordpress-plugins-march-2014)
+* [TidyRepo](http://tidyrepo.com/wp-rss-aggregator/)
+* [WP Eka](http://www.wpeka.com/wp-rss-aggregators-plugin.html)
 * [IndexWP](www.indexwp.com/wp-rss-aggregator-plugin-review/)
 * [WPulsar](http://www.wpulsar.com/wp-rss-aggregator-plugin-feed-to-posts-keyword-filtering-review/)
 * [Kevin Muldoon](http://www.kevinmuldoon.com/wp-rss-aggregator-wordpress-plugin/)
@@ -134,6 +143,10 @@ You can do that with the [Feed to Post](http://www.wprssaggregator.com/extension
 
 Yes, within the [Feed to Post](http://www.wprssaggregator.com/extensions/feed-to-post) add-on we have an advanced feature that can get the full content of those feeds that only supply a short excerpt.
 
+= Where can I find the documentation for the plugin? =
+
+The full documentation section can be found on the [WP RSS Aggregator website](www.wprssaggregator.com/documentation/), the documentation also includes an extensive FAQ list.
+
 
 == Screenshots ==
 
@@ -149,6 +162,69 @@ Yes, within the [Feed to Post](http://www.wprssaggregator.com/extensions/feed-to
 
 
 == Changelog ==
+
+= 4.3 (2014-08-04) =
+* New Feature: Feed items now also import authors.
+* Enhanced: Custom feed is now in RSS 2.0 format.
+* Enhanced: Improved the display template for feed items.
+* Fixed bug: Custom feed was not working in Firefox.
+* Fixed bug: Some feed items were showing items from another feed source.
+* Fixed bug: The feed limit in the global settings was not working.
+
+= 4.2.3 (2014-07-29) =
+* Enhanced: Added an option to choose between the current pagination type, and numbered pagination.
+* Enhanced: The Feed Preview now also shows the total number of items in the feed.
+* Fixed bug: A PHP warning error was being shown in the System Info.
+* Fixed bug: Language files were not always being referenced correctly.
+* Fixed bug: Manually fetching a feed fails if the feed is scheduled to update in the next 10 minutes.
+* Fixed bug: Bing RSS feeds were importing duplicates on every update.
+
+= 4.2.2 (2014-07-23) =
+* Enhanced: Facebook page feeds are now changed into RSS 2.0 feeds, rather than Atom 1.0 feeds.
+* Enhanced: Improved live updating performace on the Feed Sources page.
+
+= 4.2.1 (2014-07-17) =
+* Enhanced: Feed Sources page is now more responsive.
+
+= 4.2 (2014-07-17) =
+* New Feature: Can now view each feed source's imported feed items separate from other feed sources' feed items.
+* Enhanced: Major visual update to the Feed Sources page with new live updates.
+* Enhanced: The custom feed now includes the feed source.
+* Fixed bug: Google News feeds were importing duplicate items on every update.
+* Fixed bug: Multiple minor bug fixes with old filters.
+
+= 4.1.6 (2014-06-28) = 
+* Fixed bug: Results returned by wprss_get_feed_items_for_source() will no longer be affected by filters.
+* Fixed bug: Charset issue in titles
+
+= 4.1.5 (2014-06-19) =
+* Enhanced: The Feed Sources table now indicates which feed sources encountered errors during the last import.
+* Fixed bug: Feed titles were not being decoded for HTML entities.
+
+= 4.1.4 (2014-05-16) =
+* Enhanced: Minor improvements to feed importing and handling.
+* Fixed bug: HTML entities were not being decoded in feed item titles.
+
+= 4.1.3 (2014-04-28) =
+* Enhanced: Added a force feed option, for valid RSS feeds with incorrect header content types.
+* Fixed bug: HTML entities in feed item titles are now being decoded.
+
+= 4.1.2 (2014-04-22) =
+* Enhanced: Improved the custom feed, by allowing a custom title.
+* Enhanced: Improved shortcode, by adding the "pagination" parameter.
+* Enhanced: Modified a filter to fix some bugs in the add-ons.
+
+= 4.1.1 (2014-04-09) =
+* Enhanced: Tracking notices only appear for admin users.
+* Fixed bug: Auto Feed Discovery was not working.
+
+= 4.1 (2014-04-03) =
+* New Feature: Feed items can now link to enclosure links in the feed.
+* Enhanced: Added a filter to allow add-ons to modify feed item queries.
+
+= 4.0.9 (2014-03-27) =
+* Enhanced: Added a filter to modify the feeds template.
+* Fixed bug: Nested lists in feeds template.
 
 = 4.0.8 (2014-03-20) =
 * Fixed bug: Using the shortcode makes the comments section always open.

@@ -14,7 +14,8 @@ function fetch_items_row_action_callback(){
         },
         success: function( response, status, jqXHR ){
             console.log( jqXHR );
-            link.text( 'Feed items are being imported!' );
+            link.text( 'Items are importing!' );
+            jQuery('table.wp-list-table tbody tr.post-' + id + ' td.column-feed-count i.fa-spin').addClass('wprss-show');
             setTimeout( function(){
                 link.text( original_text ).click( fetch_items_row_action_callback );
             }, 3500 );
@@ -158,13 +159,10 @@ jQuery(window).load( function(){
         
     }
 
-
-
     // GENERATES A RANDOM STRING FOR THE SECURE RESET CODE FIELD
     jQuery('#wprss-secure-reset-generate').click( function(){
         jQuery('input#wprss-secure-reset-code').val( Math.random().toString(36).substr(2) );
     });
-
 
 });
 
@@ -285,3 +283,17 @@ if ( !String.prototype.trim ) {
         return this.replace(/^\s+|\s+$/g, '');
     };
 }
+
+// For add-ons page
+(function($) {
+    $(window).load(function(){                
+        $('#add-ons .add-on-group').each(function(){                
+            var $el = $(this),
+                h = 0;                                        
+            $el.find('.add-on').each(function(){                        
+                h = Math.max( $(this).height(), h );                        
+            });                    
+            $el.find('.add-on').height( h );                    
+        });                
+    });            
+})(jQuery); 

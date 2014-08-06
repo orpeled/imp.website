@@ -28,8 +28,7 @@
      *
      * @since 2.1
      */
-    function wprss_feed_cache_lifetime( $seconds )
-    {
+    function wprss_feed_cache_lifetime( $seconds ) {
         return 1; // one second
     }
 
@@ -86,10 +85,11 @@
                     array(
                         'key'       => 'wprss_feed_id',
                         'value'     => $source_id,
-                        'compare'   => 'LIKE',
+                        'compare'   => '=',
                     ),
-                )
-            )
+                ),
+                'suppress_filters'  => 1
+            ), $source_id
         );
         return new WP_Query( $args );
     }
@@ -263,7 +263,7 @@
                 # If an id is present ...
                 if ( isset( $json['id'] ) ) {
                     # Generate the final URL for this feed and update the post meta
-                    $final_url = "http://www.facebook.com/feeds/page.php?format=atom10&id=" . $json['id'];
+                    $final_url = "http://www.facebook.com/feeds/page.php?format=rss20&id=" . $json['id'];
                     update_post_meta( $post_id, 'wprss_url', $final_url, $url );   
                 }
             }
@@ -326,6 +326,59 @@
         }
         wp_reset_postdata();
     }
+
+
+	/**
+     * Returns whether or not the feed source is updating.
+     *
+     * @param (string|int) The id of the feed source
+     * @return (bool) TRUE if the feed source is currently updating, FALSE otherwise.
+     *
+     */
+    function wprss_is_feed_source_updating( $id ) {
+        $is_updating_meta = get_post_meta( $id, 'wprss_feed_is_updating', TRUE );
+
+        if ( $is_updating_meta === '' ) {
+            return FALSE;
+        }
+		
+		$diff = time() - $is_updating_meta;
+		
+		if ( $diff > 300 ) {
+			delete_post_meta( $id, 'wprss_feed_is_updating' );
+			return FALSE;
+		}
+
+		return TRUE;
+    }
+
+
+
+    /**
+     * Returns whether or not the feed source is deleting its feeed items.
+     *
+     * @param (string|int) The id of the feed source
+     * @return (bool) TRUE if the feed source is currently deleting its items, FALSE otherwise.
+     *
+     */
+    function wprss_is_feed_source_deleting( $id ) {
+        $is_deleting_meta = get_post_meta( $id, 'wprss_feed_is_deleting_items', TRUE );
+
+        if ( $is_deleting_meta === '' ) {
+            return FALSE;
+        }
+		
+		$diff = time() - $is_deleting_meta;
+
+        $items = wprss_get_feed_items_for_source( $id );
+        if ( $items->post_count == 0 || $diff > 300 ) {
+            delete_post_meta( $id, 'wprss_feed_is_deleting_items' );
+            return FALSE;
+        }
+
+        return TRUE;
+    }
+
 
 
     /**
@@ -520,41 +573,6 @@
 
 
     /**
-     * Custom version of the WP fetch_feed() function, since we want custom sanitization of a feed
-     *
-     * Not being used at the moment, until we decide whether we can still use fetch_feed and modify its handling of sanitization
-     *
-     * @since 3.0
-     *
-     */
-    /*function wprss_fetch_feed($url) {
-        require_once (ABSPATH . WPINC . '/class-feed.php');
-
-        $feed = new SimplePie();
-
-        // $feed->set_sanitize_class( 'WP_SimplePie_Sanitize_KSES' );
-        // We must manually overwrite $feed->sanitize because SimplePie's
-        // constructor sets it before we have a chance to set the sanitization class
-        // $feed->sanitize = new WP_SimplePie_Sanitize_KSES();
-
-        $feed->set_cache_class( 'WP_Feed_Cache' );
-        $feed->set_file_class( 'WP_SimplePie_File' );
-
-        $feed->set_feed_url($url);
-        $feed->strip_htmltags(array_merge($feed->strip_htmltags, array( 'h1', 'h2', 'h3', 'h4', 'h5', 'a' )));
-        $feed->set_cache_duration( apply_filters( 'wp_feed_cache_transient_lifetime', 12 * HOUR_IN_SECONDS, $url ) );
-        do_action_ref_array( 'wp_feed_options', array( &$feed, $url ) );
-        $feed->init();
-        $feed->handle_content_type();
-
-        if ( $feed->error() )
-            return new WP_Error('simplepie-error', $feed->error());
-
-        return $feed;
-    }*/
-
-
-    /**
      * Deletes all imported feeds and re-imports everything
      *
      * @since 3.0
@@ -564,9 +582,54 @@
         wprss_fetch_insert_all_feed_items( TRUE );
     }
 
-  /*  add_action( 'wp_feed_options', 'wprss_feed_options' );
-    function wprss_feed_options( $feed) {
-        $feed->strip_htmltags(array_merge($feed->strip_htmltags, array('h1', 'a', 'img','em')));
+
+    /**
+     * Deletes N oldest feed items for the given source
+     *
+     * @since 4.2
+     */
+    function wprss_delete_oldest_feed_items( $n, $source ) {
+        // If the source does not exist, do nothing
+        if ( get_post( $source ) == NULL ) return;
+
+        // Make sure $n is an integer
+        $n = intval($n);
+
+        // Do nothing if n is zero or negative
+        if ( $n <= 0 ) return;
+
+        // Get the feed items, as an array, not WP_Query.
+        // We will need to perform some array operations
+        $feed_items = wprss_get_feed_items_for_source( $source );
+        $feed_items = $feed_items->get_posts();
+        // Get number of feed items
+        $count = count( $feed_items );
+
+        // Index of first feed item to delete
+        $start = $count - $n;
+        // Cut the array of feed items to get the items to delete
+        $to_delete = array_slice( $feed_items, $start );
+        // log -- for now
+        foreach( $to_delete as $fi ) {
+            wprss_log_obj( "To delete" , $fi->ID );
+        }
     }
 
-*/
+
+    /**
+     * Deletes the required number of feed items for the given source,
+     * to keep the number of feed items below its limit.
+     *
+     * @since 4.2
+     */
+    function wprss_truncate_feed_items_for_source( $source ) {
+        // Get the limit setting
+        $limit = get_post_meta( $source, 'wprss_limit', true );
+
+        // Calculate the number of feed items to delete
+        $feed_items = wprss_get_feed_items_for_source( $source );
+        $n = intval($feed_items->found_posts) - intval($limit);
+
+        // Delete the feed items
+        wprss_delete_oldest_feed_items( $n, $source );
+    }

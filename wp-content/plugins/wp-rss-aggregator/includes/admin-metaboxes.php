@@ -93,7 +93,7 @@
             'label' => __( 'URL', 'wprss' ),
             'desc'  => __( 'Enter feed URL (including http://)', 'wprss' ),
             'id'    => $prefix .'url',
-            'type'  => 'text',
+            'type'  => 'url',
             'after' => 'wprss_validate_feed_link',
         );
         
@@ -109,6 +109,13 @@
             'desc'  => __( 'Enter a feed item import/display limit. Leave blank to use the default setting.', 'wprss' ),
             'id'    => $prefix . 'limit',
             'type'  => 'number'
+        );
+
+        $wprss_meta_fields[ 'enclosure' ] = array(
+            'label' => __( 'Link to enclosure', 'wprss' ),
+            'desc'  => __( 'Check this box to link the feed item title to the enclosure link in the feed.', 'wprss' ),
+            'id'    => $prefix . 'enclosure',
+            'type'  => 'checkbox'
         );
 
         // for extensibility, allows more meta fields to be added
@@ -145,9 +152,10 @@
 
                         switch( $field['type'] ) {
                         
-                            // text
+                            // text/url
+                            case 'url':
                             case 'text':
-                                echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'. esc_attr( $meta ) .'" size="55" />
+                                echo '<input type="'.$field['type'].'" name="'.$field['id'].'" id="'.$field['id'].'" value="'. esc_attr( $meta ) .'" size="55" />
                                     <br><span class="description">'.$field['desc'].'</span>';
                             break;
                         
@@ -159,7 +167,8 @@
                         
                             // checkbox
                             case 'checkbox':
-                                echo '<input type="checkbox" name="'.$field['id'].'" id="'.$field['id'].'" ', esc_attr( $meta ) ? ' checked="checked"' : '','/>
+                                echo '<input type="hidden" name="'.$field['id'].'" value="false" />';
+                                echo '<input type="checkbox" name="'.$field['id'].'" id="'.$field['id'].'" value="true" ', checked( $meta, 'true' ), ' />
                                     <label for="'.$field['id'].'">'.$field['desc'].'</label>';
                             break;    
                         
@@ -270,7 +279,7 @@
         // loop through fields and save the data
         foreach ( $meta_fields as $field ) {
             $old = get_post_meta( $post_id, $field[ 'id' ], true );
-            $new = $_POST[ $field[ 'id' ] ];
+            $new = trim( $_POST[ $field[ 'id' ] ] );
             if ( $new && $new != $old ) {
                 update_post_meta( $post_id, $field[ 'id' ], $new );
             } elseif ( '' == $new && $old ) {
@@ -278,6 +287,7 @@
             }
         } // end foreach
 
+        $force_feed = ( isset( $_POST['wprss_force_feed'] ) )? $_POST['wprss_force_feed'] : 'false';
         $state = ( isset( $_POST['wprss_state'] ) )? $_POST['wprss_state'] : 'active';
         $activate = ( isset( $_POST['wprss_activate_feed'] ) )? stripslashes( $_POST['wprss_activate_feed'] ) : '';
         $pause = ( isset( $_POST['wprss_pause_feed'] ) )? stripslashes( $_POST['wprss_pause_feed'] ) : '';
@@ -287,6 +297,7 @@
         $old_update_interval = get_post_meta( $post_id, 'wprss_update_interval', TRUE );
 
         // Update the feed source meta
+        update_post_meta( $post_id, 'wprss_force_feed', $force_feed );
         update_post_meta( $post_id, 'wprss_activate_feed', $activate );
         update_post_meta( $post_id, 'wprss_pause_feed', $pause );
         update_post_meta( $post_id, 'wprss_age_limit', $age_limit );
@@ -322,15 +333,17 @@
         $feed_url = get_post_meta( $post->ID, 'wprss_url', true );
         
         if( ! empty( $feed_url ) ) {             
-            $feed = wprss_fetch_feed( $feed_url ); 
+            $feed = wprss_fetch_feed( $feed_url, $post->ID ); 
             if ( ! is_wp_error( $feed ) ) {
                 $items = $feed->get_items();        
-                // Figure out how many total items there are, but limit it to 5. 
-                $maxitems = $feed->get_item_quantity(5); 
+                // Figure out how many total items there are
+                $total = $feed->get_item_quantity();
+                // Get the number of items again, but limit it to 5.
+                $maxitems = $feed->get_item_quantity(5);
 
                 // Build an array of all the items, starting with element 0 (first element).
                 $items = $feed->get_items( 0, $maxitems );  
-                echo '<h4>Latest 5 feed items available from ' . get_the_title() . '</h4>';
+                echo "<h4>Latest $maxitems feed items out of $total available from " . get_the_title() . '</h4>';
                 echo '<ul>';
                 foreach ( $items as $item ) { 
                     // Get human date (comment if you want to use non human date)
@@ -349,9 +362,42 @@
                 }  
                 echo '</ul>';
             }
-            else _e( '<span class="invalid-feed-url"><strong>Invalid feed URL</strong> - Double check the feed source URL setting above.</span>
-                      <p>Not sure where to find the RSS feed on a website? 
-                      <a target="_blank" href="http://webtrends.about.com/od/webfeedsyndicationrss/ss/rss_howto.htm">Click here</a> for a visual guide' , 'wprss' );
+            else {
+                ?>
+                <span class="invalid-feed-url">
+                    <strong><?php _e( 'Invalid feed URL', 'wprss' ); ?></strong> - 
+                    <?php _e( 'Double check the feed source URL setting above.' , 'wprss' ); ?>
+                </span>
+
+                <p><?php _e( 'Not sure where to find the RSS feed on a website?', 'wprss' ); ?>
+                    <a target="_blank" href="http://webtrends.about.com/od/webfeedsyndicationrss/ss/rss_howto.htm">
+                        <?php _e( 'Click here' ); ?>
+                    </a>
+                    <?php _e( 'for a visual guide' , 'wprss' ); ?>
+                </p>
+
+                <?php
+            }
+
+            $force_feed = get_post_meta( $post->ID, 'wprss_force_feed', TRUE ); ?>
+
+            <hr/>
+
+            <p>
+                <label for="wprss-force-feed">
+                    <strong><?php _e('Are you seeing an error, but sure the feed URL is correct?', 'wprss' ); ?></strong>
+                </label>
+            </p>
+            <p>
+                <label for="wprss-force-feed">Force the feed</label>
+                <input type="hidden" name="wprss_force_feed" value="false" />
+                <input type="checkbox" name="wprss_force_feed" id="wprss-force-feed" value="true" <?php echo checked( $force_feed, 'true' ); ?> />
+            </p>
+            <p class="description">
+                <strong>Note:</strong> This will disable auto discovery of the RSS feed, meaning you will have to use the feed's URL. Using the site's URL will not work.
+            </p>
+
+            <?php
         }
 
         else _e( 'No feed URL defined yet', 'wprss' );
@@ -508,6 +554,7 @@
             </div>
         </div>
 
+        
         <?php
     }
 
@@ -581,7 +628,7 @@
     function wprss_remove_meta_boxes() {
         if ( 'wprss_feed' !== get_current_screen()->id ) return;   
         // Remove meta boxes of other plugins that tend to appear on all posts          
-        remove_meta_box( 'wpseo_meta', 'wprss_feed' ,'normal' );
+        //remove_meta_box( 'wpseo_meta', 'wprss_feed' ,'normal' );
         remove_meta_box( 'postpsp', 'wprss_feed' ,'normal' );
         remove_meta_box( 'su_postmeta', 'wprss_feed' ,'normal' );
         remove_meta_box( 'woothemes-settings', 'wprss_feed' ,'normal' ); 

@@ -3,14 +3,14 @@
     Plugin Name: WP RSS Aggregator
     Plugin URI: http://www.wprssaggregator.com
     Description: Imports and aggregates multiple RSS Feeds using SimplePie
-    Version: 4.0.8
+    Version: 4.3
     Author: Jean Galea
     Author URI: http://www.wprssaggregator.com
     License: GPLv2
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
     */
 
-    /*  
+    /*
     Copyright 2012-2014 Jean Galea (email : info@jeangalea.com)
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@
 
     /**
      * @package   WPRSSAggregator
-     * @version   4.0.8
+     * @version   4.3
      * @since     1.0
      * @author    Jean Galea <info@jeangalea.com>
      * @copyright Copyright (c) 2012-2014, Jean Galea
@@ -43,7 +43,7 @@
 
     // Set the version number of the plugin. 
     if( !defined( 'WPRSS_VERSION' ) )
-        define( 'WPRSS_VERSION', '4.0.8', true );
+        define( 'WPRSS_VERSION', '4.3', true );
 
     // Set the database version number of the plugin. 
     if( !defined( 'WPRSS_DB_VERSION' ) )
@@ -81,6 +81,9 @@
     if( !defined( 'WPRSS_INC' ) )
         define( 'WPRSS_INC', WPRSS_DIR . trailingslashit( 'includes' ), true );
 
+    if( !defined( 'WPRSS_LANG' ) )
+        define( 'WPRSS_LANG', WPRSS_DIR . trailingslashit( 'languages' ), true );
+    
     // Set the constant path to the plugin's log file.
     if( !defined( 'WPRSS_LOG_FILE' ) )
         define( 'WPRSS_LOG_FILE', WPRSS_DIR . 'log', true );
@@ -146,6 +149,12 @@
     /* Load the system info file */
     require_once ( WPRSS_INC . 'admin-debugging.php' );     
 
+    /* Load the system info file */
+    require_once ( WPRSS_INC . 'admin-help.php' );   
+    
+    /* Load the system info file */
+    require_once ( WPRSS_INC . 'admin-addons.php' );   
+
     /* Load the admin display-related functions */
     require_once ( WPRSS_INC . 'admin-display.php' );     
 
@@ -169,6 +178,12 @@
    
     /* Load the admin editor file */
     require_once ( WPRSS_INC . 'admin-editor.php' );
+
+    /* Load the admin heartbeat functions */
+    require_once ( WPRSS_INC . 'admin-heartbeat.php' );
+
+    // Load the statistics functions file
+    require_once ( WPRSS_INC . 'admin-statistics.php' );
 
     // Load the logging functions file
     require_once ( WPRSS_INC . 'admin-log.php' );
@@ -242,6 +257,10 @@
     function wprss_prepare_pointers() {
         // Don't run on WP < 3.3
         if ( get_bloginfo( 'version' ) < '3.3' )
+            return;
+
+        // If the user is not an admin, do not show the pointer
+        if ( !current_user_can( 'manage_options' ) )
             return;
 
         $screen = get_current_screen();
@@ -381,7 +400,7 @@
      * @return void     
      */  
     function wprss_load_textdomain() { 
-        load_plugin_textdomain( 'wprss', false, plugin_dir_path( __FILE__ ) . '/languages/' );
+        load_plugin_textdomain( 'wprss', false, WPRSS_LANG );
     }
     
     
