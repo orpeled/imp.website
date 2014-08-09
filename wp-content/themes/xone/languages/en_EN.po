@@ -1,0 +1,2740 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Spab Rice <spabrice@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.1"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.2"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.3"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.4"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.5"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.6"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.7"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.8"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "0.9"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/widget-dribbble.php:1
+msgid "A simple Dribbble Widget to show your Dribbbles."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/widget-flickr.php:1
+msgid "A simple flickr Widget to show your flickr images."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/widget-tags.php:1
+msgid "A simple tag Widget."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/widget-sociallinks.php:1
+msgid "A widget that displays all Social links which have been activated."
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/singlepost-blog.php:53
+msgid "About"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Accordion"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Adapt Slides"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add Accordion"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add FIeld"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1822
+msgid "Add Image"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Add Images"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Add Item"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add Skill"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add Tab"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add Testimonial"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Add Video"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Add a 16px x 16px Png/Gif image that will represent your website's favicon."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Add a Custom Logo from your Media Library"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Add a background image for the section"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Add a custom logo for the Wordpress login screen."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Add a custom logo for the preloading screen."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add animation for each Team Meber"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add animation for each column"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add animation for whole Team row"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Add animation for whole row"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Add images or embedded videos, then drag and drop to arrange them."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Add the gallery images, then drag and drop to arrange them."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Add your own custom blog excerpt length."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Alert Text"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Alert Type/Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Alerts"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Align Caption"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Alternativ Main Title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Analytics / Tracking"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Animation"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Animation Duration"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Archive"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Author"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Author Info"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Author name"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Auto Start"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Back To Top"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Background"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Background Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Background Image"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Behance"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:225
+msgid "Behance:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Below the thumbnail"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Big"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Blog"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/loop-search.php:1
+msgid "Blog Post"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Blog Posts Comments"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Body"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Body Font"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Bottom Center"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Bottom Left"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Bottom Right"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Branding"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Bullet Navigation"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Button Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Button Font"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Button Size"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Button Target"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Button Text"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Button URL"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Button type"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Buttons"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-general-features.php:1
+#: Neuer Ordner/shortcodes.php:1
+msgid "By"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Cancel Reply"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Caption"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Carousel"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Categories"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/theme-custom-post-types.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Category"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Category Name"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Center"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Center Center"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Choose Icon"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Choose Text color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Choose a Logo for the overlay header."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Choose a Slider. The Slider will replace the content."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Choose a background for your page/section"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Choose a category"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Choose a custom color for the hover effect"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Choose a layout"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Choose a logo for your footer.<br><b>Please leave this empty if you don't want a footer logo.</b>"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-dribbble.php:137
+#: Neuer Ordner/widget-flickr.php:138
+msgid "Choose a number of items (max = 30)"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Choose an image"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Choose for Light or Dark background"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Choose the initial style of your header"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Choose the opacity for the overlay color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Choose the portfolio category you want to show for this page"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Choose the slider you want to show for this page"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Choose your layout for the columns you want include."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Color Bordered to Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Color Scheme"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Column 1"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Column 2"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Column 3"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Column 4"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Column 5"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Column Layout"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Columns"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Columns (if selected above)"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Comment"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/comments.php:25
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcodes.php:1
+msgid "Comments"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Contact Form"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Contact Settings"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Content"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Contentwidth"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Contentwidth Gallery & text below"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Control Nav"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Copyright Info"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Count"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Count From"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Count To"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Counter"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Crop Thumbnails"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Crop the thumbnails? If deactivated it will have a masonry effect."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Custom"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Custom CSS"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Custom File"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Custom Login Logo"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Custom Preloader Logo"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Dark"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Dark Bordered to Dark"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-custom-post-types.php:1
+msgid "Date"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Default"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Default is 400.  Width is 100% of parent container."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Delay (optional)"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Demo Choose"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Deviantart"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:232
+msgid "Deviantart:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Direction Nav"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Disabled"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Display"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Display Content"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Display the back to top button after scrolling"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Divider"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Do you want the preloading effect on start of each page?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Do you want the slides to adapt automatically to the slider height/width?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Do you want to activate the sound of the video?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Do you want to display the category name?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Do you want to have a parallax effect?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Do you want to show the Filter? If YES, please don't select 'All' for 'Category' above."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Do you want to show the Page Title for this page?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Do you want your header to be fixed?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Do youw ant to display the content of the editor below the slider?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Do youw want a carousel?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Don't show the item title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Dribbble"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-dribbble.php:135
+msgid "Dribbble Items"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-dribbble.php:129
+msgid "Dribbble Name"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:205
+msgid "Dribbble:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Email"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Embedded Audio"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Embedded Video"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Enable or disable the read more button on blog entries."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Enable the pagination between the portfolio items."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Enable the random display of the different slides"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Enable the share feature."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Enabled"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Enter a top padding. Default is 0."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Enter a top padding. Default is 100.  Choose 0 for the First Section / Front Page"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Enter the google map latitude & longitude using this tool:<br>http://itouchmap.com/latlong.html"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Enter the quote."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Enter the url of one of your media image"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:159
+msgid "Enter your social profile links including \"http://\""
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Enter your subtitle for this page.  Leave it empty if you son't want do show any subtitle."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Entries"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcodes.php:1
+msgid "Error"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Excerpt length"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Facebook"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Facebook Profile"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:171
+msgid "Facebook:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "False"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Favicon"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Featured Image"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Fieldname / Label"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Fieltype"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Fixed header"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Flickr"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-flickr.php:129
+msgid "Flickr ID"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-flickr.php:136
+msgid "Flickr Items"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Footer"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Footer Logo"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Footer Settings"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Forrst"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:239
+msgid "Forrst:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Fullwidth"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Fullwidth or Contentwidth?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/theme-custom-post-types.php:1
+msgid "Gallery"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Gallery Layout"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Gallery left & text right"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "General"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "General Headings"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/theme-onepage-features.php:197
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Go To"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Google Map"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Google Map Infotext"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Google Map Latitude & Longitude"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Google Map Pin Icon"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:185
+msgid "Google Plus:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Google Profile"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Google map"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Google+"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Grey Bordered to Dark"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Grid Width"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "H1"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "H2"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "H3"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "H4"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "H5"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "H6"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "HTML"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Header"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Header Background"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Header Settings"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Header Style"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Headline"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Height"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Home"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Horizontal Section"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Hover Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "How big do you want the thumbnails?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "How many Portfolio items do youw ant to show. <b>-1</b> = all.  If you have more portfolio items a load more button will be shown."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Huge"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "ID"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Icon"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Icon Box"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Icon Button"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Icon Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Icon Position"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "If YES the portfolio items will be shown on start page dependingly the styling settings from theme options."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "If empty, it will take the page name."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "If you choose 'List' the images will be displayed below each other instead of a slider."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "If you go for a fixed header you can choose here if you want a bullet navigation or not. <br><b>This will only apply if fixed header above has been enabled</b>"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Image"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Image (Optional)"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Import Demo"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Include the embedded iframe."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Info Method"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Infotext"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1822
+msgid "Insert"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Instagram"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:198
+msgid "Instagram:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Item Title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Latitude & Longitude"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Layout"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Leave a Comment"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Leave a Comment to %s"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Leave it empty if you don't want any overlay color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+msgid "Left"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Left side for copyright"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Light"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Light or Dark Color Scheme?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Link"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Behance portfolio."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Deviantart works."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Dribbles."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Facebook site."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Flickr images."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Forrst site."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Google+ profile"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Instagram Gallery."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your LinkedIn profile."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Pins."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Thumblr."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Twitter profile."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Vimeo videos."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Link to your Youtube channel."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Link url"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:253
+msgid "Linked In:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "LinkedIn"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "LinkedIn Link"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "List"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-general-features.php:1
+msgid "Load More"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Logo"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "M4V File URL"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "MP3 File URL"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "MP4 file url"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Mail Adress"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Main Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Main Section Title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Main Title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Make sure to add this iconbox into a column shortcode!"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Map ID"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Medias"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Medias / Gallery"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Medium"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Method"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Method of options"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Mini"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Misc"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Misc Font"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Name"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Navigation"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Navigation Font"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "New Page"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/index.php:43
+msgid "Next Page"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "No"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "No Slider"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "No animation"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/index.php:27
+#: Neuer Ordner/template-portfolio.php:63
+msgid "No posts has been found!"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "No sidebar"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+msgid "None"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Number of Projects"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "OGA/OGG File URL"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "OGV file url"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Open"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Open Lightbox Video"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Or self hosted audio.  Please leave these fields empty if you don't want to show an self hosted audio."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Or self hosted video.  Please leave these fields empty if you don't want to show an self hosted video."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Overlay"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Overlay Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Overlay Logo"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Overlay Opacity"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Overlay Slider"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Overlay opacity"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Padding Bottom"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Padding Top"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/theme-onepage-features.php:200
+#: Neuer Ordner/loop-search.php:1
+msgid "Page"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Page / Section settings"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Page Comments"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Page not found"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Pagetitle"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Parallax Effect"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Paste your Google analytics (or other) code here."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Percent Amount"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Pin Icon"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Pinterest"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:192
+msgid "Pinterest:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Placing Caption"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcodes.php:1
+msgid "Please check your entries"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Please choose this template only if you want to show a google map in fullwidth."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/comments.php:8
+msgid "Please do not load this page directly!"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Please enter a valid number"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Please enter the height of the video file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Please enter the width of the video file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+#: Neuer Ordner/theme-custom-post-types.php:1
+#: Neuer Ordner/option-panel.php:1
+msgid "Portfolio"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Portfolio Categories"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Portfolio Comments"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/loop-search.php:1
+msgid "Portfolio Item"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Portfolio Preview"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Portfolio Single Layout"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Portfolio Single View"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-custom-post-types.php:1
+msgid "Portfolio categories"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-custom-post-types.php:1
+msgid "Portfolio tags"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Portfolio?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Post Comment"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Post Format"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Poster"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Posts (Single)"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Preloader"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/index.php:43
+msgid "Previous Page"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/functions.php:1
+msgid "Primary Menu"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-custom-post-types.php:1
+msgid "Project"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Quote"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Quote Name"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Quote Slider"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Quote Text"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "RSS"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Randomize"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/loop-blog.php:42
+msgid "Read More"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Read More Button"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Recent Works"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Recipient Email"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1822
+msgid "Remove Image"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Required field?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Reset Likes"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Reset Views"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Responsive Layout"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+msgid "Right"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:260
+msgid "Rss:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/widget-dribbble.php:1
+msgid "SR - Dribbbles"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/widget-flickr.php:1
+msgid "SR - Flickr"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/widget-sociallinks.php:1
+msgid "SR - Social Links"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/widget-tags.php:1
+msgid "SR - Tags"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Same page"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Scroll to Section"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Scroll to section"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Search"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/theme-onepage-features.php:199
+msgid "Section"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Section Title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Select Slider"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Select a display option."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Select true if you want the slider to start automatically on page loading."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Select true to enable the control navigation."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Select true to enable the next/previous arrows."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Select true to enable the smooth transition between slides of different heights."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Select your color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Selfhosted Audio"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Selfhosted Video"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Selhosted Audio"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Selhosted Video"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Set the animation speed, in milliseconds."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Set the interval time between the slides, in milliseconds."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Share"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Show Filter"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Show Media Caption Text"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Show Page Title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Show Portfolio?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Show RSS link to the feed."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Show on hover"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Shows the author description at the bottom of the post. <br><b>Please make sure to added some description for the author.</b>"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Shows the author name below the post title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Shows the related categories below the post title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Shows the related tags at the bottom of the post"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Sidebar"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:1
+msgid "Sidebar Blog"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Single Pagination"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Size"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Skills"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Slide"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Slider"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Slider Settings"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Slides"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Slideshow Speed"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Slugname"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Small"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Smooth Height"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Social Links"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Social Media"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Sound"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Spacer"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Spacer / Margin"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Spacing"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Spacing between the thumbnail."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Speed"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Styling"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Subject"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Subline"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Submit"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Submit Button"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Subtitle"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Tab Name"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Tab Text"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Tabs"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Tag"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-custom-post-types.php:1
+#: Neuer Ordner/option-panel.php:1
+msgid "Tags"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Team Layout"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Team Member"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Text"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Text Button"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Text Color"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Textarea"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Textfield"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "The <b>Custom File method</b> is the best.  The css rules are written in a css file (custom-style.php) outside of the html. This method might not work on some servers.<br><br>The <b>HTML method</b> is fail-safe. The css rules are written in the head of the html.  <br>Only use this if \"Custom File\" is not working.<br><br><b>How to check if \"custom file method\" is working?</b><br>Choose \"custom file\" and change the \"Main Color\" in Styling and check if the color changed in your frontend site.  If this is the case, the custom file method is working fine."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "The Demo has been imported"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "The above Background settings have no impact. <br>Make sure to choose the right Top/Bottom Padding (Recommendation = 0/0)<br>Also recommended to hide the page title."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "The caption text you've entered for the media will be shown"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/comments.php:7
+msgid "The comments is password protected. Enter your password."
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/404.php:14
+msgid "The page you've searched for has not been found."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "The slider will be displayed below the Page Title if this is active."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "The slider will overlay your bg image & replace the content! <b>Make sure to add transparent background to the slides</b>."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "The slider will overlay your video & replace the content! <b>Make sure to add transparent background to the slides</b>."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "The url to the M4V file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "The url to the OGV file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "The url to the WEBM file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "The url to the m4v file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "The url to the mp3 file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "The url to the oga/ogg file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "The url to the webmv file"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Thickness"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "This Text will be displayed on the Google Map"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "This activates the responsive layout for mobile devices."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "This activates the social links in the bottom right area. Configure Icons in Social Media."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "This image will be shown for devices which don't support background video. Please make sure that this image has the same height than the video itself"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "This is important if you want to add multiple audios/videos. Use a unique value."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "This is important if you want to use more maps in the same page."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Thumblr"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:246
+msgid "Thumblr:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Thumbnail Size"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/theme-custom-post-types.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Title Color (optional)"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-tags.php:110
+#: Neuer Ordner/widget-dribbble.php:123
+#: Neuer Ordner/widget-sociallinks.php:164
+#: Neuer Ordner/widget-flickr.php:123
+msgid "Title:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "To view this protected post, enter the password below:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Toggle"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Toggle Open"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Toggle Size"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Toggle Text"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Toggle Title"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Top Center"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Top Left"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Top Right"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Tracking Code"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "True"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Twitter"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Twitter Profile"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:178
+msgid "Twitter:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Type of animation"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Typography"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "URL"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Upload as many slides you want, then drag and drop to arrange them."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Uppercase"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Video"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Video Height"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Video URL"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Video Width"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "Video code"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-general-features.php:1
+msgid "View all posts in %s"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-custom-post-types.php:1
+msgid "Views / Likes"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Vimeo"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:212
+msgid "Vimeo:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "WEBM file url"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "WEBMV File URL"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-admin.php:157
+msgid "Website"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "What Layout mode do you want to show for this project in single view?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Where do you want to place your item title?"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Where should the sidebar float"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "White Bordered to White"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Write your own CSS-Code."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+#: Neuer Ordner/option-panel.php:1
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "Yes"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/contact-form.php:1
+msgid "Your message has been sent. Thank You."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/contact-form.php:1
+msgid "Your message has not been sent"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "Youtube"
+msgstr ""
+
+#. Text in echo
+#: Neuer Ordner/widget-sociallinks.php:218
+msgid "Youtube:"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcode-popup.php:1
+msgid "choose a custom pin icon"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "for blog settings reset"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "for portfolio settings reset"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/theme-postmeta.php:1
+msgid "leave empty if you want to default color."
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/shortcodes.php:1
+msgid "read more"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "settings reset"
+msgstr ""
+
+#. Text in function
+#: Neuer Ordner/option-panel.php:1
+msgid "settings saved"
+msgstr ""
+
