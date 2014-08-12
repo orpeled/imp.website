@@ -25,7 +25,11 @@
 		$browser =  new Browser();
 	?>
 			<h3><?php _e( 'System Information', 'wprss' ) ?></h3>
-			<form action="<?php echo esc_url( admin_url( 'edit.php?post_type=wprss_feed&page=wprss-debugging' ) ); ?>" method="post">
+			<?php
+				$form_url = admin_url( 'edit.php?post_type=wprss_feed&page=wprss-debugging' );
+				$nonce_url = wp_nonce_url( $form_url, 'wprss-sysinfo' );
+			?>
+			<form action="<?php echo esc_url( $nonce_url ); ?>" method="post">
 				<textarea readonly="readonly" onclick="this.focus();this.select()" id="system-info-textarea" name="wprss-sysinfo" title="<?php _e( 'To copy the system info, click below then press Ctrl + C (PC) or Cmd + C (Mac).', 'wprss' ); ?>">
 ### Begin System Info ###
 
@@ -42,7 +46,10 @@ WordPress Version:        <?php echo get_bloginfo( 'version' ) . "\n"; ?>
 <?php echo $browser ; ?>
 
 PHP Version:              <?php echo PHP_VERSION . "\n"; ?>
-MySQL Version:            <?php echo mysql_get_server_info() . "\n"; ?>
+MySQL Version:            <?php
+								$mysqli = new mysqli( DB_HOST, DB_USER, DB_PASSWORD );
+								echo $mysqli->server_info . "\n";
+						  ?>
 Web Server Info:          <?php echo $_SERVER['SERVER_SOFTWARE'] . "\n"; ?>
 
 PHP Safe Mode:            <?php echo ini_get( 'safe_mode' ) ? "Yes" : "No\n"; ?>
@@ -158,6 +165,8 @@ if ( get_bloginfo( 'version' ) < '3.4' ) {
 	function wprss_generate_sysinfo_download() {
 		nocache_headers();
 
+		check_admin_referer('wprss-sysinfo');
+		
 		header( "Content-type: text/plain" );
 		header( 'Content-Disposition: attachment; filename="wprss-system-info.txt"' );
 
