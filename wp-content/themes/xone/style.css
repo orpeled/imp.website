@@ -2625,17 +2625,17 @@ a.sr-buttonicon.big-button { padding: 20px; width: 30px; height: 30px !important
 /* Are you a maker section */
 .maker_section h2 {
     font-size: 28px;
-    line-height: 60px;
+    line-height: 45px;
 
 }
 .maker_section p {
     height: 0px;
-    margin-top:0px;
+    margin-top: 0px;
 
 }
 
 p {
-    text-color: #4D4D4D;
+    color: #4D4D4D;
 }
 
 .pad_right {
@@ -2644,4 +2644,32 @@ p {
 
 .pad_left {
     padding: 0 0 0 10%
+}
+.box_text {
+    border: 1px #e6e6e6 solid;
+    color: #666666;
+    background-color: #ffffff;
+    padding: 1px 5px 1px 5px;
+    margin: 0px 4px 0px 4px;
+}
+
+.menu {
+    color: #4D4D4D;
+}
+
+.logged-in .fixed-header header { top: 0px; }
+
+footer {
+    border-top: 1px #666666 solid !important;
+
+}
+
+.specs_before_footer p{
+    margin-top: 5px;
+}
+.about_us_before_footer p{
+    margin-top: 5px;
+}
+.contact_us_before_footer p{
+    margin-top: 5px;
 }

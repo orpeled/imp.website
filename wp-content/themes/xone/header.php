@@ -72,9 +72,9 @@ if ($titles['tax']) {
 			<?php if (get_option($sr_prefix.'_logo')) { ?>
 			<div id="logo">
 				<?php if (get_option($sr_prefix.'_headerstyle') && get_option($sr_prefix.'_overlaylogo') && is_page_template('template-onepage.php')) { ?>
-				<a id="overlay-logo" class="logotype" href="<?php echo home_url(); ?>"><img src="<?php echo get_option($sr_prefix.'_overlaylogo'); ?>" alt="Logo"></a>
+				<a id="overlay-logo" class="logotype" href="<?php echo home_url(); ?>/#"><img src="<?php echo get_option($sr_prefix.'_overlaylogo'); ?>" alt="Logo"></a>
 				<?php } ?>
-				<a id="defaut-logo" class="logotype" href="<?php echo home_url(); ?>"><img src="<?php echo get_option($sr_prefix.'_logo'); ?>" alt="Logo"></a>
+				<a id="defaut-logo" class="logotype" href="<?php echo home_url(); ?>/#"><img src="<?php echo get_option($sr_prefix.'_logo'); ?>" alt="Logo"></a>
 			</div>    
 			<?php } else { ?>
 			<div id="logo">
