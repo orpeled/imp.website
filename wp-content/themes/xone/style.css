@@ -119,8 +119,13 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.text-light h1, .text-light h2, .text-light h3, .text-light h4, .text-light h5, .text-light h6 { color: #ffffff; }
 
+    @font-face {
+        font-family: Miso Regular;
+        src: url('../xone/files/fonts/miso.otf');
+    }
+
 h1 { font-size: 100px; line-height: 130px; }
-h2 { font-size: 40px; line-height: 60px; }
+h2 { font-family: 'Miso Regular','Raleway', sans-serif !important; font-size: 40px; line-height: 60px; }
 h3 { font-size: 32px; line-height: 48px; }
 h4 { font-size: 22px; line-height: 34px; }
 h5 { font-size: 18px; line-height: 26px; }
@@ -167,19 +172,21 @@ div h1:first-child, div h2:first-child, div h3:first-child, div h4:first-child, 
 ---------------------------------------- */
 input[type=text], input[type=password], input[type=email], textarea {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-	font-weight: 400;
-	font-size: 12px;
+	font-style: italic;
+    font-weight: 400;
+	font-size: 18px;
 	background: #ffffff;
-	border: 1px solid #d9d9d9;
-	line-height: 18px;
+	border: 0px solid #d9d9d9;
+	line-height: 22px;
 	height: 18px;
 	color:#999999;
-	padding: 10px 4px;
-	border-radius: 3px;
-	-moz-border-radius: 3px; 
-	-khtml-border-radius: 3px; 
+	padding: 12px 20px;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-khtml-border-radius: 12px;
 	-webkit-border-radius: 3x;
 	transition: all 200ms linear;
+    display:inline !important;
 	}
 	
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus { 
@@ -198,22 +205,23 @@ textarea { width: 1100px; height: 150px; max-width: 97%; padding: 11px 4px 8px 4
 
 input[type=submit] {
 	font-family: 'Open Sans';
-	font-weight: 600;
-	font-size: 13px; 
-	line-height: 22px ;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px ;
 	letter-spacing: 0.15em; 
 	text-transform: uppercase;
-	text-align: center;
-	display: block;
 	border: none;
-	color: #ffffff;	
-	background: #262626;
+	color: #ffffff;
+    background: -webkit-linear-gradient(left top, #00aba8, #2a97b4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #00aba8, #2a97b4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #00aba8, #2a97b4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #00aba8 , #2a97b4); /* Standard syntax */
 	cursor: pointer;
-	padding: 15px 40px;
-	border-radius: 3px;
-	-moz-border-radius:3px; 
-	-khtml-border-radius:3px; 
-	-webkit-border-radius:3px;
+	padding: 11px 14px;
+	border-radius: 12px;
+	-moz-border-radius:12px;
+	-khtml-border-radius:12px;
+	-webkit-border-radius:12px;
 	-webkit-transition: all 200ms linear;
     -moz-transition: all 200ms linear;
     -o-transition: all 200ms linear;
@@ -365,7 +373,7 @@ ul.list-nostyle li > .fa {
 /* Others
 ---------------------------------------- */
 p { 
-	margin-top: 20px; 
+	margin-top: 20px;
 	}
 	div p:first-child {  margin-top: 0px;  }	
 	
@@ -2612,4 +2620,28 @@ a.sr-buttonicon.big-button { padding: 20px; width: 30px; height: 30px !important
 /*---------------------------------------------- 
 21. THIRD PARTY PLUGINS
 ------------------------------------------------*/
-.tp-leftarrow.default, .tp-rightarrow.default { background-image: url(files/images/sprites.png);
+.tp-leftarrow.default, .tp-rightarrow.default { background-image: url(files/images/sprites.png);}
+
+/* Are you a maker section */
+.maker_section h2 {
+    font-size: 28px;
+    line-height: 60px;
+
+}
+.maker_section p {
+    height: 0px;
+    margin-top:0px;
+
+}
+
+p {
+    text-color: #4D4D4D;
+}
+
+.pad_right {
+    padding: 0 0 10% 0
+}
+
+.pad_left {
+    padding: 0 0 0 10%
+}

@@ -3,9 +3,9 @@
     add_action( 'add_meta_boxes', 'wprss_add_meta_boxes');
     /**
      * Set up the input boxes for the wprss_feed post type
-     * 
+     *
      * @since 2.0
-     */   
+     */
     function wprss_add_meta_boxes() {
         global $wprss_meta_fields;
         
@@ -14,7 +14,7 @@
         
         add_meta_box(
             'submitdiv',                            // $id
-            __( 'Save Feed Source', 'wprss' ),      // $title 
+            __( 'Save Feed Source', 'wprss' ),      // $title
             'post_submit_meta_box',                 // $callback
             'wprss_feed',                           // $page
             'side',                                 // $context
@@ -22,23 +22,24 @@
         );
 
         add_meta_box(
-            'preview_meta_box', 
-            __( 'Feed Preview', 'wprss' ), 
-            'wprss_preview_meta_box_callback', 
-            'wprss_feed', 
-            'side', 
+            'preview_meta_box',
+            __( 'Feed Preview', 'wprss' ),
+            'wprss_preview_meta_box_callback',
+            'wprss_feed',
+            'side',
             'high'
         );
 
          add_meta_box(
-            'wprss-feed-processing-meta', 
-            __( 'Feed Processing', 'wprss' ), 
-            'wprss_feed_processing_meta_box_callback', 
-            'wprss_feed', 
-            'side', 
+            'wprss-feed-processing-meta',
+            __( 'Feed Processing', 'wprss' ),
+            'wprss_feed_processing_meta_box_callback',
+            'wprss_feed',
+            'side',
             'high'
         );
 
+        /*
         add_meta_box(
             'wprss-help-meta',
             __( 'WP RSS Aggregator Help', 'wprss' ),
@@ -46,17 +47,21 @@
             'wprss_feed',
             'side',
             'low'
-        );  
+        );
+        */
 
-        add_meta_box(
-            'wprss-like-meta',
-            __( 'Like This Plugin?', 'wprss' ),
-            'wprss_like_meta_box_callback',
-            'wprss_feed',
-            'side',
-            'low'
-        );   
+        if ( !defined('WPRSS_FTP_VERSION') ) {
+            add_meta_box(
+                'wprss-like-meta',
+                __( 'Like This Plugin?', 'wprss' ),
+                'wprss_like_meta_box_callback',
+                'wprss_feed',
+                'side',
+                'low'
+            );
+        }
 
+        /*
         add_meta_box(
             'wprss-follow-meta',
             __( 'Follow Us', 'wprss' ),
@@ -64,20 +69,21 @@
             'wprss_feed',
             'side',
             'low'
-        );   
+        );
+        */
 
         
         add_meta_box(
-            'custom_meta_box', 
-            __( 'Feed Source Details', 'wprss' ), 
-            'wprss_show_meta_box_callback', 
-            'wprss_feed', 
-            'normal', 
+            'custom_meta_box',
+            __( 'Feed Source Details', 'wprss' ),
+            'wprss_show_meta_box_callback',
+            'wprss_feed',
+            'normal',
             'high'
         );
 
         
-    } 
+    }
 
 
     /**     
@@ -90,19 +96,21 @@
         
         // Field Array
         $wprss_meta_fields[ 'url' ] = array(
-            'label' => __( 'URL', 'wprss' ),
-            'desc'  => __( 'Enter feed URL (including http://)', 'wprss' ),
-            'id'    => $prefix .'url',
-            'type'  => 'url',
-            'after' => 'wprss_validate_feed_link',
+            'label'			=> __( 'URL', 'wprss' ),
+            'desc'		 	=> __( 'Enter feed URL (including http://)', 'wprss' ),
+            'id'			=> $prefix .'url',
+            'type'			=> 'url',
+            'after'			=> 'wprss_validate_feed_link',
+			'placeholder'	=>	'http://'
         );
-        
+        /*
         $wprss_meta_fields[ 'description' ] = array(
             'label' => __( 'Description', 'wprss' ),
             'desc'  => __( 'A short description about this feed source (optional)', 'wprss' ),
             'id'    => $prefix .'description',
             'type'  => 'textarea'
-        );    
+        );
+		*/
 
         $wprss_meta_fields[ 'limit' ] = array(
             'label' => __( 'Limit', 'wprss' ),
@@ -134,6 +142,9 @@
 
         // Use nonce for verification
         wp_nonce_field( basename( __FILE__ ), 'wprss_meta_box_nonce' ); 
+            
+            // Fix for WordpRess SEO JS issue
+            echo '<input type="hidden" id="content" value="" />';
 
             // Begin the field table and loop
             echo '<table class="form-table wprss-form-table">';
@@ -149,13 +160,16 @@
                         if ( isset( $field['before'] ) && !empty( $field['before'] ) ) {
                             call_user_func( $field['before'] );
                         }
-
+				
+						// Add default placeholder value
+						$field = wp_parse_args( $field, array( 'placeholder' => '' ) );
+				
                         switch( $field['type'] ) {
                         
                             // text/url
                             case 'url':
                             case 'text':
-                                echo '<input type="'.$field['type'].'" name="'.$field['id'].'" id="'.$field['id'].'" value="'. esc_attr( $meta ) .'" size="55" />
+                                echo '<input type="'.$field['type'].'" name="'.$field['id'].'" id="'.$field['id'].'" value="'. esc_attr( $meta ) .'" placeholder="'.__($field['placeholder'], 'wprss').'" size="55" />
                                     <br><span class="description">'.$field['desc'].'</span>';
                             break;
                         

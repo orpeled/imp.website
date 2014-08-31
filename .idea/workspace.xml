@@ -2,182 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d40f179-13e7-4060-bd83-27d1b8a111d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/20140810_impcomputer_53e786ff5f54a5479140810145143_archive.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/uploads/2014/08/Logo_V2_Wordpress_100x47.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/uploads/2014/08/NewVidAsKick.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/uploads/2014/08/NewVidAsKick.oggtheora.ogv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/uploads/2014/08/NewVidAsKick.webmsd.webm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/images/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/images/welcome-page/blacklist-feed-item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/images/blacklist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/images/welcome-page/blacklist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-de_DE.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-es_ES.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-it_IT.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-nl_NL.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-pt_BR.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/img/menu-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/images/seedprod-credit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/images/welcome-page/trash-feed-item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e7862680f898179140810144806_scan.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e78643d5cf39343140810144835_scan.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e7865cbbe247649140810144900_scan.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e78693eeaec4642140810144955_scan.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e786c79bc058579140810145047_scan.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/20140810_impcomputer_53e786ff5f54a5479140810145143.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/20140810_impcomputer_53e786ff5f54a5479140810145143_database.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/20140810_impcomputer_53e786ff5f54a5479140810145143_installer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-snapshots/20140810_impcomputer_53e786ff5f54a5479140810145143_scan.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/partials/_form-reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/partials/_form-reset.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/partials/_form-theme-base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/partials/_form-theme-base.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-field-wizard.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-footer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-need-support.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-upgrade-to-pro.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/js/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/admin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/js/admin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/inc/adminbar-style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/api-settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/js/beautify-html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/js/beautify-html.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/checkbox-settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/checkbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/checkbox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/checkbox.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-api.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-bbpress.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-buddypress.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-cf7.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-checkbox-manager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-comment-form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-form-manager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-form-request.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-general.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-integration.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-mailchimp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-multisite.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-plugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-registration-form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/inc/class-seed-csp4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-widget.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/js/color.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/color.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/validations/color.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/coming-soon.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/inc/config-settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/customsocialfollow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/date.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/daterange.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/inc/default-settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/validations/email.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/validations/escurlraw.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/export.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/feed-blacklist.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/js/form-request.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/js/form-request.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/form-settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-blue.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-blue.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-dark.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-dark.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-green.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-green.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-green.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-green.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-light.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-light.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form-theme-red.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form-theme-red.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/form.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/form.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/framework.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/functions/general.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/get-settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/import.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/img/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/js/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/partials/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/js/jquery.fitvids.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-de_DE.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-es_ES.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-it_IT.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-nl_NL.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-pt_BR.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/mailchimp-for-wp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/js/modernizr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/multiselect.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/validations/number.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/password.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/js/placeholders.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/radio.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/validations/required.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/rtl.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/lib/seed_csp4_lessc.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/languages/seedprod.pot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/select.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/settings-scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/settings-style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/themes/default/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/functions/template.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/textarea.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/textbox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/js/upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/upload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/coming-soon/framework/field-types/wpeditor.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2014/08/Logo_V2_Wordpress_Theme.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/images/welcome-page/authors.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/images/welcome-page/default-pagination.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/images/welcome-page/numbered-pagination.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/images/welcome-page/view-items.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e77fd21a09b6485140810142106_scan.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e7849d188a39177140810144133_scan.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e784c7cd9e29802140810144215_scan.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e7862680f898179140810144806_scan.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e78643d5cf39343140810144835_scan.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e7865cbbe247649140810144900_scan.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e78693eeaec4642140810144955_scan.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-snapshots/tmp/20140810_impcomputer_53e786c79bc058579140810145047_scan.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-it_IT.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-it_IT.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/OPML.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/OPML.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/README.md" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/js/admin-custom.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/js/admin-custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-debugging.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-debugging.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-display.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-display.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-options.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/css/admin-styles.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/css/admin-styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-footer.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-import-export.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-import-export.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-metaboxes.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-metaboxes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-need-support.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-need-support.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-upgrade-to-pro.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/parts/admin-upgrade-to-pro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-welcome.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin-welcome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/akismet.php" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/akismet.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/changelog.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.css" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/checkbox.css" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/checkbox.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/assets/sass/checkbox.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-cf7.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-cf7.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-checkbox-manager.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-checkbox-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-form-manager.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-form-manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-general.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-general.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-integration.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/integrations/class-integration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-plugin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/class-plugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet-admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet.php" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/custom-post-types.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/custom-post-types.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/feed-display.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/feed-display.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/feed-importing.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/feed-importing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/feed-processing.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/feed-processing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/form-settings.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/includes/views/form-settings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-it_IT.po" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp-it_IT.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/mailchimp-for-wp.php" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/mailchimp-for-wp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp.po" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/languages/mailchimp-for-wp.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/views/notice.php" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/views/notice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/opml-importer.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/opml-importer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/mailchimp-for-wp/readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/scripts.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/scripts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/system-info.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/includes/system-info.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/xone/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/xone/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/wp-rss-aggregator.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-rss-aggregator/wp-rss-aggregator.php" />
     </list>
@@ -257,30 +135,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="options-discussion.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-admin/options-discussion.php">
+      <file leaf-file-name="theme-custom-fonts.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/theme-admin/functions/theme-custom-fonts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="19" selection-start="1619" selection-end="1619" vertical-scroll-proportion="-12.5" vertical-offset="240" max-vertical-offset="4110">
+            <state line="57" column="50" selection-start="1802" selection-end="1802" vertical-scroll-proportion="-15.708333" vertical-offset="418" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme-custom-fonts.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/theme-admin/functions/theme-custom-fonts.php">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="65" selection-start="755" selection-end="755" vertical-scroll-proportion="-7.5" vertical-offset="90" max-vertical-offset="975">
-              <folding>
-                <element signature="e#7#194#0" expanded="true" />
-              </folding>
+            <state line="2647" column="0" selection-start="60776" selection-end="60776" vertical-scroll-proportion="0.8522167" vertical-offset="39359" max-vertical-offset="39795">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom-style.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/includes/custom-style.php">
+      <file leaf-file-name="font-awesome.min.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/files/css/font-awesome.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="24" selection-start="314" selection-end="340" vertical-scroll-proportion="0.44520548" vertical-offset="0" max-vertical-offset="540">
+            <state line="3" column="193" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
               <folding />
             </state>
           </provider>
@@ -304,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/preen/library/scss/_481up.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/preen/library/scss/style.scss" />
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-sharrre/app/code/Block/App.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-sharrre/assets/js/jquery.sharrre-1.3.4.js" />
@@ -320,6 +195,7 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-sharrre/lib/vendor/updater/updater.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/top-10/top-10.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/xone/style.css" />
       </list>
     </option>
   </component>
@@ -331,9 +207,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5.3 (MAMP)" />
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" port="9000" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
+    <option name="x" value="53" />
     <option name="y" value="22" />
-    <option name="width" value="1390" />
+    <option name="width" value="1387" />
     <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -362,6 +238,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -380,23 +257,132 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="files" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="files" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="sshConsole" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -411,6 +397,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/xone/files/fonts" />
       <recent name="$PROJECT_DIR$/wp-content/plugins/wp-sharrre/assets/scss" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -542,7 +529,11 @@
       <created>1407682070443</created>
       <updated>1407682070443</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Website framework ready (except for the Kickstarter widget).">
+      <created>1407879832139</created>
+      <updated>1407879832139</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -566,26 +557,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="22" width="1390" height="878" extended-state="6" />
-    <editor active="false" />
+    <frame x="53" y="22" width="1387" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276316" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32717678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17272054" sideWeight="0.671159" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34564644" sideWeight="0.49962714" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39973614" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.323219" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34564644" sideWeight="0.5003728" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21835677" sideWeight="0.42612138" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32514882" sideWeight="0.676781" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.323219" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3303505" sideWeight="0.65435356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3054863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -595,6 +586,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
@@ -614,7 +606,8 @@
     <MESSAGE value="Changed Template." />
     <MESSAGE value="Small changes in design (photos, icons etc.)" />
     <MESSAGE value="Getting ready for Tair to see the most recent design made. Still need to implement the signup for newsletter." />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting ready for Tair to see the most recent design made. Still need to implement the signup for newsletter." />
+    <MESSAGE value="Website framework ready (except for the Kickstarter widget)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Website framework ready (except for the Kickstarter widget)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -677,40 +670,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/preen/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-          <folding>
-            <marker date="1389261723000" expanded="true" signature="44:2013" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="96:1974" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="163:1912" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="383:1264" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="424:830" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="538:810" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="932:983" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="1053:1178" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="1383:1874" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="1425:1519" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="1561:1689" placeholder="..." />
-            <marker date="1389261723000" expanded="true" signature="1731:1854" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/preen/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/preen/single-custom_type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-admin/options-discussion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="4" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="4110">
@@ -730,9 +689,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2486" selection-end="2486" vertical-scroll-proportion="-30.625" vertical-offset="0" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="62" column="0" selection-start="2486" selection-end="2486" vertical-scroll-proportion="-30.625" vertical-offset="0" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/preen/index.php">
@@ -783,30 +740,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-admin/options-discussion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="19" selection-start="1619" selection-end="1619" vertical-scroll-proportion="-12.5" vertical-offset="240" max-vertical-offset="4110">
+        <state line="41" column="19" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="4185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/theme-admin/shortcodes/js/shortcode-functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4798206" vertical-offset="660" max-vertical-offset="14070" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/includes/custom-style.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.37671232" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/readme.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2758621" vertical-offset="555" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/files/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="193" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/theme-admin/functions/theme-custom-fonts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="65" selection-start="755" selection-end="755" vertical-scroll-proportion="-7.5" vertical-offset="90" max-vertical-offset="975">
-          <folding>
-            <element signature="e#7#194#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/theme-admin/shortcodes/js/shortcode-functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4798206" vertical-offset="660" max-vertical-offset="14070">
+        <state line="57" column="50" selection-start="1802" selection-end="1802" vertical-scroll-proportion="-15.708333" vertical-offset="418" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/includes/custom-style.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="314" selection-end="340" vertical-scroll-proportion="0.44520548" vertical-offset="0" max-vertical-offset="540">
+        <state line="2647" column="0" selection-start="60776" selection-end="60776" vertical-scroll-proportion="0.8522167" vertical-offset="39359" max-vertical-offset="39795">
           <folding />
         </state>
       </provider>

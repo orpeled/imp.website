@@ -77,7 +77,11 @@
      * @since 3.0
      */
     function wprss_get_feed_items_query( $settings ) {
-        $posts_per_page = ( isset( $settings['posts_per_page'] ) )? $settings['posts_per_page'] : $settings['feed_limit'];
+		if( isset( $settings['feed_limit'] ) ) {
+			$posts_per_page = $settings['feed_limit'];
+		} else {
+			$posts_per_page = wprss_get_general_setting('feed_limit');
+		}
         global $paged;
         if ( get_query_var('paged') ) {
             $paged = get_query_var('paged');
@@ -195,7 +199,7 @@
                 // Fallback for feeds created with older versions of the plugin
                 if ( $source_url === '' ) $source_url = get_post_meta( $feed_source_id, 'wprss_url', true );
                 // convert from Unix timestamp
-                $date = date_i18n( wprss_get_general_setting('date_format'), $timestamp );
+                $date = wprss_date_i18n( $timestamp );
 
                 // Prepare the title
                 $feed_item_title = get_the_title();
