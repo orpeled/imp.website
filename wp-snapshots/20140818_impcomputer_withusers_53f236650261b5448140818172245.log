@@ -1,0 +1,84 @@
+********************************************************************************
+PACKAGE-LOG: 2014-08-18 17:23:26
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	0.5.6
+WORDPRESS:	3.9.2
+PHP INFO:	5.5.3 | SAPI: apache2handler
+SERVER:		Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 5000M (40M default) 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP
+MYSQLDUMP:    Is Supported
+MYSQLTIMEOUT: 5000 
+TABLES: total:17 | filtered:0 | create:17 
+FILTERED: [] 
+wp_commentmeta (0) 
+wp_comments (0) 
+wp_duplicator_packages (3) 
+wp_links (0) 
+wp_options (268) 
+wp_postmeta (577) 
+wp_posts (327) 
+wp_revslider_css (15) 
+wp_revslider_layer_animations (0) 
+wp_revslider_settings (0) 
+wp_revslider_sliders (0) 
+wp_revslider_slides (0) 
+wp_term_relationships (46) 
+wp_term_taxonomy (29) 
+wp_terms (29) 
+wp_usermeta (20) 
+wp_users (1) 
+SQL CREATED: 20140818_impcomputer_withusers_53f236650261b5448140818172245_database.sql 
+SQL FILE SIZE: 935.94KB 
+SQL RUNTIME: 0.24 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /Applications/MAMP/htdocs 
+ARCHIVE FILE: 20140818_impcomputer_withusers_53f236650261b5448140818172245_archive.zip 
+FILTERS: *ON* 
+DIRS:  /Applications/MAMP/htdocs/.git;/Applications/MAMP/htdocs/wp-content/themes/preen;/Applications/MAMP/htdocs/wp-content/themes/quickstep;/Applications/MAMP/htdocs/wp-content/themes/bones;/Applications/MAMP/htdocs/wp-content/uploads/2013/06;/Applications/MAMP/htdocs/wp-content/uploads/2013/07;/Applications/MAMP/htdocs/wp-content/uploads/2013/08;/Applications/MAMP/htdocs/wp-content/uploads/2013/09;/Applications/MAMP/htdocs/wp-content/uploads/2013/10;/Applications/MAMP/htdocs/wp-content/uploads/2013/11;/Applications/MAMP/htdocs/wp-content/uploads/2013/12; 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	69.83MB 
+STATS:	Dirs 363 | Files 2,717 | Links 0 
+SQL ADDED: 20140818_impcomputer_withusers_53f236650261b5448140818172245_database.sql 
+WARNING: Unable to zip directory: '/Applications/MAMP/htdocs' 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 3080
+    [filename] => /Applications/MAMP/htdocs/wp-snapshots/tmp/20140818_impcomputer_withusers_53f236650261b5448140818172245_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 47.96MB 
+ARCHIVE RUNTIME: 4.19 sec. 
+
+******************************************************************************** 
+INSTALLER: 
+******************************************************************************** 
+INSTALLER FILE: Build Start 
+INSTALLER FILE: Build Finished 
+INSTALLER FILE: Preping for use 
+INSTALLER FILE: Template parsed with new data 
+INSTALLER FILE: Complete [/Applications/MAMP/htdocs/wp-snapshots/tmp/20140818_impcomputer_withusers_53f236650261b5448140818172245_installer.php] 
+INSTALLER FILE: Added to archive 
+
+********************************************************************************
+RECORD ID:[3]
+FILE SIZE: Archive:47.96MB | SQL:935.94KB | Installer:414.02KB
+TOTAL PROCESS RUNTIME: 5.00 sec.
+DONE PROCESSING => 20140818_impcomputer_withusers 2014-08-18 17:23:31
+********************************************************************************
+ 
