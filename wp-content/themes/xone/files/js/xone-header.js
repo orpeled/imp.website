@@ -31,6 +31,22 @@ jQuery( window ).resize(function() {
 		}
 	}
 	sizeDownHeader();
+
+   /* *//* FIXING PAD_LEFT & PAD_RIGHT *//*
+    if ( jQuery( window ).width() > 1023 ) {
+        jQuery('.pad_left').css({ 'padding': '0 0 0 20%' });
+        jQuery('.pad_right').css({ 'padding': '0 20% 0 0' });
+        *//*jQuery('#logo').css({ 'right': '88%', 'position':'absolute' });*//*
+    } else if ( jQuery( window ).width() > 767 ) {
+        *//* SETTING PAD_LEFT & PAD_RIGHT TO 0 *//*
+        jQuery('.pad_left').css({ 'padding': '0 0 0 0' });
+        jQuery('.pad_right').css({ 'padding': '0 0 0 0' });
+        *//*jQuery('#logo').css({ 'right': '15%', 'position':'relative' });*//*
+    } else {
+        jQuery('.pad_left').css({ 'padding': '0 0 0 0' });
+        jQuery('.pad_right').css({ 'padding': '0 0 0 0' });
+        *//*jQuery('#logo').css({ 'right': '0%', 'position':'relative' });*//*
+    }*/
 });
 
 function sizeDownHeader() {
@@ -59,6 +75,8 @@ function sizeDownHeader() {
 			jQuery('.fixed-header nav#main-nav').fadeOut(0);
 			jQuery('.fixed-header nav#menu-controls').fadeOut(0);
 			jQuery('.fixed-header .open-responsive-nav').fadeIn(500);
+
+
 		} else {
 			
 			if (jQuery(document).scrollTop() > scrolltop && jQuery('.fixed-header').length > 0 ) { 

@@ -119,15 +119,25 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.text-light h1, .text-light h2, .text-light h3, .text-light h4, .text-light h5, .text-light h6 { color: #ffffff; }
 
-    @font-face {
-        font-family: Miso Regular;
-        src: url('../xone/files/fonts/miso.otf');
-    }
+@font-face {
+    font-family: Miso Light;
+    src: url('../xone/files/fonts/miso-light.otf');
+}
 
-h1 { font-size: 100px; line-height: 130px; }
-h2 { font-family: 'Miso Regular','Raleway', sans-serif !important; font-size: 40px; line-height: 60px; }
+@font-face {
+    font-family: Miso Regular;
+    src: url('../xone/files/fonts/miso.otf');
+}
+
+@font-face {
+    font-family: Miso Bold;
+    src: url('../xone/files/fonts/miso-bold.otf');
+}
+
+h1 { font-family: 'Miso Regular','Raleway', sans-serif !important; font-size: 65px; line-height: 90px; }
+h2 { font-size: 40px; line-height: 60px; }
 h3 { font-size: 32px; line-height: 48px; }
-h4 { font-size: 22px; line-height: 34px; }
+h4 { font-family: 'Miso Bold','Raleway', sans-serif !important; font-size: 28px; line-height: 40px; }
 h5 { font-size: 18px; line-height: 26px; }
 h6 { font-size: 16px; line-height: 22px; }
 
@@ -205,7 +215,7 @@ textarea { width: 1100px; height: 150px; max-width: 97%; padding: 11px 4px 8px 4
 
 input[type=submit] {
 	font-family: 'Open Sans';
-	font-weight: 700;
+	font-weight: 300;
 	font-size: 18px;
 	line-height: 21px ;
 	letter-spacing: 0.15em; 
@@ -231,9 +241,9 @@ input[type=submit] {
 	
 input[type=submit]:hover { 
 	background-color: #4da5f5;
-	transform: scale(1.07);
-	-ms-transform: scale(1.07); 
-	-webkit-transform: scale(1.07);
+	transform: scale(1.03);
+	-ms-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
 	}
 	
 select {
@@ -1182,7 +1192,7 @@ section { position: relative; }
 	margin-top: 20px;
 	padding: 0;
 	}
-	.gallery-list li:fist-child {
+	.gallery-list li:first-child {
 	margin-top: 0px;
 	}
 	
@@ -1863,7 +1873,7 @@ a.sr-buttonicon.big-button { padding: 20px; width: 30px; height: 30px !important
 	text-align: center;
 	margin-top: 10px;
 	}
-	div .counter:fist-child {
+	div .counter:first-child {
 	margin-top: 0px;
 	}
 	
@@ -2622,6 +2632,15 @@ a.sr-buttonicon.big-button { padding: 20px; width: 30px; height: 30px !important
 ------------------------------------------------*/
 .tp-leftarrow.default, .tp-rightarrow.default { background-image: url(files/images/sprites.png);}
 
+
+/* Special design for h1 header. */
+.bold_title_header {
+    font-family: 'Miso Bold','Raleway', sans-serif !important;
+    font-size: 95px;
+    line-height: 90px;
+
+}
+
 /* Are you a maker section */
 .maker_section h2 {
     font-size: 28px;
@@ -2638,12 +2657,13 @@ p {
     color: #4D4D4D;
 }
 
+/* NOTICE THAT I ADDED A JS FUNCTION TO XONE-HEADER.JS  FOR PADDING. THEN DELETED AND MOVED TO MQUERIES.CSS*/
 .pad_right {
-    padding: 0 0 10% 0
+    padding: 0 20% 0 5%;
 }
 
 .pad_left {
-    padding: 0 0 0 10%
+    padding: 0 5% 0 20%;
 }
 .box_text {
     border: 1px #e6e6e6 solid;
@@ -2661,6 +2681,7 @@ p {
 
 footer {
     border-top: 1px #666666 solid !important;
+    padding-top: 10px;
 
 }
 
@@ -2672,4 +2693,55 @@ footer {
 }
 .contact_us_before_footer p{
     margin-top: 5px;
+}
+
+#backtotop {
+    display: none;
+}
+
+p.copyright {
+    float: left;
+    text-align: left;
+    margin-top:0px;
+    color: #808080;
+    padding-bottom: 10px;
+}
+
+/* Making other menu tabs disappear. */
+li.menu-item:first-child {
+    display:none;
+}
+
+li.menu-item:nth-child(3) {
+    display:none;
+}
+
+li.menu-item:nth-child(5) {
+    display:none;
+}
+
+li.menu-item:nth-child(6) {
+    display:none;
+}
+
+li.menu-item:nth-child(7) {
+    display:none;
+}
+
+li.menu-item:nth-child(8) {
+    display:none;
+}
+
+div#logo {
+    position: absolute;
+    right: 88%;
+}
+input[type="submit"].notify_me_button {
+    float: left;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+form.mc4wp-form {
+    padding-left: 10%;
+
 }
