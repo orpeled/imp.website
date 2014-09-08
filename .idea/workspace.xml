@@ -34,7 +34,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2914" column="12" selection-start="65686" selection-end="65686" vertical-scroll-proportion="0.6674877" vertical-offset="43439" max-vertical-offset="43965">
+            <state line="2915" column="28" selection-start="65715" selection-end="65715" vertical-scroll-proportion="0.7044335" vertical-offset="43439" max-vertical-offset="43965">
               <folding />
             </state>
           </provider>
@@ -541,7 +541,11 @@
       <created>1410195132110</created>
       <updated>1410195132110</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Mid-way towards Tair's design implementation - Vesion 2.0.">
+      <created>1410195266453</created>
+      <updated>1410195266453</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -779,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2914" column="12" selection-start="65686" selection-end="65686" vertical-scroll-proportion="0.6674877" vertical-offset="43439" max-vertical-offset="43965">
+        <state line="2915" column="28" selection-start="65715" selection-end="65715" vertical-scroll-proportion="0.7044335" vertical-offset="43439" max-vertical-offset="43965">
           <folding />
         </state>
       </provider>
