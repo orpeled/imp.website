@@ -183,11 +183,11 @@ div h1:first-child, div h2:first-child, div h3:first-child, div h4:first-child, 
 input[type=text], input[type=password], input[type=email], textarea {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
 	font-style: italic;
-    font-weight: 400;
-	font-size: 18px;
+    font-weight: 300;
+	font-size: 21px;
 	background: #ffffff;
 	border: 0px solid #d9d9d9;
-	line-height: 22px;
+	/*line-height: 22px;*/
 	height: 18px;
 	color:#999999;
 	padding: 12px 20px;
@@ -196,7 +196,7 @@ input[type=text], input[type=password], input[type=email], textarea {
 	-khtml-border-radius: 12px;
 	-webkit-border-radius: 3x;
 	transition: all 200ms linear;
-    display:inline !important;
+    /*display:inline !important;*/
 	}
 	
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus { 
@@ -216,10 +216,10 @@ textarea { width: 1100px; height: 150px; max-width: 97%; padding: 11px 4px 8px 4
 input[type=submit] {
 	font-family: 'Open Sans';
 	font-weight: 300;
-	font-size: 18px;
-	line-height: 21px ;
-	letter-spacing: 0.15em; 
-	text-transform: uppercase;
+	font-size: 21px;
+	/*line-height: 21px ;*/
+	/*letter-spacing: 0.15em;*/
+	/*text-transform: uppercase;*/
 	border: none;
 	color: #ffffff;
     background: -webkit-linear-gradient(left top, #00aba8, #2a97b4); /* For Safari 5.1 to 6.0 */
@@ -227,7 +227,7 @@ input[type=submit] {
     background: -moz-linear-gradient(bottom right, #00aba8, #2a97b4); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #00aba8 , #2a97b4); /* Standard syntax */
 	cursor: pointer;
-	padding: 11px 14px;
+	/*padding: 13px 14px 12px;*/
 	border-radius: 12px;
 	-moz-border-radius:12px;
 	-khtml-border-radius:12px;
@@ -1965,51 +1965,90 @@ a.sr-buttonicon.big-button { padding: 20px; width: 30px; height: 30px !important
 	
 .tabs ul.tab-nav {
 	padding: 0;
-	margin: 0;
-	margin: 0 !important;
+	margin: 0 5% 0 5%;
 	list-style: none !important;
 	position: relative;
 	z-index: 1;
+    text-align: center;
 	}
 	
 .tabs ul.tab-nav li {
 	background: none;
-	padding: 0 !important;
+	padding: 0!important;
 	float: left;
 	margin: 0 30px 0 0 !important;
+    width: 30%;
+    text-align: center;
 	}
 	
 	
 .tabs ul.tab-nav li a {
-	color: #262626;
-	text-transform: uppercase;
-	font-family: 'Raleway';
-	font-weight: 600;
-	font-size: 13px;
-	letter-spacing: 0.1em;
+	color: #000000 !important;
+	/*text-transform: uppercase;*/
+	font-family: 'Roboto Regular';
+	font-weight: 400;
+	font-size: 21px;
+	/*letter-spacing: 0.1em;*/
 	line-height: 20px;
 	padding-bottom: 2px;
 	display: block;
-	border-bottom: 2px solid transparent;
+	/*border-bottom: 2px solid transparent;*/
+
 	}
 	.text-light .tabs ul.tab-nav li a { color: #ffffff; }
 	
 .tabs ul.tab-nav li a:hover, .tabs ul.tab-nav li a.active {
-	border-color: #4da5f5;
+	opacity: 0.7;
 	}
 	
 .tabs .tab-container {
-	margin-top: 20px;
+	margin-top: 0px;
 	}
 	
 .tabs .tab-container .tab-content {
-	float: left;
+	/*float: left;*/
 	display: none;
 	}
 	
 .tabs .tab-container .active {
 	display: block;
 	}
+.tab_small_text {
+    font-family: 'Roboto Regular','Raleway', sans-serif !important;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 7px;
+}
+
+/*.tabid_img1 {
+    background: url(../xone/files/images/HomeComputer_Icon.jpg) no-repeat top center;
+    *//* Set rules to fill background *//*
+    min-height: 170px;
+    width: auto;
+    display:block;
+    text-align: center;
+}
+
+.tabid_img2 {
+    background: url(../xone/files/images/HomeComputer_Icon.jpg) no-repeat top center;
+    *//* Set rules to fill background *//*
+    min-height: 170px;
+    width: auto;
+    display:block;
+    text-align: center;
+}
+
+.tabid_img3 {
+    background: url(../xone/files/images/HomeComputer_Icon.jpg) no-repeat top center;
+    *//* Set rules to fill background *//*
+    min-height: 170px;
+    width: auto;
+    display:block;
+    text-align: center;*/
+}
 	
 	
 /*	Toggle/Accordion
@@ -2633,24 +2672,67 @@ a.sr-buttonicon.big-button { padding: 20px; width: 30px; height: 30px !important
 .tp-leftarrow.default, .tp-rightarrow.default { background-image: url(files/images/sprites.png);}
 
 
+#section-home {
+    background-size: contain !important;
+    background-position: center center;
+    background-repeat: no-repeat !important;
+    background-color: black !important;
+}
+
 /* Special design for h1 header. */
 .bold_title_header {
     font-family: 'Miso Bold','Raleway', sans-serif !important;
-    font-size: 95px;
-    line-height: 90px;
+    font-size: 75px;
+    line-height: 70px;
+    padding-top: 30px;
+    padding-left: 0;
 
+}
+/* FIX SOCIAL*/
+h4 .smaller_social_button_fb {
+    height: 43px;
+    width: 45px;
+    margin-left: 5px;
+}
+
+h4 .smaller_social_button_twitter {
+    height: 43px;
+    width: 45px;
+    margin-left: 15px;
+}
+
+/* Gallery */
+.tabs ul.gallery_tabs {
+    margin-left: 20%;
+}
+
+.tabs ul.tab-nav li.tabid1_mobile_li, .tabs ul.tab-nav li.tabid2_mobile_li, .tabs ul.tab-nav li.tabid3_mobile_li{
+    width: 23% !important;
+}
+
+.tabs ul.tab-nav li.tabid1_mobile_li a, .tabs ul.tab-nav li.tabid2_mobile_li a, .tabs ul.tab-nav li.tabid3_mobile_li a{
+    margin: 0 0 0 0 !important;
+}
+
+.icon_tab {
+    width: 85px !important;
+    height: 85px !important;
 }
 
 /* Are you a maker section */
-.maker_section h2 {
-    font-size: 28px;
-    line-height: 45px;
 
+.maker_section {
+    padding: 0 20% 0 20%;
 }
+
+.maker_section h1 {
+    text-align: center;
+    line-height: 53px;
+}
+
 .maker_section p {
     height: 0px;
-    margin-top: 0px;
-
+    text-align: center;
 }
 
 p {
@@ -2693,7 +2775,60 @@ footer {
 }
 .contact_us_before_footer p{
     margin-top: 5px;
+
 }
+
+.specs_before_footer h6{
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.about_us_before_footer h6{
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.contact_us_before_footer h6{
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.specs_before_footer h3{
+    font-weight: 300;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about_us_before_footer h3{
+    font-weight: 300;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.contact_us_before_footer h3{
+    font-weight: 300;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.specs_before_footer a{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.about_us_before_footer a{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.contact_us_before_footer a{
+    font-weight: 300;
+    font-size: 15px;
+}
+
 
 #backtotop {
     display: none;
@@ -2710,6 +2845,7 @@ p.copyright {
 /* Making other menu tabs disappear. */
 li.menu-item:first-child {
     display:none;
+
 }
 
 li.menu-item:nth-child(3) {
@@ -2734,14 +2870,57 @@ li.menu-item:nth-child(8) {
 
 div#logo {
     position: absolute;
-    right: 88%;
+    right: 80%;
+
+
 }
-input[type="submit"].notify_me_button {
+
+input[type=submit].notify_me_button {
     float: left;
-    margin-right: 6px;
-    margin-left: 6px;
+    padding: 12px 8px 12px 8px;
+    margin: 0 0 0 5px;
+
 }
+
 form.mc4wp-form {
     padding-left: 10%;
 
+}
+#section-newsletter-2 {
+    background: url(../xone/files/images/carbon_fibre.png) !important;
+    background-repeat: repeat !important;
+}
+
+#section-newsletter-2 .horizontalinner {
+    display: none !important;
+}
+
+.what_is_imp_text {
+    padding: 0 20% 0 20%;
+}
+ul.footer_menu_right {
+    padding-left: 30% !important;
+}
+
+ul.footer_menu_right li{
+    padding-top: 0 !important;
+}
+
+ul.footer_menu_right a {
+    color: #c1c1c1 !important;
+    font-size: 21px;
+    padding-top: 0 !important;
+
+}
+.copyright {
+    float: right !important;
+}
+
+.smaller_social_button_fb_footer {
+    height: 43px;
+    width: 45px;
+}
+.smaller_social_button_twitter_footer {
+    height: 43px;
+    width: 45px;
 }

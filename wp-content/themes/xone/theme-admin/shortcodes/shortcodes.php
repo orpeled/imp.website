@@ -700,7 +700,7 @@ function sr_tabs( $atts, $content = null )
 	$i = 1;
 	foreach ($title as $t) {
 		if ($i == 1) { $addclass = 'class="active"'; } else { $addclass = ''; }
-		$return .= '<li><a href="tabid'.$i.'" '.$addclass.'>'.$t.'</a></li>';	
+		$return .= '<li><a href="tabid'.$i.'" '.$addclass.'><span class="tabid_img'.$i.'"></span>'.$t.'</a></li>';
 		$i++;
 	}
 	

@@ -17,7 +17,7 @@ global $sr_prefix;
 			<?php if (get_option($sr_prefix.'_footerlogo')) { ?>
 			<p class="footer-logo"><img src="<?php echo get_option($sr_prefix.'_footerlogo'); ?>" alt="Footer Logo"></p>
 			<?php } ?>
-			
+            <a href="http://www.facebook.com/imp.computer"><img src="http://127.0.0.1:8888/wp-content/uploads/2014/09/Fb_Button.png" alt="Fb_Button" width="90" height="86" class="alignleft size-full wp-image-934 smaller_social_button_fb_footer" /></a><a href="http://twitter.com/theimpcomputer"><img src="http://127.0.0.1:8888/wp-content/uploads/2014/09/Twitter_Button.png" alt="Twitter_Button" width="90" height="86" class="alignleft size-full wp-image-935 smaller_social_button_twitter_footer" /></a>
 			<?php if(!get_option($sr_prefix.'_socialdisable')) { ?>
 			<ul class="socialmedia-widget">
 				<?php if (get_option($sr_prefix.'_facebook')) { ?><li class="facebook" ><a href="<?php echo get_option($sr_prefix.'_facebook'); ?>" target="_blank"></a></li><?php } ?>
@@ -37,10 +37,44 @@ global $sr_prefix;
 				<?php if (!get_option($sr_prefix.'_rss')) { ?><li class="rss"><a href="<?php echo bloginfo('rss2_url') ?>" target="_blank"></a></li><?php } ?>
 			</ul>
 			<?php } ?>
-			
-			<?php if(get_option($sr_prefix.'_copyright_text')) { ?>
-			<p class="copyright"><?php echo stripslashes(get_option($sr_prefix.'_copyright_text')) ?></p>
-			<?php } ?>
+            <?php if(get_option($sr_prefix.'_copyright_text')) { ?>
+                <p class="copyright"><?php echo stripslashes(get_option($sr_prefix.'_copyright_text')) ?></p>
+            <?php } ?>
+            <!-- MENU -->
+            <div class="footer_menu <?php echo $menuClass; ?> clearfix">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location'  => 'primary-menu',
+                        'container'       => 'nav',
+                        'container_id'    => 'main-nav',
+                        'container_class' => 'container_footer_menu',
+                        'menu_class'      => 'footer_menu_right',
+                        'menu_id'         => 'footer_primary' ,
+                        'walker' 			=> new sr_menu_output()
+                    )
+                );
+                ?>
+
+                <?php
+                if (!get_option($sr_prefix.'_disablefixedheader') && !get_option($sr_prefix.'_disbalebulletnavigation')) {
+                    wp_nav_menu(
+                        array(
+                            'theme_location'  => 'primary-menu',
+                            'container'       => 'nav',
+                            'container_id'    => 'menu-controls',
+                            'container_class' => 'container_footer_menu',
+                            'menu_class'      => 'footer_menu_right',
+                            'menu_id'         => 'footer_primary' ,
+                            'walker' 			=> new sr_bulletmenu_output()
+                        )
+                    );
+                } // END if
+                ?>
+
+            </div>
+            <!-- MENU -->
+
 		</div>
 	</footer>
 	<!-- FOOTER --> 
