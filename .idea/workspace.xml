@@ -34,7 +34,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2899" column="1" selection-start="65443" selection-end="65443" vertical-scroll-proportion="0.63054186" vertical-offset="43229" max-vertical-offset="43965">
+            <state line="2894" column="1" selection-start="65393" selection-end="65393" vertical-scroll-proportion="0.4827586" vertical-offset="43214" max-vertical-offset="43950">
               <folding />
             </state>
           </provider>
@@ -358,7 +358,7 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="settings.github" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
@@ -553,7 +553,15 @@
       <created>1410195648002</created>
       <updated>1410195648002</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Final Version (For Now)">
+      <created>1410196158115</created>
+      <updated>1410196158115</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Final Version (For Now)">
+      <created>1410196322974</created>
+      <updated>1410196322975</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -792,7 +800,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2899" column="1" selection-start="65443" selection-end="65443" vertical-scroll-proportion="0.63054186" vertical-offset="43229" max-vertical-offset="43965">
+        <state line="2894" column="1" selection-start="65393" selection-end="65393" vertical-scroll-proportion="0.4827586" vertical-offset="43214" max-vertical-offset="43950">
           <folding />
         </state>
       </provider>
