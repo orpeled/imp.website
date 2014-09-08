@@ -34,7 +34,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2908" column="24" selection-start="65587" selection-end="65587" vertical-scroll-proportion="0.9630542" vertical-offset="43229" max-vertical-offset="43965">
+            <state line="2899" column="1" selection-start="65443" selection-end="65443" vertical-scroll-proportion="0.63054186" vertical-offset="43229" max-vertical-offset="43965">
               <folding />
             </state>
           </provider>
@@ -549,7 +549,11 @@
       <created>1410195316193</created>
       <updated>1410195316193</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Final Version (For Now)">
+      <created>1410195648002</created>
+      <updated>1410195648002</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -625,7 +629,8 @@
     <MESSAGE value="Website framework ready (except for the Kickstarter widget)." />
     <MESSAGE value="Mid-way towards Tair's design implementation." />
     <MESSAGE value="Mid-way towards Tair's design implementation - Vesion 2.0." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mid-way towards Tair's design implementation - Vesion 2.0." />
+    <MESSAGE value="Final Version (For Now)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Version (For Now)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -787,7 +792,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/xone/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2908" column="24" selection-start="65587" selection-end="65587" vertical-scroll-proportion="0.9630542" vertical-offset="43229" max-vertical-offset="43965">
+        <state line="2899" column="1" selection-start="65443" selection-end="65443" vertical-scroll-proportion="0.63054186" vertical-offset="43229" max-vertical-offset="43965">
           <folding />
         </state>
       </provider>
