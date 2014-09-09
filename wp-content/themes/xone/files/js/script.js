@@ -472,3 +472,12 @@ function flexInit(el) {
 	}
 	
 }
+
+/*----------------------------------------------
+        F A D E  O U T  M A I L C H I M P
+ ------------------------------------------------*/
+setTimeout(fade_out, 4000);
+
+function fade_out() {
+    jQuery('.mc4wp-alert').fadeOut().empty();
+}

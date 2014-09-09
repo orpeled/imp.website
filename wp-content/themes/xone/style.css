@@ -2676,7 +2676,7 @@ a.sr-buttonicon.big-button { padding: 20px; width: 30px; height: 30px !important
     background-size: contain !important;
     background-position: center center;
     background-repeat: no-repeat !important;
-    background-color: black !important;
+    background-color: #0a0a0a !important;
 }
 
 /* Special design for h1 header. */
@@ -2753,6 +2753,7 @@ p {
     background-color: #ffffff;
     padding: 1px 5px 1px 5px;
     margin: 0px 4px 0px 4px;
+    text-align: center;
 }
 
 .menu {
@@ -2852,7 +2853,7 @@ li.menu-item:nth-child(3) {
     display:none;
 }
 
-li.menu-item:nth-child(5) {
+li.menu-item:nth-child(4) {
     display:none;
 }
 
@@ -2860,11 +2861,23 @@ li.menu-item:nth-child(6) {
     display:none;
 }
 
-li.menu-item:nth-child(7) {
+li.menu-item:nth-child(8) {
     display:none;
 }
 
-li.menu-item:nth-child(8) {
+li.menu-item:nth-child(9) {
+    display:none;
+}
+
+li.menu-item:nth-child(10) {
+    display:none;
+}
+
+li.menu-item:nth-child(11) {
+    display:none;
+}
+
+li.menu-item:nth-child(12) {
     display:none;
 }
 
@@ -2922,4 +2935,57 @@ ul.footer_menu_right a {
 .smaller_social_button_twitter_footer {
     height: 43px;
     width: 45px;
+}
+
+/* building footer */
+footer li.menu-item:nth-child(1) {
+    display: none;
+
+}
+footer li.menu-item:nth-child(2) {
+    display: none;
+
+}
+footer li.menu-item:nth-child(5) {
+    display: none;
+
+}
+footer li.menu-item:nth-child(7) {
+    display: none;
+
+}
+footer li.menu-item:nth-child(9) {
+    display: inline-block;
+
+}
+footer li.menu-item:nth-child(10) {
+    display: inline-block;
+
+}
+footer li.menu-item:nth-child(11) {
+    display: inline-block;
+
+}
+footer li.menu-item:nth-child(12) {
+    display: inline-block;
+
+}
+
+/* Fixing alerts */
+.mc4wp-alert {
+    font-family: 'Roboto Regular','Raleway', sans-serif !important;
+    display: block;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: #262626;
+    border: none;
+    text-align: center;
+    margin: 5% 0 0 0;
+    padding: 2% 2% 2% 2%;
+    border-radius: 12px;
+    -moz-border-radius:12px;
+    -khtml-border-radius:12px;
+    -webkit-border-radius:12px;
 }
